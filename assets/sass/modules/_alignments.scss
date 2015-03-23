@@ -1,0 +1,37 @@
+.alignleft,
+.alignright,
+img.ubb_left,
+img.ubb_right {
+    display: block;
+    float: none;
+    margin: 0 auto 1.5em !important;
+}
+
+.aligncenter {
+    @include center-block;
+    margin-bottom: 10px;
+}
+
+img.alignleft,
+img.alignright,
+img.ubb_left,
+img.ubb_right {
+    position: relative;
+    z-index: 5;
+}
+
+@media (min-width: 550px) {
+    .alignleft,
+    img.ubb_left {
+        display: inline;
+        float: left;
+        margin-right: 1.5em !important;
+    }
+
+    .alignright,
+    img.ubb_right {
+        display: inline;
+        float: right;
+        margin-left: 1.5em !important;
+    }
+}

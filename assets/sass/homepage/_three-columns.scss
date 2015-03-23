@@ -1,0 +1,18 @@
+#homepage-three-columns {
+    .widget-title {
+        border-bottom: 1px solid #e8e8e8;
+        color: #7b7b7b;
+        @include font-size(1.0);
+        letter-spacing: .24em;
+        margin: 13px 0 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .widget {
+        @include font-size(1.1);
+        line-height: 16px;
+        margin: 20px 0;
+    }
+}

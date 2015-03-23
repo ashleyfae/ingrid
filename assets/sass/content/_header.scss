@@ -1,0 +1,34 @@
+.site-branding {
+    margin: 45px 0 20px;
+}
+
+.site-title {
+    @include font-size(7.2);
+    font: {
+        family: Rushistly, cursive;
+        weight: normal;
+    }
+    letter-spacing: 0;
+    margin: 0;
+
+    a {
+        color: #555555;
+
+        &:hover {
+            border: none;
+            color: #555555;
+        }
+    }
+}
+
+.site-description {
+    color: $color_meta;
+    font: {
+        style: italic;
+        weight: normal;
+    }
+    @include font-size(1.2);
+    letter-spacing: .24em;
+    margin: 0;
+    text-transform: lowercase;
+}

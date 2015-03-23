@@ -1,0 +1,51 @@
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+.form-control,
+textarea,
+select {
+    background: white;
+    border: 1px solid #dddddd;
+    border-radius: 0;
+    box-shadow: none;
+    color: $color_body;
+    display: block;
+    @include font-size(1.1);
+    font: {
+        weight: normal;
+    }
+    letter-spacing: .05em;
+    line-height: 1;
+    padding: 12px 9px;
+    width: 100%;
+
+    &:focus {
+        border-color: #c5c5c5;
+        box-shadow: none;
+        outline: 0;
+    }
+
+    .widget-area & {
+        border: none;
+        color: white;
+        @include font-size(1.0);
+        letter-spacing: .2em;
+        padding: 8px;
+        text-transform: lowercase;
+
+        &::-webkit-input-placeholder {
+            color: white;
+        }
+    }
+}
+
+.widget-area {
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        position: relative;
+        text-indent: 1px;
+        text-overflow: '';
+    }
+}

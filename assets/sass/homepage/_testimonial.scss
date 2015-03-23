@@ -1,0 +1,50 @@
+#testimonial {
+    background: url('assets/images/testimonial-bg.png');
+    padding: 35px 0 45px;
+    text-align: center;
+
+    blockquote {
+        background: none;
+        @include font-size(1.4);
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: 768px) {
+            margin: 0 45px;
+        }
+
+        .inner-text {
+            &:before {
+                content: "\201C";
+            }
+
+            &:after {
+                content: "\201D";
+            }
+        }
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        cite {
+            color: #939393;
+            display: block;
+            @include font-size(1.0);
+            font: {
+                style: normal;
+            }
+            letter-spacing: .24em;
+            margin-top: 5px;
+            text-transform: uppercase;
+
+            a {
+                font: {
+                    style: italic;
+                }
+                text-transform: none;
+            }
+        }
+    }
+}

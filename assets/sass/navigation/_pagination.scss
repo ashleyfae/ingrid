@@ -1,0 +1,75 @@
+/* Archive Pagination */
+.pagination {
+    margin: 40px 0;
+
+    > li {
+
+        > a {
+            background: none;
+            border-color: transparent;
+            border-radius: 0 !important;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background: none;
+                border-color: transparent transparent #dedede;
+            }
+        }
+
+        &.current > a,
+        &.current > a:hover,
+        &.current > a:focus,
+        &.current > a:active {
+            background: none;
+            border-color: transparent transparent #dedede;
+            color: #a6a6a6;
+        }
+    }
+}
+
+/* Next/Previous Post Pagination */
+#post-pagination {
+    margin: 40px 0;
+
+    .row-same-height {
+        border: 1px solid #f1f1f1;
+        border-left: none;
+        border-right: none;
+    }
+
+    span {
+        color: #b3b3b3;
+        display: block;
+        @include font-size(1.0);
+        letter-spacing: .26em;
+        text-transform: uppercase;
+    }
+
+    a {
+        font: {
+            style: italic;
+        }
+        @include font-size(1.1);
+        letter-spacing: .075em;
+    }
+
+    .col-sm-6 {
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .col-sm-6 {
+            padding: 25px 15px 35px;
+        }
+
+        .previous-post {
+            text-align: left;
+        }
+
+        .next-post {
+            border-left: 1px solid #f1f1f1;
+            text-align: right;
+        }
+    }
+}

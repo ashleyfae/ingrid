@@ -1,0 +1,191 @@
+article.post, article.page {
+    margin-top: 40px;
+    padding-bottom: 60px;
+
+    .entry-title {
+        margin: 0 0 7px;
+    }
+
+    .entry-title, .entry-title a {
+        color: $color_post-titles;
+        @include font-size(1.6);
+        font: {
+            weight: normal;
+        }
+        letter-spacing: .05em;
+        text-align: center;
+        text-decoration: none;
+        text-transform: lowercase;
+    }
+
+    // Meta
+    .post-meta {
+        color: $color_meta;
+        font: {
+            family: $font_secondary;
+            style: italic;
+        }
+        @include font-size(1.0);
+        letter-spacing: .24em;
+        margin-bottom: 30px;
+        text-align: center;
+        text-transform: lowercase;
+
+        a {
+            color: $color_meta-links;
+            font: {
+                style: normal;
+            }
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    // Featured Image
+    .featured-image {
+        margin-bottom: 20px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+
+        &.with-effect:after {
+            content: '';
+            border-left: 400px solid white;
+            border-top: 100px solid transparent;
+            border-right: 400px solid white;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -400px;
+        }
+    }
+
+    // Entry Content
+    @media (min-width: 768px) {
+        .entry-content,
+        .entry-footer {
+            padding: 0 50px;
+        }
+    }
+
+    // Read More button
+    .readmore {
+        margin: 0 -50px;
+    }
+
+    // Footer
+    .entry-footer {
+        clear: both;
+        @include font-size(1.0);
+        overflow: hidden;
+
+        a,
+        .share-links {
+            letter-spacing: .26em;
+            text-transform: uppercase;
+        }
+
+        span {
+            color: #b3b3b3;
+            @include font-size(1.1);
+            display: block;
+            font: {
+                style: italic;
+            }
+            letter-spacing: .075em;
+            text-transform: lowercase;
+        }
+
+        .col-sm-6 {
+            text-align: center;
+        }
+
+        @media (min-width: 992px) {
+            .noah-social-share {
+                text-align: left;
+            }
+            .comment-link {
+                text-align: right;
+            }
+        }
+    }
+
+    /* Excerpt View */
+    &.excerpt-view {
+        padding-bottom: 10px;
+
+        .entry-title {
+            margin: 0 0 2px;
+            text-align: left;
+        }
+
+        .post-meta {
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        .entry-content {
+            padding: 0 !important;
+        }
+
+        // Thumbnail
+        .thumbnail-wrap {
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+
+            &.with-effect:after {
+                content: '';
+                border-left: 60px solid transparent;
+                border-top: 100px solid white;
+                border-bottom: 100px solid white;
+                border-right: 60px solid transparent;
+                position: absolute;
+                right: -60px;
+                top: -37px;
+            }
+        }
+    }
+}
+
+/* About the Author */
+.cw-about-author {
+    border-top: 1px solid #f1f1f1;
+    padding-top: 25px;
+
+    h4 {
+        @include font-size(1.4);
+        font: {
+            weight: normal;
+        }
+        letter-spacing: .26em;
+        text-transform: uppercase;
+    }
+
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Desktop Only */
+@media (min-width: 768px) {
+    article.post .meta-ribbon {
+        padding: 8px 0;
+
+        &:before {
+            background: url('assets/images/ribbon.png') no-repeat;
+            content: '';
+            height: 40px;
+            width: 67px;
+            position: absolute;
+            top:0;
+            right: 100%;
+        }
+    }
+}

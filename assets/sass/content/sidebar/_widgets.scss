@@ -1,0 +1,143 @@
+/* Social Media Widget */
+.widget.widget_noah_social_media {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            @include font-size(1.4);
+
+            a {
+                color: white;
+                display: block;
+                padding: 2px 3px 0;
+
+                &:hover {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+/* Icon Box Widget */
+.widget.widget_noah_icon_box {
+    .icon-wrapper {
+        color: #bebebe;
+        @include font-size(2.4);
+    }
+}
+
+/* Callout Widget */
+.widget.widget_noah_callout {
+    .widget-title {
+        color: #7b7b7b;
+        @include font-size(1.0);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .callout-wrapper {
+        @include font-size(1.0);
+        font: {
+            style: italic;
+        }
+        letter-spacing: .24em;
+        line-height: 1;
+        padding: 15px;
+        position: relative;
+        text-align: center;
+
+        .callout-link {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border: none;
+            }
+        }
+
+        span {
+            font: {
+                style: normal;
+            }
+            text-transform: uppercase;
+        }
+    }
+}
+
+.widget.widget_recent_entries,
+.widget.widget_noah_popular_posts {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            padding: 0 0 0 12px;
+            position: relative;
+
+            &:before {
+                content: '\f101';
+                font: {
+                    family: FontAwesome;
+                }
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+}
+
+/* Latest Comment */
+.widget.widget_noah_latest_comment {
+    .comment-author {
+        font: {
+            style: italic;
+        }
+        letter-spacing: .1em;
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                border: none;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* Search */
+.searchform {
+    position: relative;
+
+    .fa {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+}
+
+/* Browse Widget */
+.widget.widget_noah_browse {
+    .browse-wrap {
+        margin-bottom: 8px;
+        position: relative;
+
+        .fa-angle-double-down {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            z-index: 10;
+        }
+    }
+}

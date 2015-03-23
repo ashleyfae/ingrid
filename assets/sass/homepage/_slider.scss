@@ -1,0 +1,92 @@
+.flexslider {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        /*overflow: hidden;
+
+        &:before,
+        &:after {
+            content: '';
+            border-left: 150px solid transparent;
+            border-top: 300px solid #e4e4e4;
+            border-bottom: 300px solid #e4e4e4;
+            border-right: 150px solid transparent;
+            position: absolute;
+            top: -150px;
+            z-index: 4;
+        }
+
+        &:before {
+            left: -148px;
+        }
+
+        &:after {
+            right: -148px;
+        }*/
+
+        .flex-viewport {
+            &:before,
+            &:after {
+                content: '';
+                border-left: 150px solid transparent;
+                border-top: 300px solid white;
+                border-bottom: 300px solid white;
+                border-right: 150px solid transparent;
+                position: absolute;
+                top: -150px;
+                z-index: 5;
+            }
+
+            &:before {
+                left: -150px;
+            }
+
+            &:after {
+                right: -150px;
+            }
+        }
+
+        .slides {
+            .flex-active-slide {
+                overflow: hidden;
+                position: relative;
+
+                /*img {
+                    width: 800px;
+                    height: 300px;
+                }*/
+            }
+        }
+
+        /* Navigation */
+        .flex-direction-nav {
+            a {
+                background: rgba(255, 255, 255, .8);
+                margin: 0;
+                top: 0;
+                height: 100%;
+                width: 80px;
+                text-indent: -999999px;
+
+                &:before,
+                &:after {
+                    content: '' !important;
+                }
+
+                &:hover {
+                    border: 0;
+                }
+            }
+        }
+
+        &:hover {
+            .flex-prev {
+                left: 0 !important;
+            }
+            .flex-next {
+                right: 0 !important;
+            }
+        }
+    }
+}

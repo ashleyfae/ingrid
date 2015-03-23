@@ -1,0 +1,31 @@
+h1, h2, h3, h4, h5, h6 {
+    font: {
+        weight: normal;
+    }
+    letter-spacing: .2em;
+}
+
+h1 {
+    color: $color_post-titles;
+    @include font-size(1.6);
+    font: {
+        weight: normal;
+    }
+    letter-spacing: .05em;
+    text-align: center;
+    text-decoration: none;
+}
+
+h2, h3 {
+    color: #8a8a8a;
+    @include font-size(1.4);
+}
+
+h4, h5, h6 {
+    @include font-size(1.0);
+    font: {
+        weight: bold;
+    }
+    letter-spacing: .24em;
+    text-transform: uppercase;
+}

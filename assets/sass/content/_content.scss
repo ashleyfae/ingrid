@@ -1,0 +1,93 @@
+@media (min-width: 1200px) {
+    .container {
+        width: 830px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 830px;
+    }
+}
+
+.archive,
+.search,
+.error404 {
+    .site-main {
+        padding-bottom: 60px;
+    }
+}
+
+/* Equal height columns */
+
+.row-full-height {
+    height: 100%;
+}
+
+.col-full-height {
+    height: 100%;
+    vertical-align: middle;
+}
+
+.row-same-height {
+    display: table;
+    width: 100%;
+    /* fix overflow */
+    table-layout: fixed;
+}
+
+.col-xs-height {
+    display: table-cell;
+    float: none !important;
+}
+
+@media (min-width: 768px) {
+    .col-sm-height {
+        display: table-cell;
+        float: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-height {
+        display: table-cell;
+        float: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-height {
+        display: table-cell;
+        float: none !important;
+    }
+}
+
+/*--------------------------------------------------------------
+8.1 Header
+--------------------------------------------------------------*/
+@import "header";
+
+/*--------------------------------------------------------------
+8.2 Slide Out
+--------------------------------------------------------------*/
+@import "slide-out";
+
+/*--------------------------------------------------------------
+8.3 Posts and Pages
+--------------------------------------------------------------*/
+@import "main/posts-pages";
+
+/*--------------------------------------------------------------
+8.4 Comments
+--------------------------------------------------------------*/
+@import "main/comments";
+
+/*--------------------------------------------------------------
+8.5 Widgets
+--------------------------------------------------------------*/
+@import "sidebar/widgets";
+
+/*--------------------------------------------------------------
+8.6 Footer
+--------------------------------------------------------------*/
+@import "footer";

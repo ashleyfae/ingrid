@@ -1,0 +1,45 @@
+.btn,
+#commentform #submit,
+input[type="submit"] {
+    border-radius: 0;
+    border-style: solid;
+    @include font-size(1.0);
+    letter-spacing: .24em;
+    padding: 7px 12px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+
+    &.btn-primary {
+        background-color: #f1f1f1;
+        border-color: #f1f1f1;
+        color: #a6a6a6;
+
+        &:hover {
+            background-color: #f9f9f9;
+            border-color: #f9f9f9;
+            color: #a6a6a6;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+#commentform #submit, input[type="submit"] {
+    color: white;
+    display: block;
+    line-height: 1.42857143;
+    width: 100%;
+    text-align: right;
+
+    /*background-color: #f1f1f1;
+    border-color: #f1f1f1;
+    color: #a6a6a6;
+
+    &:hover {
+        background-color: #f9f9f9;
+        border-color: #f9f9f9;
+        color: #a6a6a6;
+    }*/
+}

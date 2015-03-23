@@ -1,0 +1,117 @@
+.navbar-noah {
+    margin: 0;
+
+    .navbar-nav {
+        > li {
+            > a {
+                color: $color_meta-links;
+                @include font-size(1.0);
+                letter-spacing: .24em;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover, &:focus, &:active {
+                    background: none;
+                    border-bottom-color: #e4e4e4;
+                    color: $color_post-titles;
+                }
+            }
+
+            &.open {
+                > a {
+                    border-bottom: 1px solid #e4e4e4;
+                }
+            }
+        }
+    }
+
+    .navbar-collapse {
+        box-shadow: none;
+    }
+
+    // Sub menu
+    .dropdown-menu {
+        background: white;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+
+        > li {
+            > a {
+                color: $color_meta-links;
+                @include font-size(1.0);
+                padding: 3px 15px;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+/* Center the navigation bar on desktops only */
+
+@media (min-width: 768px) {
+    .navbar-noah {
+        > .container {
+            padding-top: 15px;
+        }
+
+        .navbar-nav {
+            float: none;
+            text-align: center;
+
+            > li {
+                display: inline-block;
+                float: none;
+                margin: 0 5px;
+
+                > a {
+                    display: inline;
+                }
+
+                &.open {
+                    a {
+                        background: none;
+                    }
+                }
+
+                &:after {
+                    color: #e4e4e4;
+                    content: '/';
+                    font-size: 11px;
+                    margin-left: 10px;
+                }
+
+                &:last-child:after {
+                    display: none;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            top: 35px;
+        }
+    }
+}
+
+/* Mobile Only */
+@media (max-width: 767px) {
+    .navbar-collapse {
+        background: white;
+    }
+
+    .navbar-toggle {
+        background: $tan-light;
+        display: block;
+        float: none;
+        margin: 8px auto;
+
+        .icon-bar {
+            background: #a0998d;
+        }
+    }
+}

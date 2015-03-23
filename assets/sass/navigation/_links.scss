@@ -1,0 +1,19 @@
+a {
+    color: $color_links;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+        color: $color_links-hover;
+        border-bottom: 1px solid #dedede;
+        text-decoration: none;
+    }
+}
+
+:focus {
+    outline: none;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}

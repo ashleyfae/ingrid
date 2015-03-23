@@ -1,0 +1,181 @@
+@media (min-width: 768px) {
+    #comments {
+        padding: 0 50px;
+    }
+}
+
+.comments-title {
+    @include font-size(1.4);
+    margin: 0 0 75px;
+    text-align: center;
+    text-transform: uppercase;
+
+    > span {
+        color: #bfbfbf;
+        display: block;
+        @include font-size(1.0);
+        font: {
+            style: italic;
+        }
+        letter-spacing: .24em;
+        margin-top: 5px;
+        text-align: center;
+        text-transform: lowercase;
+
+        > span {
+            color: #a6a6a6;
+            font: {
+                style: normal;
+            }
+            text-transform: uppercase;
+        }
+    }
+}
+
+.comment-list {
+    list-style: none;
+    margin-bottom: 60px;
+    padding: 0;
+
+    .comment {
+        clear: both;
+        overflow: hidden;
+        position: relative;
+
+        /* Only affects top-level comments */
+        &.depth-1 {
+            border-bottom: 1px solid #f1f1f1;
+            margin-bottom: 20px;
+        }
+
+        /* Only affects second-level comments */
+        &.depth-2 {
+            padding-left: 75px;
+
+            &:before {
+                color: #e8e8e8;
+                content: '\f0da';
+                @include font-size(3.6);
+                font: {
+                    family: FontAwesome;
+                }
+                position: absolute;
+                top: 0;
+                left: 48px;
+            }
+        }
+
+        .comment-body {
+            clear: both;
+            overflow: hidden;
+            padding-bottom: 10px;
+
+            .avatar-wrap {
+                float: left;
+                width: 60px;
+                text-align: center;
+            }
+
+            /* Reply link */
+            .reply {
+                @include font-size(1.0);
+                letter-spacing: .24em;
+                margin-top: 13px;
+                text-transform: uppercase;
+            }
+
+            /* Wrap around the comment body */
+            .comment-content-wrap {
+                margin-left: 75px;
+
+                p {
+                    @include font-size(1.2);
+                }
+            }
+
+            /* Comment date */
+            .comment-meta {
+                line-height: 1;
+
+                a {
+                    color: $color_meta;
+                    @include font-size(1.0);
+                    letter-spacing: .24em;
+                    line-height: 1;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+
+            /* Comment author name */
+            .comment-author {
+                color: $color_meta-links;
+                @include font-size(1.1);
+                letter-spacing: .24em;
+                line-height: 1;
+                margin: 3px 0 10px;
+                text-transform: uppercase;
+
+                .fn {
+                    font-style: normal;
+                }
+
+                .says {
+                }
+            }
+        }
+    }
+
+    .children {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+/* Form */
+#respond {
+    #reply-title {
+        margin-bottom: 2px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .comment-notes,
+    .logged-in-as {
+        color: #bfbfbf;
+        @include font-size(1.0);
+        font: {
+            style: italic;
+        }
+        letter-spacing: .24em;
+        text-align: center;
+        text-transform: lowercase;
+    }
+
+    .row {
+        margin: 0 -4px;
+    }
+
+    .col-md-4 {
+        padding: 0 4px;
+    }
+
+    input[type="text"] {
+        letter-spacing: .05em;
+
+        &::-webkit-input-placeholder {
+            text-transform: uppercase;
+        }
+        ::-moz-placeholder {
+            text-transform: uppercase;
+        }
+    }
+
+    textarea {
+        letter-spacing: .01em;
+    }
+
+    .form-group {
+        margin-bottom: 8px;
+    }
+}
