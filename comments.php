@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */
@@ -28,7 +28,7 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 			<?php
 			printf(
-				_nx( '1 comment %2$s', '%1$s comments %2$s', get_comments_number(), 'comments title', 'noah' ),
+				_nx( '1 comment %2$s', '%1$s comments %2$s', get_comments_number(), 'comments title', 'ingrid' ),
 				number_format_i18n( get_comments_number() ),
 				'<span>on <span>&ldquo;' . get_the_title() . '&rdquo;</span></span>'
 			);
@@ -37,10 +37,10 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 			<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'noah' ); ?></h1>
+				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'ingrid' ); ?></h1>
 
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'noah' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'noah' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'ingrid' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'ingrid' ) ); ?></div>
 			</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
@@ -57,10 +57,10 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 			<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-				<h3 class="screen-reader-text"><?php _e( 'Comment navigation', 'noah' ); ?></h3>
+				<h3 class="screen-reader-text"><?php _e( 'Comment navigation', 'ingrid' ); ?></h3>
 
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'noah' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'noah' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'ingrid' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'ingrid' ) ); ?></div>
 			</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
@@ -70,7 +70,7 @@ if ( post_password_required() ) {
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
-		<div class="no-comments alert alert-warning text-center"><?php _e( 'Comments are closed.', 'noah' ); ?></div>
+		<div class="no-comments alert alert-warning text-center"><?php _e( 'Comments are closed.', 'ingrid' ); ?></div>
 	<?php endif; ?>
 
 	<?php
@@ -85,27 +85,27 @@ if ( post_password_required() ) {
 	$comment_notes_after  = ng_option( 'comment_notes_after' );
 
 	$args = array(
-		'comment_field'        => '<div class="form-group"><textarea name="comment" id="comment" class="form-control" placeholder="' . sprintf( __( 'What did you think of &ldquo;%1$s&rdquo;?', 'noah' ), get_the_title() ) . '" tabindex="4" aria-required="true" rows="12"></textarea></div>',
+		'comment_field'        => '<div class="form-group"><textarea name="comment" id="comment" class="form-control" placeholder="' . sprintf( __( 'What did you think of &ldquo;%1$s&rdquo;?', 'ingrid' ), get_the_title() ) . '" tabindex="4" aria-required="true" rows="12"></textarea></div>',
 		'comment_notes_before' => ( ! empty( $comment_notes_before ) ) ? '<p class="comment-notes">' . $comment_notes_before . '</p>' : '',
 		'comment_notes_after'  => ( ! empty( $comment_notes_after ) ) ? '<p class="text-center comment-notes-after">' . $comment_notes_after . '</p>' : '',
-		'title_reply'          => __( 'Leave a Comment', 'noah' ),
-		'label_submit'         => __( 'Submit', 'noah' ),
+		'title_reply'          => __( 'Leave a Comment', 'ingrid' ),
+		'label_submit'         => __( 'Submit', 'ingrid' ),
 		'fields'               => apply_filters( 'comment_form_default_fields', array(
 			'author' =>
 				'<div class="row">' .
 				'<div class="col-md-4 form-group">' .
-				'<label for="author" class="screen-reader-text">' . __( 'Name', 'noah' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-				'<input type="text" class="form-control" name="author" id="author" value="' . esc_attr( $commenter['comment_author'] ) . '" placeholder="' . __( 'Name', 'noah' ) . '" tabindex="1"' . $aria_req . '>' .
+				'<label for="author" class="screen-reader-text">' . __( 'Name', 'ingrid' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+				'<input type="text" class="form-control" name="author" id="author" value="' . esc_attr( $commenter['comment_author'] ) . '" placeholder="' . __( 'Name', 'ingrid' ) . '" tabindex="1"' . $aria_req . '>' .
 				'</div>',
 			'email'  =>
 				'<div class="col-md-4 form-group">' .
-				'<label for="email" class="screen-reader-text">' . __( 'Email', 'noah' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-				'<input type="text" class="form-control" name="email" id="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" placeholder="' . __( 'Email', 'noah' ) . '" tabindex="2"' . $aria_req . '>' .
+				'<label for="email" class="screen-reader-text">' . __( 'Email', 'ingrid' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+				'<input type="text" class="form-control" name="email" id="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" placeholder="' . __( 'Email', 'ingrid' ) . '" tabindex="2"' . $aria_req . '>' .
 				'</div>',
 			'url'    =>
 				'<div class="col-md-4 form-group">' .
-				'<label for="url" class="screen-reader-text">' . __( 'Website', 'noah' ) . '</label> ' .
-				'<input type="text" class="form-control" name="url" id="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="' . __( 'URL', 'noah' ) . '" tabindex="3">' .
+				'<label for="url" class="screen-reader-text">' . __( 'Website', 'ingrid' ) . '</label> ' .
+				'<input type="text" class="form-control" name="url" id="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="' . __( 'URL', 'ingrid' ) . '" tabindex="3">' .
 				'</div>' .
 				'</div>',
 		) )

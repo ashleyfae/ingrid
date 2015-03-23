@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */
@@ -19,7 +19,7 @@
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'noah' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'ingrid' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -27,7 +27,7 @@
 	<!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'noah' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'ingrid' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer>
 	<!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -2,7 +2,7 @@
 /**
  * This is the main content template.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */
@@ -36,7 +36,7 @@
 
 	<footer class="entry-footer">
 		<div class="readmore">
-			<a href="<?php get_permalink(); ?>" class="btn btn-primary btn-block"><?php _e( 'Continue Reading', 'noah' ); ?></a>
+			<a href="<?php get_permalink(); ?>" class="btn btn-primary btn-block"><?php _e( 'Continue Reading', 'ingrid' ); ?></a>
 		</div>
 	</footer>
 	<!-- .entry-footer -->

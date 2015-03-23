@@ -2,7 +2,7 @@
 /**
  * Settings for the WordPress Customizer.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */
@@ -33,8 +33,8 @@ function ng_theme_customizer_settings( $options ) {
 			 * Codex - http://codex.wordpress.org/Class_Reference/WP_Customize_Manager/add_section
 			 */
 			'args'             => array(
-				'title'       => __( 'Slide Out Panel', 'noah' ),
-				'description' => __( 'Modify the slide panel at the top of the page.', 'noah' ),
+				'title'       => __( 'Slide Out Panel', 'ingrid' ),
+				'description' => __( 'Modify the slide panel at the top of the page.', 'ingrid' ),
 				'priority'    => 100
 			),
 			'fields'           => array(
@@ -48,17 +48,17 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Panel Content &amp; Visibility', 'noah' ),
+						'label'    => __( 'Panel Content &amp; Visibility', 'ingrid' ),
 						'type'     => 'select',
 						'choices'  => array(
 							'widget'   => array(
-								'label' => __( 'Widget Area (toggle)', 'noah' ),
+								'label' => __( 'Widget Area (toggle)', 'ingrid' ),
 							),
 							'inactive' => array(
-								'label' => __( 'Social Media &amp; Search (no toggle)', 'noah' ),
+								'label' => __( 'Social Media &amp; Search (no toggle)', 'ingrid' ),
 							),
 							'disabled' => array(
-								'label' => __( 'Disabled (hidden)', 'noah' ),
+								'label' => __( 'Disabled (hidden)', 'ingrid' ),
 							)
 						),
 						'priority' => 1
@@ -73,7 +73,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Slide Out Background Colour', 'noah' ),
+						'label'    => __( 'Slide Out Background Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 4
 					)
@@ -87,7 +87,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Slide Out Border Colour', 'noah' ),
+						'label'    => __( 'Slide Out Border Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 5
 					)
@@ -101,7 +101,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Slide Out Text Colour', 'noah' ),
+						'label'    => __( 'Slide Out Text Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 6
 					)
@@ -115,7 +115,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Slide Out Link Colour', 'noah' ),
+						'label'    => __( 'Slide Out Link Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 7
 					)
@@ -129,7 +129,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Slide Out Text Box Background Colour', 'noah' ),
+						'label'    => __( 'Slide Out Text Box Background Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 8
 					)
@@ -144,8 +144,8 @@ function ng_theme_customizer_settings( $options ) {
 		'blog_layout'        => array(
 			'existing_section' => false,
 			'args'             => array(
-				'title'       => __( 'Blog Layout', 'noah' ),
-				'description' => __( 'Configure the blog layout.', 'noah' ),
+				'title'       => __( 'Blog Layout', 'ingrid' ),
+				'description' => __( 'Configure the blog layout.', 'ingrid' ),
 				'priority'    => 101
 			),
 			'fields'           => array(
@@ -157,14 +157,14 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Archive Post Display', 'noah' ),
+						'label'    => __( 'Archive Post Display', 'ingrid' ),
 						'type'     => 'radio',
 						'choices'  => array(
 							'excerpts' => array(
-								'label' => __( 'Excerpts', 'noah' ),
+								'label' => __( 'Excerpts', 'ingrid' ),
 							),
 							'single'   => array(
-								'label' => __( 'Full Posts', 'noah' )
+								'label' => __( 'Full Posts', 'ingrid' )
 							)
 						),
 						'priority' => 1
@@ -178,7 +178,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Automatically Add Featured Image', 'noah' ),
+						'label'    => __( 'Automatically Add Featured Image', 'ingrid' ),
 						'type'     => 'checkbox',
 						'priority' => 2
 					)
@@ -191,20 +191,20 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Disable Featured Image Effect', 'noah' ),
+						'label'    => __( 'Disable Featured Image Effect', 'ingrid' ),
 						'type'     => 'checkbox',
 						'priority' => 3
 					)
 				),
 				'comment_notes_before' => array(
 					'setting_args' => array(
-						'default'    => __( 'Some HTML allowed, please do not include links to your site in comments', 'noah' ),
+						'default'    => __( 'Some HTML allowed, please do not include links to your site in comments', 'ingrid' ),
 						'type'       => 'option',
 						'capability' => $thsp_cbp_capability,
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Notes Before the Comment Form', 'noah' ),
+						'label'    => __( 'Notes Before the Comment Form', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 10
 					)
@@ -217,7 +217,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Notes After the Comment Form', 'noah' ),
+						'label'    => __( 'Notes After the Comment Form', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 11
 					)
@@ -230,8 +230,8 @@ function ng_theme_customizer_settings( $options ) {
 		'testimonials'       => array(
 			'existing_section' => false,
 			'args'             => array(
-				'title'       => __( 'Testimonials', 'noah' ),
-				'description' => __( 'You can use the testimonials feature to showcase quotes from your clients/customers.', 'noah' ),
+				'title'       => __( 'Testimonials', 'ingrid' ),
+				'description' => __( 'You can use the testimonials feature to showcase quotes from your clients/customers.', 'ingrid' ),
 				'priority'    => 190
 			),
 			'fields'           => array(
@@ -243,17 +243,17 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Display Testimonials On:', 'noah' ),
+						'label'    => __( 'Display Testimonials On:', 'ingrid' ),
 						'type'     => 'select',
 						'choices'  => array(
 							'pages' => array(
-								'label' => __( 'All Pages', 'noah' )
+								'label' => __( 'All Pages', 'ingrid' )
 							),
 							'home'  => array(
-								'label' => __( 'Static Homepage Only', 'noah' )
+								'label' => __( 'Static Homepage Only', 'ingrid' )
 							),
 							'none'  => array(
-								'label' => __( 'None (Disabled)', 'noah' )
+								'label' => __( 'None (Disabled)', 'ingrid' )
 							)
 						),
 						'priority' => 90
@@ -267,8 +267,8 @@ function ng_theme_customizer_settings( $options ) {
 		'social_media'       => array(
 			'existing_section' => false,
 			'args'             => array(
-				'title'       => __( 'Social Media', 'noah' ),
-				'description' => __( 'Enter the URLs for your social media profiles. These may be used in the layout and/or in a custom widget.', 'noah' ),
+				'title'       => __( 'Social Media', 'ingrid' ),
+				'description' => __( 'Enter the URLs for your social media profiles. These may be used in the layout and/or in a custom widget.', 'ingrid' ),
 				'priority'    => 200
 			),
 			'fields'           => array(
@@ -281,7 +281,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Twitter URL', 'noah' ),
+						'label'    => __( 'Twitter URL', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 2
 					)
@@ -295,7 +295,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Facebook URL', 'noah' ),
+						'label'    => __( 'Facebook URL', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 3
 					)
@@ -309,7 +309,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Pinterest URL', 'noah' ),
+						'label'    => __( 'Pinterest URL', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 4
 					)
@@ -323,7 +323,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Tumblr URL', 'noah' ),
+						'label'    => __( 'Tumblr URL', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 5
 					)
@@ -337,7 +337,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Google+ URL', 'noah' ),
+						'label'    => __( 'Google+ URL', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 6
 					)
@@ -351,7 +351,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Dribbble URL', 'noah' ),
+						'label'    => __( 'Dribbble URL', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 7
 					)
@@ -365,7 +365,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Last.fm URL', 'noah' ),
+						'label'    => __( 'Last.fm URL', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 8
 					)
@@ -379,7 +379,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Spotify URL', 'noah' ),
+						'label'    => __( 'Spotify URL', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 9
 					)
@@ -393,7 +393,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Bloglovin\' URL', 'noah' ),
+						'label'    => __( 'Bloglovin\' URL', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 10
 					)
@@ -407,7 +407,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Email Address or Contact Page URL', 'noah' ),
+						'label'    => __( 'Email Address or Contact Page URL', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 11
 					)
@@ -421,7 +421,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'RSS URL', 'noah' ),
+						'label'    => __( 'RSS URL', 'ingrid' ),
 						'type'     => 'text',
 						'priority' => 12
 					)
@@ -443,7 +443,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Paragraph Text', 'noah' ),
+						'label'    => __( 'Paragraph Text', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 1
 					)
@@ -457,7 +457,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Link Colour', 'noah' ),
+						'label'    => __( 'Link Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 2
 					)
@@ -471,7 +471,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Link Colour - Hover', 'noah' ),
+						'label'    => __( 'Link Colour - Hover', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 3
 					)
@@ -485,7 +485,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Footer Background Colour', 'noah' ),
+						'label'    => __( 'Footer Background Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 4
 					)
@@ -499,7 +499,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Footer Border Colour', 'noah' ),
+						'label'    => __( 'Footer Border Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 5
 					)
@@ -513,7 +513,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Footer Text Colour', 'noah' ),
+						'label'    => __( 'Footer Text Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 6
 					)
@@ -527,7 +527,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Footer Link Colour', 'noah' ),
+						'label'    => __( 'Footer Link Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 7
 					)
@@ -541,7 +541,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Footer Text Box Background Colour', 'noah' ),
+						'label'    => __( 'Footer Text Box Background Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 8
 					)
@@ -555,7 +555,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Footer Credits Background Colour', 'noah' ),
+						'label'    => __( 'Footer Credits Background Colour', 'ingrid' ),
 						'type'     => 'color',
 						'priority' => 9
 					)
@@ -576,7 +576,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Display image slider on Static Homepage', 'noah' ),
+						'label'    => __( 'Display image slider on Static Homepage', 'ingrid' ),
 						'type'     => 'checkbox',
 						'priority' => 20
 					)
@@ -590,8 +590,8 @@ function ng_theme_customizer_settings( $options ) {
 
 			'existing_section' => false,
 			'args'             => array(
-				'title'       => __( 'Custom CSS', 'noah' ),
-				'description' => __( 'Use this space to insert custom CSS into the theme.', 'noah' ),
+				'title'       => __( 'Custom CSS', 'ingrid' ),
+				'description' => __( 'Use this space to insert custom CSS into the theme.', 'ingrid' ),
 				'priority'    => 201
 			),
 			'fields'           => array(
@@ -604,7 +604,7 @@ function ng_theme_customizer_settings( $options ) {
 						'transport'  => 'refresh',
 					),
 					'control_args' => array(
-						'label'    => __( 'Enter your CSS', 'noah' ),
+						'label'    => __( 'Enter your CSS', 'ingrid' ),
 						'type'     => 'textarea', // Textarea control
 						'priority' => 1
 					)

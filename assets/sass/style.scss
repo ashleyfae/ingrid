@@ -1,14 +1,14 @@
 /*
-Theme Name: Noah
-Theme URI: https://creativewhim.com/shop/noah-theme/
-Author: Anna Moore and Creative Whim
+Theme Name: Ingrid
+Theme URI: https://creativewhim.com/shop/ingrid-theme/
+Author: Anna Moore and Nose Graze
 Author URI: http://annamariemoore.com/
 Description: A simple, feminine theme without a sidebar.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: noah
-Tags:
+Text Domain: ingrid
+Tags: one-column, responsive-layout, custom-header, custom-menu, editor-style, featured-image-header, featured-images, threaded-comments, translation-ready, black, green, pink, white
 */
 
 /*--------------------------------------------------------------
@@ -33,16 +33,10 @@ Tags:
 7.0 Clearings
 8.0 Content
     8.1 Header
-    8.2 Slide Out
     8.3 Posts and Pages
     8.4 Comments
     8.5 Widgets
     8.6 Footer
-9.0 Static Homepage
-    9.1 Image Slider
-    9.2 Three Column Widget Area
-    9.3 Full Width Widget Area
-    9.4 Testimonials
 --------------------------------------------------------------*/
 
 @import "variables/variables";
@@ -87,8 +81,3 @@ Tags:
 8.0 Content
 --------------------------------------------------------------*/
 @import "content/content";
-
-/*--------------------------------------------------------------
-9.0 Homepage
---------------------------------------------------------------*/
-@import "homepage/homepage";

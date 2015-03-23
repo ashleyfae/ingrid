@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */
@@ -25,7 +25,7 @@ get_template_part( 'inc/template-parts/home', 'testimonial' );
 		<div class="container">
 			<div class="row">
 				<div id="website-copyright" class="col-md-5">
-					<?php printf( __( 'Copyright &copy; %s. All Rights Reserved.', 'noah' ), get_bloginfo( 'name' ) ); ?>
+					<?php printf( __( 'Copyright &copy; %s. All Rights Reserved.', 'ingrid' ), get_bloginfo( 'name' ) ); ?>
 				</div>
 
 				<div id="footer-heart" class="col-md-2 text-center">
@@ -35,10 +35,10 @@ get_template_part( 'inc/template-parts/home', 'testimonial' );
 				<div id="design-credits" class="col-md-5">
 					<?php
 					printf( '<a href="https://creativewhim.com/shop/noah-theme/" target="_blank">%1s</a> %2s <a href="http://annamariemoore.com/" target="_blank">%3s</a> + <a href="https://www.nosegraze.com" target="_blank">%4s</a>.',
-						__( 'Noah Theme', 'noah' ),
-						__( 'by', 'noah' ),
-						__( 'Anna Moore', 'noah' ),
-						__( 'Nose Graze', 'noah' )
+						__( 'Noah Theme', 'ingrid' ),
+						__( 'by', 'ingrid' ),
+						__( 'Anna Moore', 'ingrid' ),
+						__( 'Nose Graze', 'ingrid' )
 					);
 					?>
 				</div>

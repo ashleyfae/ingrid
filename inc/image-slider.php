@@ -13,23 +13,23 @@
 function ng_register_slider_post_type() {
 
 	$labels = array(
-		'name'               => _x( 'Sliders', 'Post Type General Name', 'noah' ),
-		'singular_name'      => _x( 'Slider', 'Post Type Singular Name', 'noah' ),
-		'menu_name'          => __( 'Image Slider', 'noah' ),
-		'parent_item_colon'  => __( 'Parent Slide:', 'noah' ),
-		'all_items'          => __( 'All Slides', 'noah' ),
-		'view_item'          => __( 'View Slide', 'noah' ),
-		'add_new_item'       => __( 'Add New Slide', 'noah' ),
-		'add_new'            => __( 'Add New', 'noah' ),
-		'edit_item'          => __( 'Edit Slide', 'noah' ),
-		'update_item'        => __( 'Update Slide', 'noah' ),
-		'search_items'       => __( 'Search Slide', 'noah' ),
-		'not_found'          => __( 'Not found', 'noah' ),
-		'not_found_in_trash' => __( 'Not found in Trash', 'noah' ),
+		'name'               => _x( 'Sliders', 'Post Type General Name', 'ingrid' ),
+		'singular_name'      => _x( 'Slider', 'Post Type Singular Name', 'ingrid' ),
+		'menu_name'          => __( 'Image Slider', 'ingrid' ),
+		'parent_item_colon'  => __( 'Parent Slide:', 'ingrid' ),
+		'all_items'          => __( 'All Slides', 'ingrid' ),
+		'view_item'          => __( 'View Slide', 'ingrid' ),
+		'add_new_item'       => __( 'Add New Slide', 'ingrid' ),
+		'add_new'            => __( 'Add New', 'ingrid' ),
+		'edit_item'          => __( 'Edit Slide', 'ingrid' ),
+		'update_item'        => __( 'Update Slide', 'ingrid' ),
+		'search_items'       => __( 'Search Slide', 'ingrid' ),
+		'not_found'          => __( 'Not found', 'ingrid' ),
+		'not_found_in_trash' => __( 'Not found in Trash', 'ingrid' ),
 	);
 	$args   = array(
-		'label'               => __( 'ng_slider', 'noah' ),
-		'description'         => __( 'Create an image slider', 'noah' ),
+		'label'               => __( 'ng_slider', 'ingrid' ),
+		'description'         => __( 'Create an image slider', 'ingrid' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'thumbnail', ),
 		'hierarchical'        => false,
@@ -61,10 +61,10 @@ add_action( 'init', 'ng_register_slider_post_type', 0 );
 function ng_move_slider_featured_image_meta() {
 	// Featured Image Box
 	remove_meta_box( 'postimagediv', 'cw_slider', 'side' );
-	add_meta_box( 'postimagediv', __( 'Slider Image', 'noah' ), 'post_thumbnail_meta_box', 'ng_slider', 'normal', 'high' );
+	add_meta_box( 'postimagediv', __( 'Slider Image', 'ingrid' ), 'post_thumbnail_meta_box', 'ng_slider', 'normal', 'high' );
 
 	// Link
-	add_meta_box( 'cw_slider_link', __( 'Link URL', 'noah' ), 'ng_slider_url_metabox_cb', 'ng_slider', 'normal', 'high' );
+	add_meta_box( 'cw_slider_link', __( 'Link URL', 'ingrid' ), 'ng_slider_url_metabox_cb', 'ng_slider', 'normal', 'high' );
 }
 
 add_action( 'add_meta_boxes', 'ng_move_slider_featured_image_meta' );
@@ -91,8 +91,8 @@ add_action( 'admin_head-post.php', 'ng_changed_slider_html' );
  * @return string
  */
 function ng_slider_featured_image_label( $content ) {
-	$content = str_replace( __( 'Set featured image' ), __( 'Add slider image', 'noah' ), $content );
-	$content = str_replace( __( 'Remove featured image' ), __( 'Remove slider image', 'noah' ), $content );
+	$content = str_replace( __( 'Set featured image' ), __( 'Add slider image', 'ingrid' ), $content );
+	$content = str_replace( __( 'Remove featured image' ), __( 'Remove slider image', 'ingrid' ), $content );
 
 	return $content;
 }
@@ -109,7 +109,7 @@ function ng_slider_url_metabox_cb( $post ) {
 	$link = get_post_meta( $post->ID, 'ng_slider_link', true );
 
 	?>
-	<p><label for="ng_slider_link"><?php _e('Enter a URL you\'d like the slide to link to:', 'noah'); ?></label></p>
+	<p><label for="ng_slider_link"><?php _e('Enter a URL you\'d like the slide to link to:', 'ingrid'); ?></label></p>
 	<input type="url" id="ng_slider_link" name="ng_slider_link" value="<?php echo esc_attr( $link ); ?>" style="width:300px" placeholder="http://">
 <?php
 }

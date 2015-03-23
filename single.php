@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */

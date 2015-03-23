@@ -51,7 +51,7 @@ function ng_theme_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', 'noah' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'ingrid' ), max( $paged, $page ) );
 	}
 
 	return $title;
@@ -113,12 +113,9 @@ function ng_option( $key ) {
 function ng_theme_navigation() {
 	wp_nav_menu(
 		array(
-			'menu'           => 'main_menu',
-			'menu_class'     => 'nav navbar-nav',
 			'theme_location' => 'main_menu',
 			'container'      => false,
 			'depth'          => '2',
-			'walker'         => new main_navigation_walker()
 		)
 	);
 }
@@ -147,99 +144,6 @@ function ng_theme_current_to_active( $text ) {
 add_filter( 'wp_nav_menu', 'ng_theme_current_to_active' );
 
 /**
- * Prevents the "Blog" item from always being shown as active
- * even if you're not on the blog page.
- *
- * @param $classes
- * @param $item
- *
- * @return mixed
- */
-function ng_theme_fix_blog_tab( $classes, $item ) {
-	if ( ! is_singular( 'post' ) && ! is_category() && ! is_tag() ) {
-		$blog_page_id = intval( get_option( 'page_for_posts' ) );
-		if ( $blog_page_id != 0 ) {
-			if ( $item->object_id == $blog_page_id ) {
-				unset( $classes[ array_search( 'current_page_parent', $classes ) ] );
-			}
-		}
-	}
-
-	return $classes;
-}
-
-add_filter( 'nav_menu_css_class', 'ng_theme_fix_blog_tab', 10, 3 );
-
-/**
- * Class main_navigation_walker
- *
- * This modifies the layout of the navigation menu to make it
- * more compatible with Bootstrap.
- */
-class main_navigation_walker extends Walker_Nav_Menu {
-	function start_el( &$output, $item, $depth = 0, $args = array(), $current_object_id = 0 ) {
-		global $wp_query;
-		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-
-		$class_names = $value = '';
-
-		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-
-		$class_names .= join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-
-		// if the item has children, add the class "dropdown"
-		if ( $args->has_children ) {
-			$extra_class = ' dropdown';
-		} else {
-			$extra_class = '';
-		}
-		$class_names = ' class="' . esc_attr( $class_names ) . $extra_class . '"';
-
-		$output .= $indent . '<li id="menu-item-' . $item->ID . '"' . $value . $class_names . '>';
-
-		$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) . '"' : '';
-		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) . '"' : '';
-		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) . '"' : '';
-		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
-		// if the item has children add these two attributes to the anchor tag
-		if ( $args->has_children ) {
-			$attributes .= 'class="dropdown-toggle" data-toggle="dropdown"';
-		}
-
-		$item_output = $args->before;
-		$item_output .= '<a' . $attributes . '>';
-		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID );
-		$item_output .= $args->link_after;
-		// if the item has children add the caret just before closing the anchor tag
-		if ( $args->has_children ) {
-			$item_output .= ' <span class="caret"></span>';
-		}
-		$item_output .= '</a>' . $args->after;
-
-		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-	}
-
-	function start_lvl( &$output, $depth = 0, $args = array() ) {
-		$indent = str_repeat( "\t", $depth );
-		$output .= "\n$indent<ul class=\"dropdown-menu\">\n";
-	}
-
-	function end_lvl( &$output, $depth = 0, $args = array() ) {
-		$indent = str_repeat( "\t", $depth );
-		$output .= "\n$indent</ul>\n";
-	}
-
-	function display_element( $element, &$children_elements, $max_depth, $depth = 0, $args, &$output ) {
-		$id_field = $this->db_fields['id'];
-		if ( is_object( $args[0] ) ) {
-			$args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] );
-		}
-
-		return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-	}
-}
-
-/**
  * Filters the display of the search form.
  *
  * @param string $form The default search form HTML.
@@ -250,7 +154,7 @@ function ng_theme_search_form( $form ) {
 	$form = '
 	<form role="search" method="get" class="searchform" action="' . home_url( '/' ) . '">
 		<i class="fa fa-angle-double-right"></i>
-		<input type="search" class="search-field" placeholder="' . esc_attr_x( 'keyword + enter', 'placeholder', 'noah' ) . '" value="' . get_search_query() . '" name="s" title="' . esc_attr_x( 'Search the blog', 'placeholder', 'noah' ) . '">
+		<input type="search" class="search-field" placeholder="' . esc_attr_x( 'keyword + enter', 'placeholder', 'ingrid' ) . '" value="' . get_search_query() . '" name="s" title="' . esc_attr_x( 'Search the blog', 'placeholder', 'ingrid' ) . '">
 	</form>
 	';
 
@@ -306,7 +210,7 @@ function ng_theme_comment_layout( $comment, $args, $depth ) {
 			<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
 				<?php echo get_comment_date(); ?>
 			</a>
-			<?php edit_comment_link( __( '(Edit)', 'noah' ), '  ', '' );
+			<?php edit_comment_link( __( '(Edit)', 'ingrid' ), '  ', '' );
 			?>
 		</div>
 
@@ -315,7 +219,7 @@ function ng_theme_comment_layout( $comment, $args, $depth ) {
 		</div>
 
 		<?php if ( $comment->comment_approved == '0' ) : ?>
-			<div class="comment-awaiting-moderation alert alert-warning"><?php _e( 'Your comment is awaiting moderation.', 'noah' ); ?></div>
+			<div class="comment-awaiting-moderation alert alert-warning"><?php _e( 'Your comment is awaiting moderation.', 'ingrid' ); ?></div>
 		<?php endif; ?>
 
 		<?php comment_text(); ?>

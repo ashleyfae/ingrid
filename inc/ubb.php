@@ -4,7 +4,7 @@
  * Functions in this file are used on the taxonomy.php
  * archive page.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */

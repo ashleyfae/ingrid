@@ -4,7 +4,7 @@
  * This is primarily used to customize the Ultimate Book Blogger
  * archives.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */
@@ -39,19 +39,19 @@ if ( function_exists( 'ubb_get_values' ) && function_exists( 'get_tax_meta' ) ) 
 	$author_good   = get_tax_meta( $term->term_id, '_ubb_author_goodreads', true );
 
 	if ( ! empty( $author_web ) ) {
-		$author_fields['website'] = '<a href="' . $author_web . '" target="_blank">' . __( 'Website', 'noah' ) . '</a>';
+		$author_fields['website'] = '<a href="' . $author_web . '" target="_blank">' . __( 'Website', 'ingrid' ) . '</a>';
 	}
 	if ( ! empty( $author_blog ) ) {
-		$author_fields['blog'] = '<a href="' . $author_blog . '" target="_blank">' . __( 'Blog', 'noah' ) . '</a>';
+		$author_fields['blog'] = '<a href="' . $author_blog . '" target="_blank">' . __( 'Blog', 'ingrid' ) . '</a>';
 	}
 	if ( ! empty( $author_twit ) ) {
-		$author_fields['twitter'] = '<a href="http://www.twitter.com/' . $author_twit . '" target="_blank">' . __( 'Twitter', 'noah' ) . '</a>';
+		$author_fields['twitter'] = '<a href="http://www.twitter.com/' . $author_twit . '" target="_blank">' . __( 'Twitter', 'ingrid' ) . '</a>';
 	}
 	if ( ! empty( $author_face ) ) {
-		$author_fields['facebook'] = '<a href="' . $author_face . '" target="_blank">' . __( 'Facebook', 'noah' ) . '</a>';
+		$author_fields['facebook'] = '<a href="' . $author_face . '" target="_blank">' . __( 'Facebook', 'ingrid' ) . '</a>';
 	}
 	if ( ! empty( $author_good ) ) {
-		$author_fields['goodreads'] = '<a href="' . $author_good . '" target="_blank">' . __( 'Goodreads', 'noah' ) . '</a>';
+		$author_fields['goodreads'] = '<a href="' . $author_good . '" target="_blank">' . __( 'Goodreads', 'ingrid' ) . '</a>';
 	}
 	$final_author_fields = '';
 	if ( count( $author_fields ) > 0 ) {
@@ -64,7 +64,7 @@ if ( function_exists( 'ubb_get_values' ) && function_exists( 'get_tax_meta' ) ) 
 	// Get the average rating for all posts in this term.
 	$average_rating = ng_ubb_avg_rating( get_query_var( 'taxonomy' ), $term );
 	if ( ! empty( $average_rating ) ) {
-		echo '<h2 class="text-center">' . __( 'Average rating for these reviews: ', 'noah' ) . $average_rating . '</h2>';
+		echo '<h2 class="text-center">' . __( 'Average rating for these reviews: ', 'ingrid' ) . $average_rating . '</h2>';
 	}
 
 	echo '<hr>';

@@ -1,14 +1,14 @@
 /*
-Theme Name: Noah
-Theme URI: https://creativewhim.com/shop/noah-theme/
-Author: Anna Moore and Creative Whim
+Theme Name: Ingrid
+Theme URI: https://creativewhim.com/shop/ingrid-theme/
+Author: Anna Moore and Nose Graze
 Author URI: http://annamariemoore.com/
 Description: A simple, feminine theme without a sidebar.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: noah
-Tags:
+Text Domain: ingrid
+Tags: one-column, responsive-layout, custom-header, custom-menu, editor-style, featured-image-header, featured-images, threaded-comments, translation-ready, black, green, pink, white
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -32,16 +32,10 @@ Tags:
 7.0 Clearings
 8.0 Content
     8.1 Header
-    8.2 Slide Out
     8.3 Posts and Pages
     8.4 Comments
     8.5 Widgets
     8.6 Footer
-9.0 Static Homepage
-    9.1 Image Slider
-    9.2 Three Column Widget Area
-    9.3 Full Width Widget Area
-    9.4 Testimonials
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Typography
@@ -1134,137 +1128,5 @@ article.post, article.page {
     @media (min-width: 992px) {
       #footer #design-credits {
         text-align: right; } }
-
-/*--------------------------------------------------------------
-9.0 Homepage
---------------------------------------------------------------*/
-.page-template-homepage article.page {
-  padding-bottom: 0; }
-
-/*--------------------------------------------------------------
-9.1 Image Slider
---------------------------------------------------------------*/
-.flexslider {
-  display: none; }
-  @media screen and (min-width: 768px) {
-    .flexslider {
-      display: block;
-        /*overflow: hidden;
-
-        &:before,
-        &:after {
-            content: '';
-            border-left: 150px solid transparent;
-            border-top: 300px solid #e4e4e4;
-            border-bottom: 300px solid #e4e4e4;
-            border-right: 150px solid transparent;
-            position: absolute;
-            top: -150px;
-            z-index: 4;
-        }
-
-        &:before {
-            left: -148px;
-        }
-
-        &:after {
-            right: -148px;
-        }*/
-      /* Navigation */ }
-      .flexslider .flex-viewport:before, .flexslider .flex-viewport:after {
-        content: '';
-        border-left: 150px solid transparent;
-        border-top: 300px solid white;
-        border-bottom: 300px solid white;
-        border-right: 150px solid transparent;
-        position: absolute;
-        top: -150px;
-        z-index: 5; }
-      .flexslider .flex-viewport:before {
-        left: -150px; }
-      .flexslider .flex-viewport:after {
-        right: -150px; }
-      .flexslider .slides .flex-active-slide {
-        overflow: hidden;
-        position: relative;
-        /*img {
-            width: 800px;
-            height: 300px;
-        }*/ }
-      .flexslider .flex-direction-nav a {
-        background: rgba(255, 255, 255, 0.8);
-        margin: 0;
-        top: 0;
-        height: 100%;
-        width: 80px;
-        text-indent: -999999px; }
-        .flexslider .flex-direction-nav a:before, .flexslider .flex-direction-nav a:after {
-          content: '' !important; }
-        .flexslider .flex-direction-nav a:hover {
-          border: 0; }
-      .flexslider:hover .flex-prev {
-        left: 0 !important; }
-      .flexslider:hover .flex-next {
-        right: 0 !important; } }
-
-/*--------------------------------------------------------------
-9.2 Three Column Widget Area
---------------------------------------------------------------*/
-#homepage-three-columns .widget-title {
-  border-bottom: 1px solid #e8e8e8;
-  color: #7b7b7b;
-  font-size: 10px;
-  font-size: 1rem;
-  letter-spacing: .24em;
-  margin: 13px 0 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  text-transform: uppercase; }
-#homepage-three-columns .widget {
-  font-size: 11px;
-  font-size: 1.1rem;
-  line-height: 16px;
-  margin: 20px 0; }
-
-/*--------------------------------------------------------------
-9.3 Full Width Widget Area
---------------------------------------------------------------*/
-#homepage-full .widget {
-  margin-bottom: 60px; }
-
-/*--------------------------------------------------------------
-9.4 Testimonial
---------------------------------------------------------------*/
-#testimonial {
-  background: url("assets/images/testimonial-bg.png");
-  padding: 35px 0 45px;
-  text-align: center; }
-  #testimonial blockquote {
-    background: none;
-    font-size: 14px;
-    font-size: 1.4rem;
-    margin: 0;
-    padding: 0; }
-    @media (min-width: 768px) {
-      #testimonial blockquote {
-        margin: 0 45px; } }
-    #testimonial blockquote .inner-text:before {
-      content: "\201C"; }
-    #testimonial blockquote .inner-text:after {
-      content: "\201D"; }
-    #testimonial blockquote:before, #testimonial blockquote:after {
-      display: none; }
-    #testimonial blockquote cite {
-      color: #939393;
-      display: block;
-      font-size: 10px;
-      font-size: 1rem;
-      font-style: normal;
-      letter-spacing: .24em;
-      margin-top: 5px;
-      text-transform: uppercase; }
-      #testimonial blockquote cite a {
-        font-style: italic;
-        text-transform: none; }
 
 /*# sourceMappingURL=style.css.map */

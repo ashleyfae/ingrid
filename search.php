@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */
@@ -12,7 +12,7 @@ get_header(); ?>
 <?php if ( have_posts() ) : ?>
 
 	<header class="page-header">
-		<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'noah' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'ingrid' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<?php /* Start the Loop */ ?>

@@ -2,7 +2,7 @@
 /**
  * This is the content for full posts and the individual post page.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */
@@ -40,7 +40,7 @@
 		 * Post content
 		 * translators: %s: Name of current post
 		 */
-		the_content( '<div class="readmore"><a href="' . get_permalink() . '" class="btn btn-primary btn-block">' . __( 'Continue Reading', 'noah' ) . '</a></div>' );
+		the_content( '<div class="readmore"><a href="' . get_permalink() . '" class="btn btn-primary btn-block">' . __( 'Continue Reading', 'ingrid' ) . '</a></div>' );
 		?>
 	</div>
 	<!-- .entry-content -->

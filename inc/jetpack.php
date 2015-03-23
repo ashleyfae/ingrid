@@ -3,7 +3,7 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */

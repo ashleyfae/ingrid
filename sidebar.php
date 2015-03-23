@@ -3,7 +3,7 @@
  * The sidebar containing the main widget area.
  * This is not used in this theme.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */

@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */
@@ -76,11 +76,11 @@ if ( ! function_exists( 'page_navi' ) ) {
 		echo $before . '<ul class="pagination clearfix">' . "";
 		if ( $paged > 1 ) {
 			$first_page_text = "&laquo";
-			echo '<li class="prev"><a href="' . get_pagenum_link() . '" title="' . __( 'First', 'noah' ) . '">' . $first_page_text . '</a></li>';
+			echo '<li class="prev"><a href="' . get_pagenum_link() . '" title="' . __( 'First', 'ingrid' ) . '">' . $first_page_text . '</a></li>';
 		}
 
 		echo '<li class="previous_posts_link">';
-		previous_posts_link( __( 'Previous', 'noah' ) );
+		previous_posts_link( __( 'Previous', 'ingrid' ) );
 		echo '</li>';
 		for (
 			$i = $start_page;
@@ -94,11 +94,11 @@ if ( ! function_exists( 'page_navi' ) ) {
 			}
 		}
 		echo '<li class="next_posts_link">';
-		next_posts_link( __( 'Next', 'noah' ) );
+		next_posts_link( __( 'Next', 'ingrid' ) );
 		echo '</li>';
 		if ( $end_page < $max_page ) {
 			$last_page_text = "&raquo;";
-			echo '<li class="next"><a href="' . get_pagenum_link( $max_page ) . '" title="' . __( 'Last', 'noah' ) . '">' . $last_page_text . '</a></li>';
+			echo '<li class="next"><a href="' . get_pagenum_link( $max_page ) . '" title="' . __( 'Last', 'ingrid' ) . '">' . $last_page_text . '</a></li>';
 		}
 		echo '</ul>' . $after . "";
 	}
@@ -120,7 +120,7 @@ if ( ! function_exists( 'ng_theme_post_meta' ) ) {
 
 		// Compile the sentence with the date and category list.
 		$posted_on = sprintf(
-			_x( 'Posted on %1$s in %2$s', 'post date', 'noah' ),
+			_x( 'Posted on %1$s in %2$s', 'post date', 'ingrid' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>',
 			get_the_category_list( ', ' )
 		);
@@ -143,20 +143,20 @@ if ( ! function_exists( 'ng_theme_post_footer' ) ) {
 		<div class="row">
 			<div class="col-sm-6 noah-social-share">
 				<div class="share-links">
-					<a href="http://twitter.com/home?status=<?php the_title(); ?> <?php the_permalink(); ?>" target="_blank"><?php _e( 'Tweet', 'noah' ); ?></a>
+					<a href="http://twitter.com/home?status=<?php the_title(); ?> <?php the_permalink(); ?>" target="_blank"><?php _e( 'Tweet', 'ingrid' ); ?></a>
 					/
-					<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>" target="_blank"><?php _e( 'Facebook', 'noah' ); ?></a>
+					<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>" target="_blank"><?php _e( 'Facebook', 'ingrid' ); ?></a>
 					/
-					<a href="javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)})());" target="_blank"><?php _e( 'Pin', 'noah' ); ?></a>
+					<a href="javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)})());" target="_blank"><?php _e( 'Pin', 'ingrid' ); ?></a>
 				</div>
 
-				<span><?php _e( 'Like this post? Let everyone know!', 'noah' ); ?></span>
+				<span><?php _e( 'Like this post? Let everyone know!', 'ingrid' ); ?></span>
 			</div>
 
 			<div class="col-sm-6 comment-link">
-				<a href="<?php comments_link(); ?>"><?php comments_number( __( '0 Comments', 'noah' ), __( '1 Comment', 'noah' ), __( '% Comments', 'noah' ) ); ?></a>
+				<a href="<?php comments_link(); ?>"><?php comments_number( __( '0 Comments', 'ingrid' ), __( '1 Comment', 'ingrid' ), __( '% Comments', 'ingrid' ) ); ?></a>
 
-				<span><?php _e( 'Join the conversation!', 'noah' ); ?></span>
+				<span><?php _e( 'Join the conversation!', 'ingrid' ); ?></span>
 			</div>
 		</div>
 
@@ -350,10 +350,10 @@ if ( ! function_exists( 'noah_post_pagination' ) ) {
 		<div id="post-pagination" class="row">
 			<div class="row-same-height row-full-height">
 				<div class="col-sm-6 col-sm-height previous-post">
-					<?php previous_post_link( '<span>' . __( 'Previous Post', 'noah' ) . '</span> %link' ); ?>
+					<?php previous_post_link( '<span>' . __( 'Previous Post', 'ingrid' ) . '</span> %link' ); ?>
 				</div>
 				<div class="col-sm-6 col-sm-height next-post">
-					<?php next_post_link( '<span>' . __( 'Next Post', 'noah' ) . '</span> %link' ); ?>
+					<?php next_post_link( '<span>' . __( 'Next Post', 'ingrid' ) . '</span> %link' ); ?>
 				</div>
 			</div>
 		</div>

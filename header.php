@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section, the logo, and the navigation menu.
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */
@@ -25,12 +25,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
-	<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'noah' ); ?></a>
-
-	<?php
-	// Bring in the slide out area.
-	get_template_part( 'inc/template-parts/slide-out' );
-	?>
+	<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'ingrid' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 
@@ -50,19 +45,10 @@
 	</header>
 	<!-- #masthead -->
 
-	<nav id="site-navigation" class="navbar navbar-noah" role="navigation">
+	<nav id="site-navigation" role="navigation">
 		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only"><?php _e( 'Toggle navigation', 'noah' ); ?></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="collapse navbar-collapse">
-				<?php ng_theme_navigation(); ?>
-			</div>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Menu', 'ingrid' ); ?></button>
+			<?php ng_theme_navigation(); ?>
 		</div>
 	</nav>
 	<!-- #site-navigation -->
