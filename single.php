@@ -14,7 +14,7 @@ get_header(); ?>
 	<?php /* Start the Loop */ ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php get_template_part( 'inc/template-parts/content', 'single' ); ?>
+		<?php get_template_part( 'inc/template-parts/content', get_post_format() ); ?>
 
 		<?php
 		// If comments are open or we have at least one comment, load up the comment template.

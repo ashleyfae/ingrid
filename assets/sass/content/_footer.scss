@@ -1,113 +1,83 @@
 /* Footer Widgets */
 
 #footer-widgets {
+    padding: 20px 0;
+
     .widget-title {
-        @include font-size(0.9);
+        color: #aeaeae;
+        @include font-size(1.8);
         font: {
-            weight: bold;
+            weight: 300;
         }
-        letter-spacing: .24em;
+        letter-spacing: .05em;
         text-transform: uppercase
     }
 
     .widget {
+        color: #a3a3a3;
         @include font-size(1.1);
+    }
 
-        a {
-            &:hover {
-                border: none;
-                text-decoration: underline;
-            }
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    input[type="text"],
+    select {
+        background: #3d3d3d;
+        color: #a3a3a3;
+
+        &::-webkit-input-placeholder,
+        &:-moz-placeholder {
+            color: #a3a3a3 !important;
         }
+    }
+}
+
+@media (min-width: 768px) {
+    #footer_1,
+    #footer_2 {
+        padding: 0 15px;
+    }
+
+    #footer_1 {
+        float: left;
+        width: 65%;
+    }
+
+    #footer_2 {
+        float: right;
+        width: 35%;
     }
 }
 
 /* Footer Area */
 
 #footer {
-    background: #f48e9e;
-    border-top: 4px solid #db808e;
+    background: black;
     position: relative;
+}
 
-    &:before,
-    &:after {
-        border-color: transparent transparent #f48e9d transparent;
-        border-style: solid;
-        border-width: 0 62px 20px 62px;
-        content: '';
-        width: 0;
-        height: 0;
-        margin-left: -62px;
-        position: absolute;
-        top: -20px;
-        left: 50%;
+#website-copyright,
+#design-credits {
+    color: #b2b1ae;
+    @include font-size(1.0);
+    font: {
+        family: $font_secondary;
+        weight: bold;
     }
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
 
-    &:before {
-        border-color: transparent transparent #db808e transparent;
-        border-width: 0 74px 24px 74px;
-        top: -24px;
-        margin-left: -74px;
-    }
+#design-credits {
+    color: #fba99c;
+    margin-bottom: 20px;
 
     a {
-        color: white;
+        text-decoration: underline;
 
         &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    .attribution {
-        background: #db808e;
-        color: rgba(255, 255, 255, 0.9);
-        @include font-size(1.0);
-        letter-spacing: .2em;
-        line-height: 1;
-        margin-top: 20px;
-        padding: 8px 0;
-        text-transform: uppercase;
-
-        a {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: underline;
-
-            &:hover {
-                border: none;
-                color: rgba(255, 255, 255, 1);
-                text-decoration: none;
-            }
-        }
-
-        .col-md-5,
-        .col-md-2 {
-            padding: 0;
-        }
-
-        .col-md-5 {
-            padding: 6px 0 0;
-        }
-    }
-
-    #footer-heart {
-        @include font-size(1.8);
-    }
-
-    #design-credits {
-        font: {
-            style: italic;
-        }
-        text-transform: lowercase;
-
-        a {
-            font: {
-                style: normal;
-            }
-            text-transform: uppercase;
-        }
-
-        @media (min-width: 992px) {
-            text-align: right;
+            text-decoration: none;
         }
     }
 }

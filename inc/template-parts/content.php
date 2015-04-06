@@ -1,6 +1,6 @@
 <?php
 /**
- * This is the main content template.
+ * This is the content for full posts and the individual post page.
  *
  * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
@@ -8,17 +8,27 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'excerpt-view' ); ?>>
-	<?php noah_thumbnail(); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header">
 		<?php
-		the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
-
 		/*
 		 * Include the top post meta.
 		 */
 		ng_theme_post_meta();
+
+		/*
+		 * Individual Post
+		 * Don't link the title
+		 */
+		if ( is_single() ) {
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		} /*
+		 * We're on the archive, so link the title.
+		 */
+		else {
+			the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
+		}
 		?>
 	</header>
 	<!-- .entry-header -->
@@ -26,18 +36,21 @@
 	<div class="entry-content">
 		<?php
 		/*
+		 * Featured image
+		 */
+		ingrid_featured_image();
+
+		/*
 		 * Post content
 		 * translators: %s: Name of current post
 		 */
-		the_excerpt();
+		the_content( '<div class="readmore"><a href="' . get_permalink() . '" class="btn btn-primary btn-block">' . __( 'Continue Reading', 'ingrid' ) . '</a></div>' );
 		?>
 	</div>
 	<!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<div class="readmore">
-			<a href="<?php get_permalink(); ?>" class="btn btn-primary btn-block"><?php _e( 'Continue Reading', 'ingrid' ); ?></a>
-		</div>
+		<?php ng_theme_post_footer(); ?>
 	</footer>
 	<!-- .entry-footer -->
 </article><!-- #post-## -->

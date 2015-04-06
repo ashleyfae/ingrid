@@ -21,246 +21,6 @@ function ng_theme_customizer_settings( $options ) {
 	$thsp_cbp_capability = thsp_cbp_capability();
 
 	$options = array(
-
-		/**
-		 * Slide Out panel
-		 */
-		'slide_out'          => array(
-
-			'existing_section' => false,
-			/*
-			 * Section related arguments
-			 * Codex - http://codex.wordpress.org/Class_Reference/WP_Customize_Manager/add_section
-			 */
-			'args'             => array(
-				'title'       => __( 'Slide Out Panel', 'ingrid' ),
-				'description' => __( 'Modify the slide panel at the top of the page.', 'ingrid' ),
-				'priority'    => 100
-			),
-			'fields'           => array(
-
-				// Slide out style and visibility
-				'slide_out_visibility' => array(
-					'setting_args' => array(
-						'default'    => 'widget',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Panel Content &amp; Visibility', 'ingrid' ),
-						'type'     => 'select',
-						'choices'  => array(
-							'widget'   => array(
-								'label' => __( 'Widget Area (toggle)', 'ingrid' ),
-							),
-							'inactive' => array(
-								'label' => __( 'Social Media &amp; Search (no toggle)', 'ingrid' ),
-							),
-							'disabled' => array(
-								'label' => __( 'Disabled (hidden)', 'ingrid' ),
-							)
-						),
-						'priority' => 1
-					)
-				),
-				// Slide Out background colour
-				'slide_out_bg'         => array(
-					'setting_args' => array(
-						'default'    => '#f48e9e',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Slide Out Background Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 4
-					)
-				),
-				// Slide Out border colour
-				'slide_out_border'     => array(
-					'setting_args' => array(
-						'default'    => '#db808e',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Slide Out Border Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 5
-					)
-				),
-				// Slide Out text colour
-				'slide_out_text'       => array(
-					'setting_args' => array(
-						'default'    => '#ffffff',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Slide Out Text Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 6
-					)
-				),
-				// Slide Out link colour
-				'slide_out_links'      => array(
-					'setting_args' => array(
-						'default'    => '#a23647',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Slide Out Link Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 7
-					)
-				),
-				// Input box background
-				'slide_out_input'      => array(
-					'setting_args' => array(
-						'default'    => '#d66e7e',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Slide Out Text Box Background Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 8
-					)
-				),
-
-			),
-
-		),
-		/**
-		 * Blog Posts
-		 */
-		'blog_layout'        => array(
-			'existing_section' => false,
-			'args'             => array(
-				'title'       => __( 'Blog Layout', 'ingrid' ),
-				'description' => __( 'Configure the blog layout.', 'ingrid' ),
-				'priority'    => 101
-			),
-			'fields'           => array(
-				'post_content'         => array(
-					'setting_args' => array(
-						'default'    => 'single',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Archive Post Display', 'ingrid' ),
-						'type'     => 'radio',
-						'choices'  => array(
-							'excerpts' => array(
-								'label' => __( 'Excerpts', 'ingrid' ),
-							),
-							'single'   => array(
-								'label' => __( 'Full Posts', 'ingrid' )
-							)
-						),
-						'priority' => 1
-					)
-				),
-				'auto_add_featured'    => array(
-					'setting_args' => array(
-						'default'    => true,
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Automatically Add Featured Image', 'ingrid' ),
-						'type'     => 'checkbox',
-						'priority' => 2
-					)
-				),
-				'featured_arrow'       => array(
-					'setting_args' => array(
-						'default'    => false,
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Disable Featured Image Effect', 'ingrid' ),
-						'type'     => 'checkbox',
-						'priority' => 3
-					)
-				),
-				'comment_notes_before' => array(
-					'setting_args' => array(
-						'default'    => __( 'Some HTML allowed, please do not include links to your site in comments', 'ingrid' ),
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Notes Before the Comment Form', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 10
-					)
-				),
-				'comment_notes_after'  => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Notes After the Comment Form', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 11
-					)
-				)
-			)
-		),
-		/**
-		 * Social Media
-		 */
-		'testimonials'       => array(
-			'existing_section' => false,
-			'args'             => array(
-				'title'       => __( 'Testimonials', 'ingrid' ),
-				'description' => __( 'You can use the testimonials feature to showcase quotes from your clients/customers.', 'ingrid' ),
-				'priority'    => 190
-			),
-			'fields'           => array(
-				'testimonials' => array(
-					'setting_args' => array(
-						'default'    => 'pages',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Display Testimonials On:', 'ingrid' ),
-						'type'     => 'select',
-						'choices'  => array(
-							'pages' => array(
-								'label' => __( 'All Pages', 'ingrid' )
-							),
-							'home'  => array(
-								'label' => __( 'Static Homepage Only', 'ingrid' )
-							),
-							'none'  => array(
-								'label' => __( 'None (Disabled)', 'ingrid' )
-							)
-						),
-						'priority' => 90
-					)
-				),
-			)
-		),
 		/**
 		 * Social Media
 		 */
@@ -437,7 +197,7 @@ function ng_theme_customizer_settings( $options ) {
 				// Body text
 				'body_color'         => array(
 					'setting_args' => array(
-						'default'    => '#a0a0a0',
+						'default'    => '#888888',
 						'type'       => 'option',
 						'capability' => $thsp_cbp_capability,
 						'transport'  => 'refresh',
@@ -451,7 +211,7 @@ function ng_theme_customizer_settings( $options ) {
 				// Links
 				'links'              => array(
 					'setting_args' => array(
-						'default'    => '#f48e9e',
+						'default'    => '#fba99c',
 						'type'       => 'option',
 						'capability' => $thsp_cbp_capability,
 						'transport'  => 'refresh',
@@ -465,7 +225,7 @@ function ng_theme_customizer_settings( $options ) {
 				// Link Hover
 				'links_hover'        => array(
 					'setting_args' => array(
-						'default'    => '#f48e9e',
+						'default'    => '#fba99c',
 						'type'       => 'option',
 						'capability' => $thsp_cbp_capability,
 						'transport'  => 'refresh',
@@ -476,141 +236,7 @@ function ng_theme_customizer_settings( $options ) {
 						'priority' => 3
 					)
 				),
-				// Footer background colour
-				'footer_bg'          => array(
-					'setting_args' => array(
-						'default'    => '#f48e9e',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Footer Background Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 4
-					)
-				),
-				// Footer border colour
-				'footer_border'      => array(
-					'setting_args' => array(
-						'default'    => '#db808e',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Footer Border Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 5
-					)
-				),
-				// Slide Out text colour
-				'footer_text'        => array(
-					'setting_args' => array(
-						'default'    => '#ffffff',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Footer Text Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 6
-					)
-				),
-				// Footer link colour
-				'footer_links'       => array(
-					'setting_args' => array(
-						'default'    => '#ffffff',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Footer Link Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 7
-					)
-				),
-				// Input box background
-				'footer_input'       => array(
-					'setting_args' => array(
-						'default'    => '#d66e7e',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Footer Text Box Background Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 8
-					)
-				),
-				// Attribution background
-				'footer_attribution' => array(
-					'setting_args' => array(
-						'default'    => '#db808e',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Footer Credits Background Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 9
-					)
-				),
 			)
-		),
-		/**
-		 * Static Front Page
-		 */
-		'static_front_page'  => array(
-			'existing_section' => true,
-			'fields'           => array(
-				'image_slider' => array(
-					'setting_args' => array(
-						'default'    => true,
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Display image slider on Static Homepage', 'ingrid' ),
-						'type'     => 'checkbox',
-						'priority' => 20
-					)
-				),
-			)
-		),
-		/**
-		 * Custom CSS
-		 */
-		'custom_css_section' => array(
-
-			'existing_section' => false,
-			'args'             => array(
-				'title'       => __( 'Custom CSS', 'ingrid' ),
-				'description' => __( 'Use this space to insert custom CSS into the theme.', 'ingrid' ),
-				'priority'    => 201
-			),
-			'fields'           => array(
-				// Custom CSS box.
-				'custom_css' => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Enter your CSS', 'ingrid' ),
-						'type'     => 'textarea', // Textarea control
-						'priority' => 1
-					)
-				),
-			)
-
 		),
 
 
@@ -671,84 +297,11 @@ function ng_theme_generate_custom_styles() {
 			color: ' . esc_attr( ng_option( 'body_color' ) ) . ';
 		}
 
-		a,
-		.pagination > li > a {
+		a {
 			color: ' . esc_attr( ng_option( 'links' ) ) . ';
 		}
-		a:hover,
-		.pagination > li > a:hover,
-		.pagination > li > a:active,
-		.pagination > li > a:focus {
+		a:hover {
 			color: ' . esc_attr( ng_option( 'links_hover' ) ) . ';
-		}
-
-		#commentform #submit, input[type="submit"] {
-			background: ' . esc_attr( ng_option( 'links' ) ) . ';
-			border: 1px solid ' . esc_attr( ng_option( 'links' ) ) . ';
-		}
-
-		#commentform #submit, input[type="submit"]:hover {
-			background: ' . esc_attr( ng_option( 'links_hover' ) ) . ';
-			border: 1px solid ' . esc_attr( ng_option( 'links_hover' ) ) . ';
-		}
-
-		#slide-out {
-			background: ' . esc_attr( ng_option( 'slide_out_bg' ) ) . ';
-			border-bottom-color: ' . esc_attr( ng_option( 'slide_out_border' ) ) . ';
-		}
-		#slide-out:after {
-			border-color: ' . esc_attr( ng_option( 'slide_out_bg' ) ) . ' transparent transparent transparent;
-		}
-		#slide-out:before {
-			border-color: ' . esc_attr( ng_option( 'slide_out_border' ) ) . ' transparent transparent transparent;
-		}
-		#slide-out .widget-area,
-		#slide-out .widget-title,
-		#slide-out .widget.widget_noah_social_media ul li a {
-			color: ' . esc_attr( ng_option( 'slide_out_text' ) ) . ';
-		}
-		#slide-out .widget a,
-		#slide-out .widget.widget_noah_social_media ul li a:hover {
-			color: ' . esc_attr( ng_option( 'slide_out_links' ) ) . ';
-		}
-		#slide-out input[type="email"],
-		#slide-out input[type="search"],
-		#slide-out input[type="password"],
-		#slide-out input[type="text"],
-		#slide-out select,
-		#slide-out textarea {
-			background: ' . esc_attr( ng_option( 'slide_out_input' ) ) . ';
-		}
-
-		#footer {
-			background: ' . esc_attr( ng_option( 'footer_bg' ) ) . ';
-			border-top-color: ' . esc_attr( ng_option( 'footer_border' ) ) . ';
-		}
-		#footer:after {
-			border-color: transparent transparent ' . esc_attr( ng_option( 'footer_bg' ) ) . ' transparent;
-		}
-		#footer:before {
-			border-color: transparent transparent ' . esc_attr( ng_option( 'footer_border' ) ) . ' transparent;
-		}
-		#footer .widget-area,
-		#footer .widget-title,
-		#footer .widget.widget_noah_social_media ul li a {
-			color: ' . esc_attr( ng_option( 'footer_text' ) ) . ';
-		}
-		#footer .widget a,
-		#footer .widget.widget_noah_social_media ul li a:hover {
-			color: ' . esc_attr( ng_option( 'footer_links' ) ) . ';
-		}
-		#footer input[type="email"],
-		#footer input[type="search"],
-		#footer input[type="password"],
-		#footer input[type="text"],
-		#footer select,
-		#footer textarea {
-			background: ' . esc_attr( ng_option( 'footer_input' ) ) . ';
-		}
-		#footer .attribution {
-			background: ' . esc_attr( ng_option( 'footer_attribution' ) ) . ';
 		}
 	';
 

@@ -8,10 +8,20 @@
  * @license   GPL2
  */
 
-if ( ! is_active_sidebar( 'sidebar' ) ) {
+// If none of these sidebars are active, bail straight away.
+if ( ! is_active_sidebar( 'footer_1' ) && ! is_active_sidebar( 'footer_2' ) ) {
 	return;
 }
 ?>
-<div id="secondary" class="widget-area col-md-4" role="complementary">
-	<?php dynamic_sidebar( 'sidebar' ); ?>
-</div><!-- #secondary -->
+
+<div id="footer-widgets" class="row widget-area">
+
+	<div id="footer_1">
+		<?php dynamic_sidebar( 'footer_1' ); ?>
+	</div>
+
+	<div id="footer_2">
+		<?php dynamic_sidebar( 'footer_2' ); ?>
+	</div>
+
+</div>

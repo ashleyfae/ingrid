@@ -26,74 +26,13 @@ function ng_theme_body_classes( $classes ) {
 add_filter( 'body_class', 'ng_theme_body_classes' );
 
 /**
- * Filters wp_title to print a neat <title> tag based on what is being viewed.
- *
- * @param string $title Default title text for current view.
- * @param string $sep   Optional separator.
- *
- * @return string The filtered title.
- */
-function ng_theme_wp_title( $title, $sep ) {
-	if ( is_feed() ) {
-		return $title;
-	}
-
-	global $page, $paged;
-
-	// Add the blog name
-	$title .= get_bloginfo( 'name', 'display' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) ) {
-		$title .= " $sep $site_description";
-	}
-
-	// Add a page number if necessary:
-	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', 'ingrid' ), max( $paged, $page ) );
-	}
-
-	return $title;
-}
-
-add_filter( 'wp_title', 'ng_theme_wp_title', 10, 2 );
-
-/**
  * Adds a custom stylesheet to the visual editor
  */
-function ng_theme_add_editor_styles() {
+function ingrid_theme_add_editor_styles() {
 	add_editor_style();
 }
 
-add_action( 'after_setup_theme', 'ng_theme_add_editor_styles' );
-
-/**
- * Adds custom highlighting based on post status
- */
-function ng_theme_color_code_post_status() {
-	?>
-	<style>
-		.status-draft {
-			background: #fad8d8 !important;
-		}
-
-		.status-future {
-			background: #CCFF99 !important;
-		}
-
-		.status-pending {
-			background: #FFFF99 !important;
-		}
-
-		.status-private {
-			background: #FFCC99;
-		}
-	</style>
-<?php
-}
-
-add_action( 'admin_head', 'ng_theme_color_code_post_status' );
+add_action( 'after_setup_theme', 'ingrid_theme_add_editor_styles' );
 
 /**
  * Fetches a value from the Customizer.
@@ -128,7 +67,7 @@ function ng_theme_navigation() {
  *
  * @return string
  */
-function ng_theme_current_to_active( $text ) {
+function ingrid_theme_current_to_active( $text ) {
 	$replace = array(
 		//List of menu item classes that should be changed to "active"
 		'current_page_item'     => 'active',
@@ -141,7 +80,7 @@ function ng_theme_current_to_active( $text ) {
 	return $text;
 }
 
-add_filter( 'wp_nav_menu', 'ng_theme_current_to_active' );
+add_filter( 'wp_nav_menu', 'ingrid_theme_current_to_active' );
 
 /**
  * Filters the display of the search form.
@@ -150,7 +89,7 @@ add_filter( 'wp_nav_menu', 'ng_theme_current_to_active' );
  *
  * @return string The filtered search form HTML.
  */
-function ng_theme_search_form( $form ) {
+function ingrid_theme_search_form( $form ) {
 	$form = '
 	<form role="search" method="get" class="searchform" action="' . home_url( '/' ) . '">
 		<i class="fa fa-angle-double-right"></i>
@@ -161,7 +100,7 @@ function ng_theme_search_form( $form ) {
 	return $form;
 }
 
-add_filter( 'get_search_form', 'ng_theme_search_form' );
+add_filter( 'get_search_form', 'ingrid_theme_search_form' );
 
 
 /**
@@ -338,7 +277,7 @@ function ng_truncate($string, $length=100, $append="&hellip;") {
  *
  * @return string
  */
-function ng_img_caption_shortcode_filter($dummy, $attr, $content) {
+function ingrid_img_caption_shortcode_filter($dummy, $attr, $content) {
 	$atts = shortcode_atts( array(
 		'id'      => '',
 		'align'   => 'alignnone',
@@ -365,4 +304,4 @@ function ng_img_caption_shortcode_filter($dummy, $attr, $content) {
 	return '';
 }
 
-add_filter( 'img_caption_shortcode', 'ng_img_caption_shortcode_filter', 10, 3 );
+add_filter( 'img_caption_shortcode', 'ingrid_img_caption_shortcode_filter', 10, 3 );

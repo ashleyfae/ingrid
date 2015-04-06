@@ -28,15 +28,8 @@ select {
 
     .widget-area & {
         border: none;
-        color: white;
-        @include font-size(1.0);
-        letter-spacing: .2em;
         padding: 8px;
         text-transform: lowercase;
-
-        &::-webkit-input-placeholder {
-            color: white;
-        }
     }
 }
 

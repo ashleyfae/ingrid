@@ -1,64 +1,34 @@
-@media (min-width: 1200px) {
-    .container {
-        width: 830px;
-    }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-@media (min-width: 992px) {
-    .container {
-        width: 830px;
-    }
+body {
+    background: white;
+    margin: 0;
+    padding: 0;
 }
 
-.archive,
-.search,
-.error404 {
-    .site-main {
-        padding-bottom: 60px;
-    }
+.container {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-/* Equal height columns */
-
-.row-full-height {
-    height: 100%;
+.row {
+    clear: both;
+    margin: 0 -15px;
 }
 
-.col-full-height {
-    height: 100%;
-    vertical-align: middle;
-}
+.ingrid-half {
+    padding: 0 15px;
 
-.row-same-height {
-    display: table;
-    width: 100%;
-    /* fix overflow */
-    table-layout: fixed;
-}
-
-.col-xs-height {
-    display: table-cell;
-    float: none !important;
-}
-
-@media (min-width: 768px) {
-    .col-sm-height {
-        display: table-cell;
-        float: none !important;
-    }
-}
-
-@media (min-width: 992px) {
-    .col-md-height {
-        display: table-cell;
-        float: none !important;
-    }
-}
-
-@media (min-width: 1200px) {
-    .col-lg-height {
-        display: table-cell;
-        float: none !important;
+    @media (min-width: 768px) {
+        float: left;
+        padding: 0 15px;
+        width: 50%;
     }
 }
 
@@ -66,11 +36,6 @@
 8.1 Header
 --------------------------------------------------------------*/
 @import "header";
-
-/*--------------------------------------------------------------
-8.2 Slide Out
---------------------------------------------------------------*/
-@import "slide-out";
 
 /*--------------------------------------------------------------
 8.3 Posts and Pages
@@ -88,6 +53,11 @@
 @import "sidebar/widgets";
 
 /*--------------------------------------------------------------
-8.6 Footer
+8.6 404 Error Page
+--------------------------------------------------------------*/
+@import "main/404";
+
+/*--------------------------------------------------------------
+8.7 Footer
 --------------------------------------------------------------*/
 @import "footer";

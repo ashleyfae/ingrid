@@ -1,0 +1,308 @@
+body {
+  max-width: 630px; }
+
+/*--------------------------------------------------------------
+Alignments
+--------------------------------------------------------------*/
+.alignleft,
+.alignright,
+img.ubb_left,
+img.ubb_right {
+  display: block;
+  float: none;
+  margin: 0 auto 1.5em !important; }
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px; }
+
+img.alignleft,
+img.alignright,
+img.ubb_left,
+img.ubb_right {
+  position: relative;
+  z-index: 5; }
+
+@media (min-width: 550px) {
+  .alignleft,
+  img.ubb_left {
+    display: inline;
+    float: left;
+    margin-right: 1.5em !important; }
+
+  .alignright,
+  img.ubb_right {
+    display: inline;
+    float: right;
+    margin-left: 1.5em !important; } }
+/*--------------------------------------------------------------
+Elements
+--------------------------------------------------------------*/
+img {
+  max-width: 100%;
+  height: auto; }
+
+/*--------------------------------------------------------------
+2.1 Buttons
+--------------------------------------------------------------*/
+.btn,
+#commentform #submit,
+input[type="submit"] {
+  border-radius: 0;
+  border-style: solid;
+  font-size: 10px;
+  font-size: 1rem;
+  letter-spacing: .24em;
+  padding: 7px 12px;
+  text-transform: uppercase;
+  transition: all 0.5s; }
+  .btn.btn-primary,
+  #commentform #submit.btn-primary,
+  input[type="submit"].btn-primary {
+    background-color: #f1f1f1;
+    border-color: #f1f1f1;
+    color: #a6a6a6; }
+    .btn.btn-primary:hover,
+    #commentform #submit.btn-primary:hover,
+    input[type="submit"].btn-primary:hover {
+      background-color: #f9f9f9;
+      border-color: #f9f9f9;
+      color: #a6a6a6; }
+  .btn:focus,
+  #commentform #submit:focus,
+  input[type="submit"]:focus {
+    outline: 0; }
+
+#commentform #submit, input[type="submit"] {
+  color: white;
+  display: block;
+  line-height: 1.42857143;
+  width: 100%;
+  text-align: right;
+    /*background-color: #f1f1f1;
+    border-color: #f1f1f1;
+    color: #a6a6a6;
+
+    &:hover {
+        background-color: #f9f9f9;
+        border-color: #f9f9f9;
+        color: #a6a6a6;
+    }*/ }
+
+/*--------------------------------------------------------------
+2.2 Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  background: none; }
+  .wp-caption .wp-caption-text {
+    color: #888;
+    font-size: 10px;
+    font-size: 1rem;
+    font-family: Merriweather, Georgia, serif;
+    font-style: italic;
+    letter-spacing: .1em; }
+
+/*--------------------------------------------------------------
+2.3 Horizontal Rules
+--------------------------------------------------------------*/
+hr {
+  border-top-color: #eee;
+  margin: 25px 0; }
+
+/*--------------------------------------------------------------
+2.4 Lists
+--------------------------------------------------------------*/
+.entry-content ul,
+#tinymce ul {
+  list-style-type: square; }
+  .entry-content ul ul,
+  #tinymce ul ul {
+    list-style: none;
+    padding-left: 15px; }
+    .entry-content ul ul > li:before,
+    #tinymce ul ul > li:before {
+      content: "+";
+      margin-right: 4px; }
+.entry-content ol,
+#tinymce ol {
+  list-style: decimal-leading-zero; }
+  .entry-content ol ol,
+  #tinymce ol ol {
+    list-style-type: lower-latin;
+    padding-left: 25px; }
+.entry-content ul li, .entry-content ol li,
+#tinymce ul li,
+#tinymce ol li {
+  padding: 4px; }
+  .entry-content ul li:nth-child(odd), .entry-content ol li:nth-child(odd),
+  #tinymce ul li:nth-child(odd),
+  #tinymce ol li:nth-child(odd) {
+    background: #F2F2F2;
+    padding: 4px 8px; }
+
+/*--------------------------------------------------------------
+2.5 Tables
+--------------------------------------------------------------*/
+table {
+  width: 100%; }
+  table th {
+    background: #f3f3f3;
+    font-size: 10px;
+    font-size: 1rem;
+    letter-spacing: .24em;
+    text-align: center;
+    text-transform: uppercase; }
+  table th, table td {
+    border: 1px solid #f3f3f3;
+    padding: 5px;
+    vertical-align: top; }
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+/*--------------------------------------------------------------
+1.1 Copy
+--------------------------------------------------------------*/
+body {
+  color: #888888;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.8;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
+
+p {
+  margin-bottom: 20px; }
+
+/*--------------------------------------------------------------
+1.1 Alignments
+--------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/*--------------------------------------------------------------
+1.1 Headings
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+.page-header .page-title {
+  color: #fba99c;
+  font-size: 31px;
+  font-size: 3.1rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 20px 0;
+  text-transform: uppercase; }
+
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6,
+#tinymce h1,
+#tinymce h2,
+#tinymce h3,
+#tinymce h4,
+#tinymce h5,
+#tinymce h6 {
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: .2em;
+  margin: 0 0 20px;
+  text-transform: uppercase; }
+.entry-content h1, .entry-content h3,
+#tinymce h1,
+#tinymce h3 {
+  color: #fba99c; }
+.entry-content h2, .entry-content h4,
+#tinymce h2,
+#tinymce h4 {
+  color: #747373; }
+
+/*--------------------------------------------------------------
+1.2 Blockquotes
+--------------------------------------------------------------*/
+blockquote {
+  font-family: Merriweather, Georgia, serif;
+  font-style: italic;
+  margin: 20px 0; }
+
+@media (min-width: 768px) {
+  blockquote {
+    padding: 10px 0 10px 40px;
+    position: relative; }
+    blockquote:before {
+      color: #e4e4e4;
+      color: rgba(83, 83, 83, 0.2);
+      content: "\201C";
+      font-size: 74px;
+      font-size: 7.4rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: normal;
+      line-height: 1;
+      height: 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1; } }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+.page-header .page-title {
+  color: #fba99c;
+  font-size: 31px;
+  font-size: 3.1rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 20px 0;
+  text-transform: uppercase; }
+
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6,
+#tinymce h1,
+#tinymce h2,
+#tinymce h3,
+#tinymce h4,
+#tinymce h5,
+#tinymce h6 {
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: .2em;
+  margin: 0 0 20px;
+  text-transform: uppercase; }
+.entry-content h1, .entry-content h3,
+#tinymce h1,
+#tinymce h3 {
+  color: #fba99c; }
+.entry-content h2, .entry-content h4,
+#tinymce h2,
+#tinymce h4 {
+  color: #747373; }
+
+a {
+  color: #fba99c;
+  text-decoration: none;
+  transition: all 0.2s; }
+  a:hover {
+    color: #fba99c;
+    text-decoration: none; }
+
+:focus {
+  outline: none; }
+
+::-moz-focus-inner {
+  border: 0; }
+
+/*# sourceMappingURL=editor-style.css.map */

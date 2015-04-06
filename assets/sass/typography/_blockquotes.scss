@@ -1,39 +1,31 @@
 blockquote {
-    background: rgba(255, 255, 255, 0.7);
-    border: none;
-    @include font-size(1.2);
+    font: {
+        family: Merriweather, Georgia, serif;
+        style: italic;
+    }
+    margin: 20px 0;
 }
 
 @media (min-width: 768px) {
     blockquote {
-        margin: 35px 65px;
-        padding: 15px;
+        padding: 10px 0 10px 40px;
         position: relative;
 
-        &:before,
-        &:after {
+        &:before {
             color: #e4e4e4;
             color: rgba(83, 83, 83, 0.2);
-            @include font-size(20.0);
+            content: "\201C";
+            @include font-size(7.4);
             font: {
-                weight: bold;
+                family: Georgia, "Times New Roman", serif;
+                style: normal;
             }
             line-height: 1;
             height: 60px;
             position: absolute;
+            top: 0;
+            left: 0;
             z-index: -1;
-        }
-
-        &:before {
-            content: "\201C";
-            top: -40px;
-            left: -25px;
-        }
-
-        &:after {
-            content: "\201D";
-            bottom: 12px;
-            right: -25px;
         }
     }
 }

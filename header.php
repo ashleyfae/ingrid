@@ -27,32 +27,39 @@
 
 	<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'ingrid' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-
-		<div class="site-branding text-center">
-			<?php if ( get_header_image() ) : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>">
-				</a>
-			<?php else : ?>
-				<h1 class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			<?php endif; // End header image check. ?>
-		</div>
-		<!-- .site-branding -->
-
-	</header>
-	<!-- #masthead -->
-
 	<nav id="site-navigation" role="navigation">
 		<div class="container">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Menu', 'ingrid' ); ?></button>
 			<?php ng_theme_navigation(); ?>
+
+			<ul id="social-media">
+				<?php echo ng_social_media_links(); ?>
+			</ul>
 		</div>
 	</nav>
 	<!-- #site-navigation -->
 
 	<div class="container">
+
+		<header id="masthead" class="site-header" role="banner">
+
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/flowers-header.png" alt="Flowers" class="flowers">
+
+			<div class="site-branding text-center">
+				<?php if ( get_header_image() ) : ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>">
+					</a>
+				<?php else : ?>
+					<h1 class="site-title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					</h1>
+					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<?php endif; // End header image check. ?>
+			</div>
+			<!-- .site-branding -->
+
+		</header>
+		<!-- #masthead -->
 
 		<main id="main" class="site-main" role="main">

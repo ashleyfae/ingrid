@@ -36,7 +36,11 @@ Tags: one-column, responsive-layout, custom-header, custom-menu, editor-style, f
     8.3 Posts and Pages
     8.4 Comments
     8.5 Widgets
-    8.6 Footer
+    8.6 404 Error Page
+    8.7 Footer
+9.0 Plugins
+    9.1 Naked Social Share
+    9.2 Ultimate Book Blogger
 --------------------------------------------------------------*/
 
 @import "variables/variables";
@@ -81,3 +85,8 @@ Tags: one-column, responsive-layout, custom-header, custom-menu, editor-style, f
 8.0 Content
 --------------------------------------------------------------*/
 @import "content/content";
+
+/*--------------------------------------------------------------
+9.0 Plugins
+--------------------------------------------------------------*/
+@import "plugins/plugins";

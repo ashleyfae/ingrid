@@ -1,23 +1,18 @@
-@import "font-face";
+//@import "font-face";
 
-body {
-    color: $color_body;
-    font: {
-        family: $font_body;
-        size: $font_body-size;
-        weight: $font_body-weight;
-    }
-    letter-spacing: .01em;
-    line-height: 1.7;
-    text-align: justify;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;
+html {
+    font-size: 62.5%;
 }
 
-p {
-    margin-bottom: 20px;
-}
+/*--------------------------------------------------------------
+1.1 Copy
+--------------------------------------------------------------*/
+@import "copy";
+
+/*--------------------------------------------------------------
+1.1 Alignments
+--------------------------------------------------------------*/
+@import "alignments";
 
 /*--------------------------------------------------------------
 1.1 Headings

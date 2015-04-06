@@ -1,0 +1,17 @@
+body {
+    color: $color_body;
+    @include font-size(1.2);
+    font: {
+        family: $font_body;
+        weight: $font_body-weight;
+    }
+    line-height: 1.8;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+p {
+    margin-bottom: 20px;
+}

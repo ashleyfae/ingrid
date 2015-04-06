@@ -1,34 +1,39 @@
-.site-branding {
-    margin: 45px 0 20px;
+#masthead {
+    clear: both;
+
+    .flowers {
+        display: block;
+        margin: -1px auto 0;
+    }
 }
 
 .site-title {
-    @include font-size(7.2);
+    @include font-size(8.0);
     font: {
-        family: Rushistly, cursive;
+        //family: Stringfellows, cursive;
         weight: normal;
     }
     letter-spacing: 0;
+    line-height: 1.2;
     margin: 0;
 
     a {
-        color: #555555;
+        color: #000;
 
         &:hover {
-            border: none;
-            color: #555555;
+            color: #000;
         }
     }
 }
 
 .site-description {
-    color: $color_meta;
+    color: #aaaaaa;
     font: {
-        style: italic;
-        weight: normal;
+        family: $font_secondary;
+        size: 10px;
+        weight: bold;
     }
-    @include font-size(1.2);
-    letter-spacing: .24em;
-    margin: 0;
-    text-transform: lowercase;
+    letter-spacing: .2em;
+    margin-top: 0;
+    text-transform: uppercase;
 }

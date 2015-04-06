@@ -10,7 +10,7 @@
 /**
  * Sets up the theme defaults and registers support for various WordPress features.
  */
-function ng_theme_setup() {
+function ingrid_theme_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -47,15 +47,17 @@ function ng_theme_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'ng_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'ingrid_custom_background_args', array(
 		'default-color' => 'ffffff',
 	) ) );
 
 	// Set up the WordPress core custom header feature.
-	add_theme_support( 'custom-header', apply_filters( 'ng_custom_header_args', array(
+	add_theme_support( 'custom-header', apply_filters( 'ingrid_custom_header_args', array(
+		'default-image'      => get_template_directory_uri() . '/assets/images/ingrid.png',
 		'default-text-color' => '000000',
 		'flex-height'        => true,
 		'flex-width'         => true,
+		'header-text' => false,
 		'wp-head-callback'   => 'ng_theme_header_style'
 	) ) );
 
@@ -75,11 +77,11 @@ function ng_theme_setup() {
 	remove_action( 'wp_head', 'wp_generator' ); // WP version
 }
 
-add_action( 'after_setup_theme', 'ng_theme_setup' );
+add_action( 'after_setup_theme', 'ingrid_theme_setup' );
 
 // Specify the content width.
 if ( ! isset( $content_width ) ) {
-	$content_width = 660;
+	$content_width = 628;
 }
 
 /**
@@ -87,7 +89,7 @@ if ( ! isset( $content_width ) ) {
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function ng_theme_widgets_init() {
+function ingrid_theme_widgets_init() {
 
 	// Register the footer widgets.
 	register_sidebar( array(
@@ -111,45 +113,39 @@ function ng_theme_widgets_init() {
 
 }
 
-add_action( 'widgets_init', 'ng_theme_widgets_init' );
+add_action( 'widgets_init', 'ingrid_theme_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function ng_theme_scripts() {
-	//wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
+function ingrid_theme_scripts() {
 
-	wp_enqueue_style( 'droid-serif', '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,700' );
+	wp_enqueue_style( 'droid-serif', '//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic|Source+Sans+Pro:300,600,700' );
 
 	wp_enqueue_style( 'ingrid', get_stylesheet_uri(), array(), '1.0.0' );
 	wp_add_inline_style( 'ingrid', ng_theme_generate_custom_styles() );
 
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
 
-	//wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), '3.3.1', true );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '20150323', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'ng_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'ingrid_theme_scripts' );
 
 /**
  * Customizer additions.
  */
-function ng_theme_customizer_uri( $uri ) {
+function ingrid_theme_customizer_uri( $uri ) {
 	return get_template_directory_uri() . '/inc/customizer';
 }
 
-add_filter( 'thsp_cbp_directory_uri', 'ng_theme_customizer_uri' );
+add_filter( 'thsp_cbp_directory_uri', 'ingrid_theme_customizer_uri' );
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/customizer/customizer.php';
-
-/**
- * aq_resizer script
- */
-require get_template_directory() . '/inc/aq_resizer.php';
 
 /**
  * Custom template tags for this theme.
@@ -165,8 +161,3 @@ require get_template_directory() . '/inc/extras.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Load UBB integration file.
- */
-require get_template_directory() . '/inc/ubb.php';

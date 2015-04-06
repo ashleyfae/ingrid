@@ -11,26 +11,21 @@ get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
 
-	<header class="page-header">
-		<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'ingrid' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-	</header><!-- .page-header -->
+	<div class="box">
+		<header class="page-header">
+			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'ingrid' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		</header>
+		<section class="search-description">
+			<p><?php _e('Not what you\'re looking for? You can search again!', 'ingrid'); ?></p>
+			<?php get_search_form(); ?>
+		</section>
+		<!-- .page-header -->
+	</div>
 
 	<?php /* Start the Loop */ ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php
-		/* We figure out which display option is selected in the Customizer, then
-		 * include the correct template file based on that.
-		 */
-
-		$layout_setting = ng_option( 'post_content' );
-		$post_layout    = ( empty( $layout_setting ) ) ? 'single' : $layout_setting;
-		if ( $post_layout != 'single' && ! empty( $post_layout ) ) {
-			$post_layout = get_post_format();
-		}
-
-		get_template_part( 'inc/template-parts/content', $post_layout );
-		?>
+		<?php get_template_part( 'inc/template-parts/content', get_post_format() ); ?>
 
 	<?php endwhile; ?>
 

@@ -1,26 +1,13 @@
-// Colours
-$color_primary: #8b5868; //purple
-$color_primary-dark: #7b4d5b;
-$color_secondary: #738e6e; //green
-$color_secondary-dark: #5f795a;
-
-$green: #ddede3;
-$green-dark: #81a58f;
-$tan-light: #faf8f2; // "the latest" bg, meta BG colour
-$tan-mid: #f3f0e7; // bottom border on "the latest", meta border colour
-$tan-dark: #e7e1cf; // top border on "the latest", widget title borders
-
-$color_body: #a0a0a0;
-$color_links: #f48e9e;
-$color_links-hover: #f48e9e;
-$color_post-titles: #8a8a8a;
-$color_meta: #bfbfbf;
-$color_meta-links: #a6a6a6;
+$color_body: #888888;
+$color_links: #fba99c;
+$color_links-hover: #fba99c;
+$color_post-titles: #fba99c;
+$color_meta: #aaaaaa;
+$color_meta-links: #aaaaaa;
 
 // Fonts
-$font_primary: 'Droid Serif', Georgia, 'Times New Roman', Times, serif;
-$font_secondary: $font_primary;
+$font_primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font_secondary: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $font_body: $font_primary;
-$font_body-size: 13px;
 $font_body-weight: normal;

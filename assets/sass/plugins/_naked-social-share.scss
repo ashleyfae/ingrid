@@ -1,0 +1,31 @@
+.naked-social-share {
+    margin: 10px 0 0;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        background: none !important;
+        display: inline-block;
+        margin: 0 5px 0 0;
+        padding: 0 !important;
+    }
+
+    a {
+        background: #fafafa;
+        color: #aaaaaa;
+        @include font-size(1.0);
+        font: {
+            family: $font_secondary;
+            weight: 600;
+        }
+        line-height: 1;
+        letter-spacing: .2em;
+        padding: 4px 8px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

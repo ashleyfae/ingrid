@@ -10,8 +10,8 @@
 $args = array(
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget'  => '</div>',
-	'before_title'  => '<h3 class="widget-title text-left">',
-	'after_title'   => '</h3>',
+	'before_title'  => '<h2 class="widget-title text-left">',
+	'after_title'   => '</h2>',
 );
 
 get_header(); ?>
@@ -19,14 +19,14 @@ get_header(); ?>
 <section class="error-404 not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'ingrid' ); ?></h1>
-
-		<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'ingrid' ); ?></p>
-
-		<?php get_search_form(); ?>
 	</header>
 	<!-- .page-header -->
 
 	<div class="page-content">
+
+		<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'ingrid' ); ?></p>
+
+		<?php get_search_form(); ?>
 
 		<?php the_widget( 'WP_Widget_Recent_Posts', array(), $args ); ?>
 
@@ -52,8 +52,8 @@ get_header(); ?>
 		$args_archive    = array(
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title text-left">',
-			'after_title'   => '</h3>' . $archive_content,
+			'before_title'  => '<h2 class="widget-title text-left">',
+			'after_title'   => '</h2>' . $archive_content,
 		);
 		the_widget( 'WP_Widget_Archives', 'dropdown=1', $args_archive );
 		?>

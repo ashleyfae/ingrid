@@ -1,15 +1,13 @@
 .wp-caption {
     background: none;
-    border: 1px solid #f1f1f1;
-    padding: 5px;
-    text-align: center;
 
     .wp-caption-text {
+        color: #888;
         @include font-size(1.0);
         font: {
+            family: Merriweather, Georgia, serif;
             style: italic;
         }
-        letter-spacing: .24em;
-        margin-top: 3px;
+        letter-spacing: .1em;
     }
 }
