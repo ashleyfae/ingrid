@@ -2,9 +2,9 @@
 /**
  * Custom functions that act independently of the theme templates
  *
- * @package noah
+ * @package   noah
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
- * @license GPL2
+ * @license   GPL2
  */
 
 /**
@@ -43,20 +43,38 @@ add_action( 'after_setup_theme', 'ingrid_theme_add_editor_styles' );
  */
 function ng_option( $key ) {
 	$options = thsp_cbp_get_options_values();
+
 	return $options[ $key ];
 }
 
 /**
  * Creates a new navigation menu in the main_nav location.
  */
-function ng_theme_navigation() {
+function ingrid_theme_navigation() {
 	wp_nav_menu(
 		array(
 			'theme_location' => 'main_menu',
 			'container'      => false,
 			'depth'          => '2',
+			'fallback_cb'    => 'ingrid_theme_navigation_fallback'
 		)
 	);
+}
+
+function ingrid_theme_navigation_fallback() {
+	$args = array(
+		'depth'       => 2,
+		'sort_column' => 'menu_order, post_title',
+		'menu_class'  => 'menu',
+		'include'     => '',
+		'exclude'     => '',
+		'echo'        => true,
+		'show_home'   => true,
+		'link_before' => '',
+		'link_after'  => ''
+	);
+
+	wp_page_menu( $args );
 }
 
 /**
@@ -192,6 +210,10 @@ function ng_social_media_links() {
 			'link' => ng_option( 'pinterest' ),
 			'icon' => 'pinterest-p',
 		),
+		'instagram' => array(
+			'link' => ng_option( 'instagram' ),
+			'icon' => 'instagram',
+		),
 		'tumblr'    => array(
 			'link' => ng_option( 'tumblr' ),
 			'icon' => 'tumblr',
@@ -253,12 +275,12 @@ function ng_social_media_links() {
  *
  * @return string
  */
-function ng_truncate($string, $length=100, $append="&hellip;") {
-	$string = trim($string);
+function ng_truncate( $string, $length = 100, $append = "&hellip;" ) {
+	$string = trim( $string );
 
-	if(strlen($string) > $length) {
-		$string = wordwrap($string, $length);
-		$string = explode("\n", $string, 2);
+	if ( strlen( $string ) > $length ) {
+		$string = wordwrap( $string, $length );
+		$string = explode( "\n", $string, 2 );
 		$string = $string[0] . $append;
 	}
 
@@ -277,7 +299,7 @@ function ng_truncate($string, $length=100, $append="&hellip;") {
  *
  * @return string
  */
-function ingrid_img_caption_shortcode_filter($dummy, $attr, $content) {
+function ingrid_img_caption_shortcode_filter( $dummy, $attr, $content ) {
 	$atts = shortcode_atts( array(
 		'id'      => '',
 		'align'   => 'alignnone',
@@ -287,11 +309,13 @@ function ingrid_img_caption_shortcode_filter($dummy, $attr, $content) {
 	), $attr, 'caption' );
 
 	$atts['width'] = (int) $atts['width'];
-	if ( $atts['width'] < 1 || empty( $atts['caption'] ) )
+	if ( $atts['width'] < 1 || empty( $atts['caption'] ) ) {
 		return $content;
+	}
 
-	if ( ! empty( $atts['id'] ) )
+	if ( ! empty( $atts['id'] ) ) {
 		$atts['id'] = 'id="' . esc_attr( $atts['id'] ) . '" ';
+	}
 
 	$class = trim( 'wp-caption ' . $atts['align'] . ' ' . $atts['class'] );
 

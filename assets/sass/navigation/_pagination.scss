@@ -33,38 +33,38 @@ body.infinite-scroll {
     .wp-prev-next {
         display: none;
     }
+}
 
-    #infinite-handle {
-        margin: 40px 0;
-        text-align: center;
+#infinite-handle {
+    margin: 40px 0;
+    text-align: center;
 
-        span {
-            background: #f7f7f7;
-            border-radius: 0;
+    span {
+        background: #f7f7f7;
+        border-radius: 0;
+        display: inline-block;
+        padding: 0;
+        width: 100%;
+
+        button {
+            color: #726f6a;
             display: inline-block;
-            padding: 0;
-            width: 100%;
-
-            button {
-                color: #726f6a;
-                display: inline-block;
-                font: {
-                    family: $font_secondary;
-                    weight: bold;
-                }
-                @include font-size(1.0);
-                letter-spacing: .2em;
-                padding: 20px 0;
-                text-align: center;
-                text-transform: uppercase;
+            font: {
+                family: $font_secondary;
+                weight: bold;
             }
+            @include font-size(1.0);
+            letter-spacing: .2em;
+            padding: 20px 0;
+            text-align: center;
+            text-transform: uppercase;
         }
     }
+}
 
-    .infinite-loader {
-        margin: 40px 0;
-        text-align: center;
-    }
+.infinite-loader {
+    margin: 40px 0;
+    text-align: center;
 }
 
 /* Next/Previous Post Pagination */

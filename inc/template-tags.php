@@ -109,3 +109,25 @@ if ( ! function_exists( 'ingrid_featured_image' ) ) {
 		echo '</div>';
 	}
 }
+
+/**
+ * Adds the pagination on a single post page.
+ * Displays links to the next post and the previous
+ * post.
+ */
+if ( ! function_exists( 'ingrid_post_pagination' ) ) {
+	function ingrid_post_pagination() {
+		?>
+		<div id="post-pagination" class="row">
+			<div class="row-same-height row-full-height">
+				<div class="col-sm-6 col-sm-height previous-post">
+					<?php previous_post_link( '<span>' . __( 'Previous Post', 'ingrid' ) . '</span> %link' ); ?>
+				</div>
+				<div class="col-sm-6 col-sm-height next-post">
+					<?php next_post_link( '<span>' . __( 'Next Post', 'ingrid' ) . '</span> %link' ); ?>
+				</div>
+			</div>
+		</div>
+	<?php
+	}
+}

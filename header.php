@@ -30,7 +30,7 @@
 	<nav id="site-navigation" role="navigation">
 		<div class="container">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Menu', 'ingrid' ); ?></button>
-			<?php ng_theme_navigation(); ?>
+			<?php ingrid_theme_navigation(); ?>
 
 			<ul id="social-media">
 				<?php echo ng_social_media_links(); ?>

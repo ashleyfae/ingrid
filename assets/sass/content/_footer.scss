@@ -2,6 +2,7 @@
 
 #footer-widgets {
     padding: 20px 0;
+    overflow: hidden;
 
     .widget-title {
         color: #aeaeae;
@@ -16,6 +17,13 @@
     .widget {
         color: #a3a3a3;
         @include font-size(1.1);
+
+        a {
+            font: {
+                weight: bold;
+            }
+            text-transform: uppercase;
+        }
     }
 
     input[type="email"],

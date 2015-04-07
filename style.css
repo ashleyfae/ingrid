@@ -303,13 +303,6 @@ select {
     padding: 8px;
     text-transform: lowercase; }
 
-.widget-area select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: relative;
-  text-indent: 1px;
-  text-overflow: ''; }
-
 /*--------------------------------------------------------------
 4.0 Navigation
 --------------------------------------------------------------*/
@@ -357,16 +350,19 @@ a {
   min-height: 33px; }
   #site-navigation.toggled .container > ul {
     display: block; }
-  #site-navigation ul.menu {
+  #site-navigation ul.menu,
+  #site-navigation div.menu > ul {
     display: none;
     list-style: none;
     margin: 0;
     padding: 0; }
     @media (min-width: 768px) {
-      #site-navigation ul.menu {
+      #site-navigation ul.menu,
+      #site-navigation div.menu > ul {
         display: block;
         float: left; } }
-    #site-navigation ul.menu li {
+    #site-navigation ul.menu li,
+    #site-navigation div.menu > ul li {
       font-size: 10px;
       font-size: 1rem;
       font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -375,24 +371,30 @@ a {
       position: relative;
       text-transform: uppercase; }
       @media (min-width: 768px) {
-        #site-navigation ul.menu li {
+        #site-navigation ul.menu li,
+        #site-navigation div.menu > ul li {
           display: inline-block; } }
-      #site-navigation ul.menu li a {
+      #site-navigation ul.menu li a,
+      #site-navigation div.menu > ul li a {
         color: white;
         display: inline-block;
         padding: 12px 16px; }
-        #site-navigation ul.menu li a:hover {
+        #site-navigation ul.menu li a:hover,
+        #site-navigation div.menu > ul li a:hover {
           color: #aaaaaa; }
         @media (min-width: 768px) {
-          #site-navigation ul.menu li a {
+          #site-navigation ul.menu li a,
+          #site-navigation div.menu > ul li a {
             padding: 8px 0; }
-            #site-navigation ul.menu li a:after {
+            #site-navigation ul.menu li a:after,
+            #site-navigation div.menu > ul li a:after {
               color: #aaaaaa;
               content: "/";
               display: inline-block;
               margin: 0 12px; } }
       @media (min-width: 768px) {
-        #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu {
+        #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu,
+        #site-navigation div.menu > ul li.menu-item-has-children:hover > .sub-menu {
           background: black;
           display: block;
           float: none;
@@ -400,16 +402,21 @@ a {
           position: absolute;
           top: 33px;
           left: -12px; }
-          #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu li {
+          #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu li,
+          #site-navigation div.menu > ul li.menu-item-has-children:hover > .sub-menu li {
             display: block;
             text-align: left; }
-            #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu li a {
+            #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu li a,
+            #site-navigation div.menu > ul li.menu-item-has-children:hover > .sub-menu li a {
               padding: 4px 8px; }
-              #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu li a:after {
+              #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu li a:after,
+              #site-navigation div.menu > ul li.menu-item-has-children:hover > .sub-menu li a:after {
                 content: ""; }
-            #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu li:first-child a {
+            #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu li:first-child a,
+            #site-navigation div.menu > ul li.menu-item-has-children:hover > .sub-menu li:first-child a {
               padding-top: 0; } }
-      #site-navigation ul.menu li:last-child a:after {
+      #site-navigation ul.menu li:last-child a:after,
+      #site-navigation div.menu > ul li:last-child a:after {
         content: "";
         display: none; }
   #site-navigation .sub-menu {
@@ -466,16 +473,17 @@ a {
 /* Infinite Scroll */
 body.infinite-scroll .wp-prev-next {
   display: none; }
-body.infinite-scroll #infinite-handle {
+
+#infinite-handle {
   margin: 40px 0;
   text-align: center; }
-  body.infinite-scroll #infinite-handle span {
+  #infinite-handle span {
     background: #f7f7f7;
     border-radius: 0;
     display: inline-block;
     padding: 0;
     width: 100%; }
-    body.infinite-scroll #infinite-handle span button {
+    #infinite-handle span button {
       color: #726f6a;
       display: inline-block;
       font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -486,7 +494,8 @@ body.infinite-scroll #infinite-handle {
       padding: 20px 0;
       text-align: center;
       text-transform: uppercase; }
-body.infinite-scroll .infinite-loader {
+
+.infinite-loader {
   margin: 40px 0;
   text-align: center; }
 
@@ -587,6 +596,8 @@ img.ubb_right {
 --------------------------------------------------------------*/
 .clear:before,
 .clear:after,
+#site-navigation:before,
+#site-navigation:after,
 .entry-content:before,
 .entry-content:after,
 .comment-content:before,
@@ -1052,7 +1063,8 @@ body.search .search-description {
 --------------------------------------------------------------*/
 /* Footer Widgets */
 #footer-widgets {
-  padding: 20px 0; }
+  padding: 20px 0;
+  overflow: hidden; }
   #footer-widgets .widget-title {
     color: #aeaeae;
     font-size: 18px;
@@ -1064,6 +1076,9 @@ body.search .search-description {
     color: #a3a3a3;
     font-size: 11px;
     font-size: 1.1rem; }
+    #footer-widgets .widget a {
+      font-weight: bold;
+      text-transform: uppercase; }
   #footer-widgets input[type="email"],
   #footer-widgets input[type="password"],
   #footer-widgets input[type="search"],

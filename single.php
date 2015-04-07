@@ -23,7 +23,7 @@ get_header(); ?>
 		}
 
 		// Add the links to next/previous posts.
-		noah_post_pagination();
+		ingrid_post_pagination();
 		?>
 
 	<?php endwhile; ?>

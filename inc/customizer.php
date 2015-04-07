@@ -74,6 +74,20 @@ function ng_theme_customizer_settings( $options ) {
 						'priority' => 4
 					)
 				),
+				// Social Media - Instagram
+				'instagram' => array(
+					'setting_args' => array(
+						'default'    => '',
+						'type'       => 'option',
+						'capability' => $thsp_cbp_capability,
+						'transport'  => 'refresh',
+					),
+					'control_args' => array(
+						'label'    => __( 'Instagram URL', 'ingrid' ),
+						'type'     => 'text',
+						'priority' => 5
+					)
+				),
 				// Social Media - Tumblr
 				'tumblr'    => array(
 					'setting_args' => array(
@@ -85,7 +99,7 @@ function ng_theme_customizer_settings( $options ) {
 					'control_args' => array(
 						'label'    => __( 'Tumblr URL', 'ingrid' ),
 						'type'     => 'text',
-						'priority' => 5
+						'priority' => 6
 					)
 				),
 				// Social Media - Google Plus
@@ -99,7 +113,7 @@ function ng_theme_customizer_settings( $options ) {
 					'control_args' => array(
 						'label'    => __( 'Google+ URL', 'ingrid' ),
 						'type'     => 'text',
-						'priority' => 6
+						'priority' => 7
 					)
 				),
 				// Social Media - Dribble
@@ -113,7 +127,7 @@ function ng_theme_customizer_settings( $options ) {
 					'control_args' => array(
 						'label'    => __( 'Dribbble URL', 'ingrid' ),
 						'type'     => 'text',
-						'priority' => 7
+						'priority' => 8
 					)
 				),
 				// Social Media - Last.fm
@@ -127,7 +141,7 @@ function ng_theme_customizer_settings( $options ) {
 					'control_args' => array(
 						'label'    => __( 'Last.fm URL', 'ingrid' ),
 						'type'     => 'text',
-						'priority' => 8
+						'priority' => 9
 					)
 				),
 				// Social Media - Spotify
@@ -141,7 +155,7 @@ function ng_theme_customizer_settings( $options ) {
 					'control_args' => array(
 						'label'    => __( 'Spotify URL', 'ingrid' ),
 						'type'     => 'text',
-						'priority' => 9
+						'priority' => 10
 					)
 				),
 				// Social Media - Bloglovin'
@@ -155,7 +169,7 @@ function ng_theme_customizer_settings( $options ) {
 					'control_args' => array(
 						'label'    => __( 'Bloglovin\' URL', 'ingrid' ),
 						'type'     => 'text',
-						'priority' => 10
+						'priority' => 11
 					)
 				),
 				// Social Media - Email
@@ -169,7 +183,7 @@ function ng_theme_customizer_settings( $options ) {
 					'control_args' => array(
 						'label'    => __( 'Email Address or Contact Page URL', 'ingrid' ),
 						'type'     => 'text',
-						'priority' => 11
+						'priority' => 12
 					)
 				),
 				// Social Media - RSS
@@ -183,7 +197,7 @@ function ng_theme_customizer_settings( $options ) {
 					'control_args' => array(
 						'label'    => __( 'RSS URL', 'ingrid' ),
 						'type'     => 'text',
-						'priority' => 12
+						'priority' => 13
 					)
 				),
 			)

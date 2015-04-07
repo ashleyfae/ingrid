@@ -32,13 +32,3 @@ select {
         text-transform: lowercase;
     }
 }
-
-.widget-area {
-    select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        position: relative;
-        text-indent: 1px;
-        text-overflow: '';
-    }
-}
