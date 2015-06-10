@@ -6,6 +6,19 @@ section.error-404,
     margin: 20px 0 60px;
     padding: 0 20px;
 
+    &.sticky {
+        border-color: $color_links;
+
+        .entry-header,
+        .tagged {
+            border-bottom-color: $color_links;
+        }
+
+        .entry-footer {
+            border-top-color: $color_links;
+        }
+    }
+
     .entry-header, {
         border-bottom: 1px solid #e5e5e5;
         clear: both;

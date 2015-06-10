@@ -693,6 +693,25 @@ section.error-404,
   padding: 0 20px;
   /* Post Content */
   /* Footer */ }
+  article.post.sticky,
+  article.page.sticky,
+  section.error-404.sticky,
+  .box.sticky {
+    border-color: #fba99c; }
+    article.post.sticky .entry-header,
+    article.post.sticky .tagged,
+    article.page.sticky .entry-header,
+    article.page.sticky .tagged,
+    section.error-404.sticky .entry-header,
+    section.error-404.sticky .tagged,
+    .box.sticky .entry-header,
+    .box.sticky .tagged {
+      border-bottom-color: #fba99c; }
+    article.post.sticky .entry-footer,
+    article.page.sticky .entry-footer,
+    section.error-404.sticky .entry-footer,
+    .box.sticky .entry-footer {
+      border-top-color: #fba99c; }
   article.post .entry-header,
   article.page .entry-header,
   section.error-404 .entry-header,
