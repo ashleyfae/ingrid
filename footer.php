@@ -28,8 +28,8 @@
 	<div id="design-credits">
 		<?php
 		printf(
-			__( '<a href="%s" target="_blank">Ingrid Theme</a> by Anna Moore and Nose Graze.', 'ingrid' ),
-			'https://creativewhim.com/shop/ingrid-theme/'
+			__( '<a href="%s" target="_blank" rel="nofollow">Ingrid Theme</a> by Anna Moore and Nose Graze.', 'ingrid' ),
+			'https://shop.nosegraze.com/product/ingrid-theme/'
 		);
 		?>
 	</div>
