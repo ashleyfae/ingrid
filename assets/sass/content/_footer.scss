@@ -11,12 +11,14 @@
             weight: 300;
         }
         letter-spacing: .05em;
+        margin: 0 0 5px;
         text-transform: uppercase
     }
 
     .widget {
         color: #a3a3a3;
         @include font-size(1.1);
+        margin: 20px 0;
 
         a {
             font: {

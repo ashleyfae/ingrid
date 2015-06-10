@@ -86,10 +86,6 @@ if ( ! function_exists( 'ng_theme_post_footer' ) ) {
 				<a href="<?php comments_link(); ?>"><?php comments_number( __( '0 Comments', 'ingrid' ), __( '1 Comment', 'ingrid' ), __( '% Comments', 'ingrid' ) ); ?></a>
 			</div>
 		</div>
-
-		<?php if ( is_single() ) : ?>
-			<hr>
-		<?php endif; ?>
 	<?php
 	}
 }

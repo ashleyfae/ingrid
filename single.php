@@ -21,9 +21,6 @@ get_header(); ?>
 		if ( comments_open() || get_comments_number() ) {
 			comments_template();
 		}
-
-		// Add the links to next/previous posts.
-		ingrid_post_pagination();
 		?>
 
 	<?php endwhile; ?>

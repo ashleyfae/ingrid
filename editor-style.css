@@ -76,19 +76,9 @@ input[type="submit"] {
 
 #commentform #submit, input[type="submit"] {
   color: white;
+  cursor: pointer;
   display: block;
-  line-height: 1.42857143;
-  width: 100%;
-  text-align: right;
-    /*background-color: #f1f1f1;
-    border-color: #f1f1f1;
-    color: #a6a6a6;
-
-    &:hover {
-        background-color: #f9f9f9;
-        border-color: #f9f9f9;
-        color: #a6a6a6;
-    }*/ }
+  line-height: 1.42857143; }
 
 /*--------------------------------------------------------------
 2.2 Captions
@@ -192,7 +182,13 @@ p {
 1.1 Headings
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal; }
+  color: #fba99c;
+  font-size: 31px;
+  font-size: 3.1rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: uppercase; }
 
 .page-header .page-title {
   color: #fba99c;
@@ -255,7 +251,13 @@ blockquote {
       left: 0;
       z-index: -1; } }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal; }
+  color: #fba99c;
+  font-size: 31px;
+  font-size: 3.1rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: uppercase; }
 
 .page-header .page-title {
   color: #fba99c;

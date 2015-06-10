@@ -1,7 +1,12 @@
 h1, h2, h3, h4, h5, h6 {
+    color: #fba99c;
+    @include font-size(3.1);
     font: {
-        weight: normal;
+        family: $font_secondary;
+        weight: 300;
     }
+    letter-spacing: 0;
+    text-transform: uppercase;
 }
 
 .page-header {

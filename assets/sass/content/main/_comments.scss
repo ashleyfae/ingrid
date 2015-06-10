@@ -1,163 +1,155 @@
-@media (min-width: 768px) {
-    #comments {
-        padding: 0 50px;
-    }
-}
-
 .comments-title {
-    @include font-size(1.4);
-    margin: 0 0 75px;
-    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    color: #7f7f7f;
+    @include font-size(3.2);
+    line-height: 1;
+    margin: 0 -20px 0;
+    padding: 20px 20px 18px;
+    position: relative;
+    text-align: left;
     text-transform: uppercase;
 
-    > span {
-        color: #bfbfbf;
-        display: block;
-        @include font-size(1.0);
-        font: {
-            style: italic;
-        }
-        letter-spacing: .24em;
-        margin-top: 5px;
-        text-align: center;
-        text-transform: lowercase;
+    @media (min-width: 768px) {
+        padding: 20px 0 18px 20px;
+    }
 
-        > span {
-            color: #a6a6a6;
+    > span {
+        @media (min-width: 768px) {
+            color: #aaaaaa;
+            display: block;
+            float: right;
             font: {
-                style: normal;
+                weight: 600;
             }
-            text-transform: uppercase;
+            text-align: center;
+            width: 61px;
+
+            &:before {
+                background: #fafafa;
+                border-left: 1px solid #e5e5e5;
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 61px;
+                height: 100%;
+                z-index: -1;
+            }
         }
     }
 }
 
 .comment-list {
-    list-style: none;
-    margin-bottom: 60px;
+    list-style: decimal-leading-zero;
+    margin: 40px 20px 0 20px;
     padding: 0;
 
     .comment {
-        clear: both;
-        overflow: hidden;
+        background: white;
+        margin: 0 0 32px 0;
+        padding: 0 12px 12px 12px;
         position: relative;
 
-        /* Only affects top-level comments */
-        &.depth-1 {
-            border-bottom: 1px solid #f1f1f1;
-            margin-bottom: 20px;
-        }
-
-        /* Only affects second-level comments */
         &.depth-2 {
-            padding-left: 75px;
-
-            &:before {
-                color: #e8e8e8;
-                content: '\f0da';
-                @include font-size(3.6);
-                font: {
-                    family: FontAwesome;
-                }
-                position: absolute;
-                top: 0;
-                left: 48px;
-            }
+            background: #F6F6F6;
         }
+    }
 
-        .comment-body {
-            clear: both;
-            overflow: hidden;
-            padding-bottom: 10px;
+    .avatar {
+        float: left;
+        margin: 0 6px 0 0;
 
-            .avatar-wrap {
-                float: left;
-                width: 60px;
-                text-align: center;
+    }
+
+    .comment-author {
+        border-top: 1px solid #e5e5e5;
+        @include font-size(2.0);
+        font: {
+            weight: 300;
+        }
+        padding: 8px 0 0 6px;
+    }
+
+    .fn,
+    .says,
+    .comment-meta {
+        @include font-size(2.0);
+        font: {
+            family: $font_secondary;
+            weight: normal;
+        }
+        letter-spacing: .1em;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+
+    .comment-meta {
+        border-bottom: 1px solid #e5e5e5;
+        @include font-size(1.0);
+        margin: -6px 0 0 0;
+        padding: 0 0 10px 6px;
+
+        a {
+            color: #AAA;
+        }
+    }
+
+    p {
+        margin: 12px 6px;
+    }
+
+    .reply {
+        a {
+            color: black;
+            @include font-size(1.0);
+            font: {
+                weight: bold;
             }
-
-            /* Reply link */
-            .reply {
-                @include font-size(1.0);
-                letter-spacing: .24em;
-                margin-top: 13px;
-                text-transform: uppercase;
-            }
-
-            /* Wrap around the comment body */
-            .comment-content-wrap {
-                margin-left: 75px;
-
-                p {
-                    @include font-size(1.2);
-                }
-            }
-
-            /* Comment date */
-            .comment-meta {
-                line-height: 1;
-
-                a {
-                    color: $color_meta;
-                    @include font-size(1.0);
-                    letter-spacing: .24em;
-                    line-height: 1;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                }
-            }
-
-            /* Comment author name */
-            .comment-author {
-                color: $color_meta-links;
-                @include font-size(1.1);
-                letter-spacing: .24em;
-                line-height: 1;
-                margin: 3px 0 10px;
-                text-transform: uppercase;
-
-                .fn {
-                    font-style: normal;
-                }
-
-                .says {
-                }
-            }
+            letter-spacing: .1em;
+            margin: 0 0 32px 6px;
+            text-transform: uppercase;
         }
     }
 
     .children {
         list-style: none;
+        margin: 0 0 24px 0;
         padding: 0;
+
+        li {
+            margin: 12px 0 0 0;
+            padding: 24px 12px 12px 12px;
+        }
     }
 }
 
 /* Form */
 #respond {
     #reply-title {
-        margin-bottom: 2px;
-        text-align: center;
+        border-bottom: 1px solid #e5e5e5;
+        color: #7f7f7f;
+        @include font-size(3.2);
+        line-height: 1;
+        margin: 0 -20px 0;
+        padding: 20px 20px 18px;
+        position: relative;
+        text-align: left;
         text-transform: uppercase;
     }
 
     .comment-notes,
     .logged-in-as {
-        color: #bfbfbf;
+        color: #707070;
         @include font-size(1.0);
         font: {
-            style: italic;
+            family: $font_secondary;
+            weight: bold;
         }
-        letter-spacing: .24em;
-        text-align: center;
-        text-transform: lowercase;
-    }
-
-    .row {
-        margin: 0 -4px;
-    }
-
-    .col-md-4 {
-        padding: 0 4px;
+        letter-spacing: .2em;
+        margin: 0 -20px;
+        padding: 20px;
+        position: relative;
+        text-transform: uppercase;
     }
 
     input[type="text"] {
@@ -171,11 +163,21 @@
         }
     }
 
+    .form-group {
+        margin: 12px 0;
+    }
+
     textarea {
         letter-spacing: .01em;
     }
+}
 
-    .form-group {
-        margin-bottom: 8px;
+#submit {
+    background: #fba99c;
+    border: none;
+    color: white;
+    font: {
+        family: $font_secondary;
+        weight: bold;
     }
 }

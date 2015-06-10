@@ -1,6 +1,6 @@
 /*
 Theme Name: Ingrid
-Theme URI: https://creativewhim.com/shop/ingrid-theme/
+Theme URI: https://shop.nosegraze.com/product/ingrid-theme/
 Author: Anna Moore and Nose Graze
 Author URI: http://annamariemoore.com/
 Description: A simple, feminine theme without a sidebar.
@@ -75,7 +75,13 @@ p {
 1.1 Headings
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal; }
+  color: #fba99c;
+  font-size: 31px;
+  font-size: 3.1rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: uppercase; }
 
 .page-header .page-title {
   color: #fba99c;
@@ -177,19 +183,9 @@ input[type="submit"] {
 
 #commentform #submit, input[type="submit"] {
   color: white;
+  cursor: pointer;
   display: block;
-  line-height: 1.42857143;
-  width: 100%;
-  text-align: right;
-    /*background-color: #f1f1f1;
-    border-color: #f1f1f1;
-    color: #a6a6a6;
-
-    &:hover {
-        background-color: #f9f9f9;
-        border-color: #f9f9f9;
-        color: #a6a6a6;
-    }*/ }
+  line-height: 1.42857143; }
 
 /*--------------------------------------------------------------
 2.2 Captions
@@ -276,7 +272,6 @@ select {
   color: #888888;
   display: block;
   font-size: 11px;
-  font-size: 1.1rem;
   font-weight: normal;
   letter-spacing: .05em;
   line-height: 1;
@@ -666,10 +661,12 @@ body {
 .site-title {
   font-size: 80px;
   font-size: 8rem;
+  font-family: Cookie, cursive;
   font-weight: normal;
   letter-spacing: 0;
-  line-height: 1.2;
-  margin: 0; }
+  line-height: 1;
+  margin: 0;
+  text-transform: none; }
   .site-title a {
     color: #000; }
     .site-title a:hover {
@@ -889,129 +886,136 @@ body.search .search-description {
 /*--------------------------------------------------------------
 8.4 Comments
 --------------------------------------------------------------*/
-@media (min-width: 768px) {
-  #comments {
-    padding: 0 50px; } }
 .comments-title {
-  font-size: 14px;
-  font-size: 1.4rem;
-  margin: 0 0 75px;
-  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  color: #7f7f7f;
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1;
+  margin: 0 -20px 0;
+  padding: 20px 20px 18px;
+  position: relative;
+  text-align: left;
   text-transform: uppercase; }
-  .comments-title > span {
-    color: #bfbfbf;
-    display: block;
-    font-size: 10px;
-    font-size: 1rem;
-    font-style: italic;
-    letter-spacing: .24em;
-    margin-top: 5px;
-    text-align: center;
-    text-transform: lowercase; }
-    .comments-title > span > span {
-      color: #a6a6a6;
-      font-style: normal;
-      text-transform: uppercase; }
-
-.comment-list {
-  list-style: none;
-  margin-bottom: 60px;
-  padding: 0; }
-  .comment-list .comment {
-    clear: both;
-    overflow: hidden;
-    position: relative;
-    /* Only affects top-level comments */
-    /* Only affects second-level comments */ }
-    .comment-list .comment.depth-1 {
-      border-bottom: 1px solid #f1f1f1;
-      margin-bottom: 20px; }
-    .comment-list .comment.depth-2 {
-      padding-left: 75px; }
-      .comment-list .comment.depth-2:before {
-        color: #e8e8e8;
-        content: '\f0da';
-        font-size: 36px;
-        font-size: 3.6rem;
-        font-family: FontAwesome;
+  @media (min-width: 768px) {
+    .comments-title {
+      padding: 20px 0 18px 20px; } }
+  @media (min-width: 768px) {
+    .comments-title > span {
+      color: #aaaaaa;
+      display: block;
+      float: right;
+      font-weight: 600;
+      text-align: center;
+      width: 61px; }
+      .comments-title > span:before {
+        background: #fafafa;
+        border-left: 1px solid #e5e5e5;
+        content: '';
         position: absolute;
         top: 0;
-        left: 48px; }
-    .comment-list .comment .comment-body {
-      clear: both;
-      overflow: hidden;
-      padding-bottom: 10px;
-      /* Reply link */
-      /* Wrap around the comment body */
-      /* Comment date */
-      /* Comment author name */ }
-      .comment-list .comment .comment-body .avatar-wrap {
-        float: left;
-        width: 60px;
-        text-align: center; }
-      .comment-list .comment .comment-body .reply {
-        font-size: 10px;
-        font-size: 1rem;
-        letter-spacing: .24em;
-        margin-top: 13px;
-        text-transform: uppercase; }
-      .comment-list .comment .comment-body .comment-content-wrap {
-        margin-left: 75px; }
-        .comment-list .comment .comment-body .comment-content-wrap p {
-          font-size: 12px;
-          font-size: 1.2rem; }
-      .comment-list .comment .comment-body .comment-meta {
-        line-height: 1; }
-        .comment-list .comment .comment-body .comment-meta a {
-          color: #aaaaaa;
-          font-size: 10px;
-          font-size: 1rem;
-          letter-spacing: .24em;
-          line-height: 1;
-          text-decoration: none;
-          text-transform: uppercase; }
-      .comment-list .comment .comment-body .comment-author {
-        color: #aaaaaa;
-        font-size: 11px;
-        font-size: 1.1rem;
-        letter-spacing: .24em;
-        line-height: 1;
-        margin: 3px 0 10px;
-        text-transform: uppercase; }
-        .comment-list .comment .comment-body .comment-author .fn {
-          font-style: normal; }
+        right: 0;
+        width: 61px;
+        height: 100%;
+        z-index: -1; } }
+
+.comment-list {
+  list-style: decimal-leading-zero;
+  margin: 40px 20px 0 20px;
+  padding: 0; }
+  .comment-list .comment {
+    background: white;
+    margin: 0 0 32px 0;
+    padding: 0 12px 12px 12px;
+    position: relative; }
+    .comment-list .comment.depth-2 {
+      background: #F6F6F6; }
+  .comment-list .avatar {
+    float: left;
+    margin: 0 6px 0 0; }
+  .comment-list .comment-author {
+    border-top: 1px solid #e5e5e5;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 8px 0 0 6px; }
+  .comment-list .fn,
+  .comment-list .says,
+  .comment-list .comment-meta {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    letter-spacing: .1em;
+    line-height: 1.2;
+    text-transform: uppercase; }
+  .comment-list .comment-meta {
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 10px;
+    font-size: 1rem;
+    margin: -6px 0 0 0;
+    padding: 0 0 10px 6px; }
+    .comment-list .comment-meta a {
+      color: #AAA; }
+  .comment-list p {
+    margin: 12px 6px; }
+  .comment-list .reply a {
+    color: black;
+    font-size: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: .1em;
+    margin: 0 0 32px 6px;
+    text-transform: uppercase; }
   .comment-list .children {
     list-style: none;
+    margin: 0 0 24px 0;
     padding: 0; }
+    .comment-list .children li {
+      margin: 12px 0 0 0;
+      padding: 24px 12px 12px 12px; }
 
 /* Form */
 #respond #reply-title {
-  margin-bottom: 2px;
-  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  color: #7f7f7f;
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1;
+  margin: 0 -20px 0;
+  padding: 20px 20px 18px;
+  position: relative;
+  text-align: left;
   text-transform: uppercase; }
 #respond .comment-notes,
 #respond .logged-in-as {
-  color: #bfbfbf;
+  color: #707070;
   font-size: 10px;
   font-size: 1rem;
-  font-style: italic;
-  letter-spacing: .24em;
-  text-align: center;
-  text-transform: lowercase; }
-#respond .row {
-  margin: 0 -4px; }
-#respond .col-md-4 {
-  padding: 0 4px; }
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: .2em;
+  margin: 0 -20px;
+  padding: 20px;
+  position: relative;
+  text-transform: uppercase; }
 #respond input[type="text"] {
   letter-spacing: .05em; }
   #respond input[type="text"]::-webkit-input-placeholder {
     text-transform: uppercase; }
   #respond input[type="text"] ::-moz-placeholder {
     text-transform: uppercase; }
+#respond .form-group {
+  margin: 12px 0; }
 #respond textarea {
   letter-spacing: .01em; }
-#respond .form-group {
-  margin-bottom: 8px; }
+
+#submit {
+  background: #fba99c;
+  border: none;
+  color: white;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold; }
 
 /*--------------------------------------------------------------
 8.5 Widgets
@@ -1071,11 +1075,13 @@ body.search .search-description {
     font-size: 1.8rem;
     font-weight: 300;
     letter-spacing: .05em;
+    margin: 0 0 5px;
     text-transform: uppercase; }
   #footer-widgets .widget {
     color: #a3a3a3;
     font-size: 11px;
-    font-size: 1.1rem; }
+    font-size: 1.1rem;
+    margin: 20px 0; }
     #footer-widgets .widget a {
       font-weight: bold;
       text-transform: uppercase; }

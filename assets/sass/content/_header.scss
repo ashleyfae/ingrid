@@ -10,12 +10,13 @@
 .site-title {
     @include font-size(8.0);
     font: {
-        //family: Stringfellows, cursive;
+        family: Cookie, cursive;
         weight: normal;
     }
     letter-spacing: 0;
-    line-height: 1.2;
+    line-height: 1;
     margin: 0;
+    text-transform: none;
 
     a {
         color: #000;

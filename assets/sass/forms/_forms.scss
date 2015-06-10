@@ -11,8 +11,9 @@ select {
     box-shadow: none;
     color: $color_body;
     display: block;
-    @include font-size(1.1);
+    //@include font-size(1.1);
     font: {
+        size: 11px;
         weight: normal;
     }
     letter-spacing: .05em;
