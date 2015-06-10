@@ -42,9 +42,11 @@ add_action( 'after_setup_theme', 'ingrid_theme_add_editor_styles' );
  * @return mixed
  */
 function ng_option( $key ) {
-	$options = thsp_cbp_get_options_values();
+	/*$options = thsp_cbp_get_options_values();
 
-	return $options[ $key ];
+	return $options[ $key ];*/
+
+	return get_theme_mod( $key );
 }
 
 /**
@@ -195,55 +197,55 @@ function ng_theme_comment_layout( $comment, $args, $depth ) {
  *
  * @return string
  */
-function ng_social_media_links() {
+function ingrid_social_media_links() {
 	$li_array     = array();
 	$social_sites = array(
 		'twitter'   => array(
-			'link' => ng_option( 'twitter' ),
+			'link' => get_theme_mod( 'ingrid_twitter' ),
 			'icon' => 'twitter',
 		),
 		'facebook'  => array(
-			'link' => ng_option( 'facebook' ),
+			'link' => get_theme_mod( 'ingrid_facebook' ),
 			'icon' => 'facebook',
 		),
 		'pinterest' => array(
-			'link' => ng_option( 'pinterest' ),
+			'link' => get_theme_mod( 'ingrid_pinterest' ),
 			'icon' => 'pinterest-p',
 		),
 		'instagram' => array(
-			'link' => ng_option( 'instagram' ),
+			'link' => get_theme_mod( 'ingrid_instagram' ),
 			'icon' => 'instagram',
 		),
 		'tumblr'    => array(
-			'link' => ng_option( 'tumblr' ),
+			'link' => get_theme_mod( 'ingrid_tumblr' ),
 			'icon' => 'tumblr',
 		),
 		'google'    => array(
-			'link' => ng_option( 'google' ),
+			'link' => get_theme_mod( 'ingrid_google' ),
 			'icon' => 'google-plus',
 		),
 		'dribbble'  => array(
-			'link' => ng_option( 'dribbble' ),
+			'link' => get_theme_mod( 'ingrid_dribbble' ),
 			'icon' => 'dribbble',
 		),
 		'lastfm'    => array(
-			'link' => ng_option( 'lastfm' ),
+			'link' => get_theme_mod( 'ingrid_lastfm' ),
 			'icon' => 'lastfm',
 		),
 		'spotify'   => array(
-			'link' => ng_option( 'spotify' ),
+			'link' => get_theme_mod( 'ingrid_spotify' ),
 			'icon' => 'spotify',
 		),
 		'bloglovin' => array(
-			'link' => ng_option( 'bloglovin' ),
+			'link' => get_theme_mod( 'ingrid_bloglovin' ),
 			'icon' => 'heart-o',
 		),
 		'email'     => array(
-			'link' => ng_option( 'email' ),
+			'link' => get_theme_mod( 'ingrid_email' ),
 			'icon' => 'envelope-o',
 		),
 		'rss'       => array(
-			'link' => ng_option( 'rss' ),
+			'link' => get_theme_mod( 'ingrid_rss' ),
 			'icon' => 'rss',
 		),
 	);
@@ -260,7 +262,7 @@ function ng_social_media_links() {
 			$site['link'] = 'mailto:' . $site['link'];
 		}
 
-		$li_array[] = '<li><a href="' . $site['link'] . '" target="_blank"><i class="fa fa-' . $site['icon'] . '"></i></a></li>';
+		$li_array[] = '<li><a href="' . esc_url( $site['link'] ) . '" target="_blank"><i class="fa fa-' . $site['icon'] . '"></i></a></li>';
 	}
 
 	return implode( '', $li_array );

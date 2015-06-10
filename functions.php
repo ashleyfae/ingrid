@@ -58,7 +58,7 @@ function ingrid_theme_setup() {
 		'flex-height'        => true,
 		'flex-width'         => true,
 		//'header-text' => false,
-		'wp-head-callback'   => 'ng_theme_header_style'
+		'wp-head-callback'   => 'ingrid_header_style'
 	) ) );
 
 	// Adds support for <title> tags, so we don't have to add them to the header.
@@ -111,7 +111,7 @@ function ingrid_theme_scripts() {
 	wp_enqueue_style( 'droid-serif', '//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic|Source+Sans+Pro:300,600,700|Cookie' );
 
 	wp_enqueue_style( 'ingrid', get_stylesheet_uri(), array(), '1.0' );
-	wp_add_inline_style( 'ingrid', ng_theme_generate_custom_styles() );
+	wp_add_inline_style( 'ingrid', ingrid_generate_custom_styles() );
 
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
 
@@ -127,13 +127,7 @@ add_action( 'wp_enqueue_scripts', 'ingrid_theme_scripts' );
 /**
  * Customizer additions.
  */
-function ingrid_theme_customizer_uri( $uri ) {
-	return get_template_directory_uri() . '/inc/customizer';
-}
-
-add_filter( 'thsp_cbp_directory_uri', 'ingrid_theme_customizer_uri' );
 require get_template_directory() . '/inc/customizer.php';
-require get_template_directory() . '/inc/customizer/customizer.php';
 
 /**
  * Custom template tags for this theme.

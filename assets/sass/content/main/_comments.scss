@@ -50,6 +50,19 @@
         padding: 0 12px 12px 12px;
         position: relative;
 
+        &.bypostauthor {
+            > .comment-body {
+                .comment-author,
+                .comment-meta {
+                    border-color: $color_links;
+                }
+
+                .fn, .fn a {
+                    color: $color_links;
+                }
+            }
+        }
+
         &.depth-2 {
             background: #F6F6F6;
         }

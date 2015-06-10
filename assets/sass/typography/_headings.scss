@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .entry-content,
+.comment-content,
 #tinymce {
     h1, h2, h3, h4, h5, h6 {
         @include font-size(1.2);

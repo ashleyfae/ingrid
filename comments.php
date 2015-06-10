@@ -24,7 +24,7 @@ if ( post_password_required() ) {
 
 	<div class="box">
 
-		<?php // You can start editing here -- including this comment! ?>
+		<?php ?>
 
 		<?php if ( have_comments() ) : ?>
 			<h2 class="comments-title">
@@ -53,7 +53,6 @@ if ( post_password_required() ) {
 					'avatar_size' => 42,
 					'style'       => 'ol',
 					'short_ping'  => true,
-					//'callback'    => 'ng_theme_comment_layout'
 				) );
 				?>
 			</ol><!-- .comment-list -->
@@ -88,8 +87,6 @@ if ( post_password_required() ) {
 
 	$args = array(
 		'comment_field'        => '<div class="form-group"><textarea name="comment" id="comment" placeholder="' . sprintf( __( 'What did you think of &ldquo;%1$s&rdquo;?', 'ingrid' ), get_the_title() ) . '" tabindex="4" aria-required="true" rows="12"></textarea></div>',
-		//'comment_notes_before' => ( ! empty( $comment_notes_before ) ) ? '<p class="comment-notes">' . $comment_notes_before . '</p>' : '',
-		//'comment_notes_after'  => ( ! empty( $comment_notes_after ) ) ? '<p class="text-center comment-notes-after">' . $comment_notes_after . '</p>' : '',
 		'title_reply'          => __( 'Leave a Comment', 'ingrid' ),
 		'label_submit'         => __( 'Submit &#x2192;', 'ingrid' ),
 		'fields'               => apply_filters( 'comment_form_default_fields', array(

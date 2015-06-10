@@ -33,7 +33,7 @@
 			<?php ingrid_theme_navigation(); ?>
 
 			<ul id="social-media">
-				<?php echo ng_social_media_links(); ?>
+				<?php echo ingrid_social_media_links(); ?>
 			</ul>
 		</div>
 	</nav>

@@ -1,270 +1,228 @@
 <?php
 /**
- * Settings for the WordPress Customizer.
+ * customizer-api.php
  *
  * @package   ingrid
- * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
- * @license   GPL2
+ * @copyright Copyright (c) 2015, Ashley Evans
+ * @license   GPL2+
  */
 
-/**
- * Adds new settings to the WordPress Customizer.
- *
- * @param $options
- *
- * @return array
- */
-function ng_theme_customizer_settings( $options ) {
+function ingrid_customize_register( $wp_customize ) {
 	/*
-	 * Using helper function to get default required capability
+	 * Social Media Section
 	 */
-	$thsp_cbp_capability = thsp_cbp_capability();
+	$wp_customize->add_section( 'ingrid_social_media', array(
+		'title'       => __( 'Social Media', 'ingrid' ),
+		'description' => __( 'Enter the URLs for your social media profiles. These may be used in the layout and/or in a custom widget.', 'ingrid' ),
+		'priority'    => 200,
+	) );
 
-	$options = array(
-		/**
-		 * Social Media
-		 */
-		'social_media'       => array(
-			'existing_section' => false,
-			'args'             => array(
-				'title'       => __( 'Social Media', 'ingrid' ),
-				'description' => __( 'Enter the URLs for your social media profiles. These may be used in the layout and/or in a custom widget.', 'ingrid' ),
-				'priority'    => 200
-			),
-			'fields'           => array(
-				// Social Media - Twitter
-				'twitter'   => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Twitter URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 2
-					)
-				),
-				// Social Media - Facebook
-				'facebook'  => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Facebook URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 3
-					)
-				),
-				// Social Media - Pinterest
-				'pinterest' => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Pinterest URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 4
-					)
-				),
-				// Social Media - Instagram
-				'instagram' => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Instagram URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 5
-					)
-				),
-				// Social Media - Tumblr
-				'tumblr'    => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Tumblr URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 6
-					)
-				),
-				// Social Media - Google Plus
-				'google'    => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Google+ URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 7
-					)
-				),
-				// Social Media - Dribble
-				'dribbble'  => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Dribbble URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 8
-					)
-				),
-				// Social Media - Last.fm
-				'lastfm'    => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Last.fm URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 9
-					)
-				),
-				// Social Media - Spotify
-				'spotify'   => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Spotify URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 10
-					)
-				),
-				// Social Media - Bloglovin'
-				'bloglovin' => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Bloglovin\' URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 11
-					)
-				),
-				// Social Media - Email
-				'email'     => array(
-					'setting_args' => array(
-						'default'    => '',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Email Address or Contact Page URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 12
-					)
-				),
-				// Social Media - RSS
-				'rss'       => array(
-					'setting_args' => array(
-						'default'    => home_url( '/rss/' ),
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'RSS URL', 'ingrid' ),
-						'type'     => 'text',
-						'priority' => 13
-					)
-				),
-			)
-		),
-		/**
-		 * Colours
-		 */
-		'colors'             => array(
-			'existing_section' => true,
-			'fields'           => array(
-				// Body text
-				'body_color'         => array(
-					'setting_args' => array(
-						'default'    => '#888888',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Paragraph Text', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 1
-					)
-				),
-				// Links
-				'links'              => array(
-					'setting_args' => array(
-						'default'    => '#fba99c',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Link Colour', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 2
-					)
-				),
-				// Link Hover
-				'links_hover'        => array(
-					'setting_args' => array(
-						'default'    => '#fba99c',
-						'type'       => 'option',
-						'capability' => $thsp_cbp_capability,
-						'transport'  => 'refresh',
-					),
-					'control_args' => array(
-						'label'    => __( 'Link Colour - Hover', 'ingrid' ),
-						'type'     => 'color',
-						'priority' => 3
-					)
-				),
-			)
-		),
+	// Twitter
+	$wp_customize->add_setting( 'ingrid_twitter', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
 
+	$wp_customize->add_control( 'ingrid_twitter_control', array(
+		'label'    => __( 'Twitter URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_twitter'
+	) );
 
-	);
+	// Facebook
+	$wp_customize->add_setting( 'ingrid_facebook', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
 
-	return $options;
+	$wp_customize->add_control( 'ingrid_facebook_control', array(
+		'label'    => __( 'Facebook URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_facebook'
+	) );
+
+	// Pinterest
+	$wp_customize->add_setting( 'ingrid_pinterest', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( 'ingrid_pinterest_control', array(
+		'label'    => __( 'Pinterest URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_pinterest'
+	) );
+
+	// Instagram
+	$wp_customize->add_setting( 'ingrid_instagram', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( 'ingrid_instagram_control', array(
+		'label'    => __( 'Instagram URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_instagram'
+	) );
+
+	// Tumblr
+	$wp_customize->add_setting( 'ingrid_tumblr', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( 'ingrid_tumblr_control', array(
+		'label'    => __( 'Tumblr URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_tumblr'
+	) );
+
+	// Google+
+	$wp_customize->add_setting( 'ingrid_google', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( 'ingrid_google_control', array(
+		'label'    => __( 'Google+ URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_google'
+	) );
+
+	// Dribbble
+	$wp_customize->add_setting( 'ingrid_dribbble', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( 'ingrid_dribbble_control', array(
+		'label'    => __( 'Dribbble URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_dribbble'
+	) );
+
+	// Last.fm
+	$wp_customize->add_setting( 'ingrid_lastfm', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( 'ingrid_lastfm_control', array(
+		'label'    => __( 'Last.fm URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_lastfm'
+	) );
+
+	// Spotify
+	$wp_customize->add_setting( 'ingrid_spotify', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( 'ingrid_spotify_control', array(
+		'label'    => __( 'Spotify URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_spotify'
+	) );
+
+	// Bloglovin
+	$wp_customize->add_setting( 'ingrid_bloglovin', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( 'ingrid_bloglovin_control', array(
+		'label'    => __( 'Bloglovin\' URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_bloglovin'
+	) );
+
+	// Email
+	$wp_customize->add_setting( 'ingrid_email', array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'ingrid_email_control', array(
+		'label'    => __( 'Email Address or Contact Page URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_email'
+	) );
+
+	// RSS
+	$wp_customize->add_setting( 'ingrid_rss', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( 'ingrid_rss_control', array(
+		'label'    => __( 'RSS URL', 'ingrid' ),
+		'section'  => 'ingrid_social_media',
+		'settings' => 'ingrid_rss'
+	) );
+
+	/*
+	 * Colours
+	 */
+
+	// Body Text
+	$wp_customize->add_setting( 'ingrid_body_text', array(
+		'default'           => '#888888',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize,
+		'ingrid_body_text_control',
+		array(
+			'label'    => __( 'Paragraph Text', 'ingrid' ),
+			'section'  => 'colors',
+			'settings' => 'ingrid_body_text',
+			'priority' => 1
+		)
+	) );
+
+	// Links
+	$wp_customize->add_setting( 'ingrid_links', array(
+		'default'           => '#fba99c',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize,
+		'ingrid_links_control',
+		array(
+			'label'    => __( 'Link Colour', 'ingrid' ),
+			'section'  => 'colors',
+			'settings' => 'ingrid_links',
+			'priority' => 2
+		)
+	) );
+
+	// Links - Hover
+	$wp_customize->add_setting( 'ingrid_links_hover', array(
+		'default'           => '#fba99c',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize,
+		'ingrid_links_hover_control',
+		array(
+			'label'    => __( 'Link Colour - Hover', 'ingrid' ),
+			'section'  => 'colors',
+			'settings' => 'ingrid_links_hover',
+			'priority' => 3
+		)
+	) );
 }
 
-add_filter( 'thsp_cbp_options_array', 'ng_theme_customizer_settings' );
+add_action( 'customize_register', 'ingrid_customize_register' );
 
 /**
  * Styles the header image and text displayed on the blog.
  */
-function ng_theme_header_style() {
+function ingrid_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -305,17 +263,17 @@ function ng_theme_header_style() {
  *
  * @return string
  */
-function ng_theme_generate_custom_styles() {
+function ingrid_generate_custom_styles() {
 	$css = '
 		body {
-			color: ' . esc_attr( ng_option( 'body_color' ) ) . ';
+			color: ' . esc_attr( get_theme_mod( 'ingrid_body_text' ) ) . ';
 		}
 
 		a {
-			color: ' . esc_attr( ng_option( 'links' ) ) . ';
+			color: ' . esc_attr( get_theme_mod( 'ingrid_links' ) ) . ';
 		}
 		a:hover {
-			color: ' . esc_attr( ng_option( 'links_hover' ) ) . ';
+			color: ' . esc_attr( get_theme_mod( 'ingrid_links_hover' ) ) . ';
 		}
 	';
 

@@ -3,6 +3,16 @@
     margin: auto -6px;
     overflow: hidden;
 
+    .gallery-caption {
+        color: #888;
+        @include font-size(1.0);
+        font: {
+            family: Merriweather, Georgia, serif;
+            style: italic;
+        }
+        letter-spacing: .1em;
+    }
+
     .gallery-item {
         float: left;
         margin: 0;
