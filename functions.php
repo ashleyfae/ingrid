@@ -63,18 +63,6 @@ function ingrid_theme_setup() {
 
 	// Adds support for <title> tags, so we don't have to add them to the header.
 	add_theme_support( 'title-tag' );
-
-	/*
-	 * Remove unnecessary elements from the header
-	 */
-	remove_action( 'wp_head', 'feed_links_extra', 3 ); // Category Feeds
-	remove_action( 'wp_head', 'rsd_link' ); // EditURI link
-	remove_action( 'wp_head', 'wlwmanifest_link' ); // Windows Live Writer
-	remove_action( 'wp_head', 'index_rel_link' ); // index link
-	remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 ); // previous link
-	remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); // start link
-	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 ); // Links for Adjacent Posts
-	remove_action( 'wp_head', 'wp_generator' ); // WP version
 }
 
 add_action( 'after_setup_theme', 'ingrid_theme_setup' );
@@ -122,7 +110,7 @@ function ingrid_theme_scripts() {
 
 	wp_enqueue_style( 'droid-serif', '//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic|Source+Sans+Pro:300,600,700|Cookie' );
 
-	wp_enqueue_style( 'ingrid', get_stylesheet_uri(), array(), '0.9' );
+	wp_enqueue_style( 'ingrid', get_stylesheet_uri(), array(), '0.9.1' );
 	wp_add_inline_style( 'ingrid', ng_theme_generate_custom_styles() );
 
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );

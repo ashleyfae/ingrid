@@ -94,14 +94,44 @@ input[type="submit"] {
     letter-spacing: .1em; }
 
 /*--------------------------------------------------------------
-2.3 Horizontal Rules
+2.3 Galleries
+--------------------------------------------------------------*/
+.gallery {
+  clear: both;
+  margin: auto -6px;
+  overflow: hidden; }
+  .gallery .gallery-item {
+    float: left;
+    margin: 0;
+    padding: 6px;
+    width: 33.33%;
+    text-align: center; }
+  .gallery.gallery-columns-1 .gallery-item {
+    width: 100%; }
+  .gallery.gallery-columns-2 .gallery-item {
+    width: 50%; }
+  .gallery.gallery-columns-4 .gallery-item {
+    width: 25%; }
+  .gallery.gallery-columns-5 .gallery-item {
+    width: 20%; }
+  .gallery.gallery-columns-6 .gallery-item {
+    width: 16.665%; }
+  .gallery.gallery-columns-7 .gallery-item {
+    width: 14.285%; }
+  .gallery.gallery-columns-8 .gallery-item {
+    width: 12.5%; }
+  .gallery.gallery-columns-9 .gallery-item {
+    width: 11.111%; }
+
+/*--------------------------------------------------------------
+2.4 Horizontal Rules
 --------------------------------------------------------------*/
 hr {
   border-top-color: #eee;
   margin: 25px 0; }
 
 /*--------------------------------------------------------------
-2.4 Lists
+2.5 Lists
 --------------------------------------------------------------*/
 .entry-content ul,
 #tinymce ul {
@@ -132,7 +162,7 @@ hr {
     padding: 4px 8px; }
 
 /*--------------------------------------------------------------
-2.5 Tables
+2.6 Tables
 --------------------------------------------------------------*/
 table {
   width: 100%; }
