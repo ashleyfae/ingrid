@@ -24,7 +24,7 @@ get_header(); ?>
 
 	<?php endwhile; ?>
 
-	<?php ng_theme_pagination(); ?>
+	<?php ingrid_theme_pagination(); ?>
 
 <?php else : ?>
 

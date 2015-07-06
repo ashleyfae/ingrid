@@ -14,8 +14,8 @@
  * @param string $before
  * @param string $after
  */
-if ( ! function_exists( 'ng_theme_pagination' ) ) {
-	function ng_theme_pagination() {
+if ( ! function_exists( 'ingrid_theme_pagination' ) ) {
+	function ingrid_theme_pagination() {
 		if ( function_exists( 'wp_pagenavi' ) ) {
 			wp_pagenavi();
 		} else {
@@ -35,8 +35,8 @@ if ( ! function_exists( 'ng_theme_pagination' ) ) {
  * Displays the meta information. This includes the
  * date the post was published and the list of categories.
  */
-if ( ! function_exists( 'ng_theme_post_meta' ) ) {
-	function ng_theme_post_meta() {
+if ( ! function_exists( 'ingrid_theme_post_meta' ) ) {
+	function ingrid_theme_post_meta() {
 		// Format the date string.
 		// The date format is taken from Settings > General.
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -55,8 +55,8 @@ if ( ! function_exists( 'ng_theme_post_meta' ) ) {
 /**
  * Displays the post footer information.
  */
-if ( ! function_exists( 'ng_theme_post_footer' ) ) {
-	function ng_theme_post_footer() {
+if ( ! function_exists( 'ingrid_theme_post_footer' ) ) {
+	function ingrid_theme_post_footer() {
 		?>
 		<div class="tagged">
 			<?php

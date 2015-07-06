@@ -29,7 +29,7 @@
 		/*
 		 * Include the top post meta.
 		 */
-		ng_theme_post_meta();
+		ingrid_theme_post_meta();
 		?>
 	</header>
 	<!-- .entry-header -->
@@ -46,7 +46,7 @@
 	<!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php ng_theme_post_footer(); ?>
+		<?php ingrid_theme_post_footer(); ?>
 	</footer>
 	<!-- .entry-footer -->
 </article><!-- #post-## -->

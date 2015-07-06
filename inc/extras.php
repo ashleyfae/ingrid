@@ -8,24 +8,6 @@
  */
 
 /**
- * Adds custom classes to the array of body classes.
- *
- * @param array $classes Classes for the body element.
- *
- * @return array
- */
-function ng_theme_body_classes( $classes ) {
-	// Adds a class of group-blog to blogs with more than 1 published author.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
-	return $classes;
-}
-
-add_filter( 'body_class', 'ng_theme_body_classes' );
-
-/**
  * Adds a custom stylesheet to the visual editor
  */
 function ingrid_theme_add_editor_styles() {
@@ -33,21 +15,6 @@ function ingrid_theme_add_editor_styles() {
 }
 
 add_action( 'after_setup_theme', 'ingrid_theme_add_editor_styles' );
-
-/**
- * Fetches a value from the Customizer.
- *
- * @param string $key
- *
- * @return mixed
- */
-function ng_option( $key ) {
-	/*$options = thsp_cbp_get_options_values();
-
-	return $options[ $key ];*/
-
-	return get_theme_mod( $key );
-}
 
 /**
  * Creates a new navigation menu in the main_nav location.
@@ -121,75 +88,6 @@ function ingrid_theme_search_form( $form ) {
 }
 
 add_filter( 'get_search_form', 'ingrid_theme_search_form' );
-
-
-/**
- * Customizes the comment layout
- *
- * @param $comment
- * @param $args
- * @param $depth
- */
-function ng_theme_comment_layout( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment;
-	extract( $args, EXTR_SKIP );
-
-	if ( 'div' == $args['style'] ) {
-		$tag       = 'div';
-		$add_below = 'comment';
-	} else {
-		$tag       = 'li';
-		$add_below = 'div-comment';
-	}
-	?>
-
-	<<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
-	<?php if ( 'div' != $args['style'] ) : ?>
-		<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-	<?php endif; ?>
-
-	<?php if ( $args['avatar_size'] != 0 ) {
-		echo '<div class="avatar-wrap">';
-		echo get_avatar( $comment, $args['avatar_size'], get_template_directory_uri() . '/assets/images/gravatar.png' );
-		?>
-		<div class="reply">
-			<?php comment_reply_link( array_merge( $args, array(
-				'add_below' => $add_below,
-				'depth'     => $depth,
-				'max_depth' => $args['max_depth']
-			) ) ); ?>
-		</div>
-		<?php
-		echo '</div>';
-	} ?>
-
-	<div class="comment-content-wrap">
-
-		<div class="comment-meta commentmetadata">
-			<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
-				<?php echo get_comment_date(); ?>
-			</a>
-			<?php edit_comment_link( __( '(Edit)', 'ingrid' ), '  ', '' );
-			?>
-		</div>
-
-		<div class="comment-author vcard">
-			<?php printf( __( '<cite class="fn">%s</cite> <span class="says">said:</span>' ), get_comment_author_link() ); ?>
-		</div>
-
-		<?php if ( $comment->comment_approved == '0' ) : ?>
-			<div class="comment-awaiting-moderation alert alert-warning"><?php _e( 'Your comment is awaiting moderation.', 'ingrid' ); ?></div>
-		<?php endif; ?>
-
-		<?php comment_text(); ?>
-
-	</div>
-
-	<?php if ( 'div' != $args['style'] ) : ?>
-		</div>
-	<?php endif; ?>
-<?php
-}
 
 /**
  * Gets all of the social media URLs and puts them
@@ -266,27 +164,6 @@ function ingrid_social_media_links() {
 	}
 
 	return implode( '', $li_array );
-}
-
-/**
- * Trims a string after a certain amount of characters.
- *
- * @param string $string
- * @param int    $length
- * @param string $append
- *
- * @return string
- */
-function ng_truncate( $string, $length = 100, $append = "&hellip;" ) {
-	$string = trim( $string );
-
-	if ( strlen( $string ) > $length ) {
-		$string = wordwrap( $string, $length );
-		$string = explode( "\n", $string, 2 );
-		$string = $string[0] . $append;
-	}
-
-	return $string;
 }
 
 /**

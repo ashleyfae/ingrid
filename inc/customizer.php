@@ -1,6 +1,6 @@
 <?php
 /**
- * customizer-api.php
+ * Adds all the settings and options to the Customizer
  *
  * @package   ingrid
  * @copyright Copyright (c) 2015, Ashley Evans

@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:600,600italic);
 body {
   max-width: 630px; }
 
@@ -191,11 +192,15 @@ Typography
 html {
   font-size: 62.5%; }
 
+body {
+  font-size: 12px;
+  font-size: 1.2rem; }
+
 /*--------------------------------------------------------------
 1.1 Copy
 --------------------------------------------------------------*/
 body {
-  color: #888888;
+  color: #444444;
   font-size: 12px;
   font-size: 1.2rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -219,57 +224,13 @@ p {
 1.1 Headings
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
-  color: #fba99c;
-  font-size: 31px;
-  font-size: 3.1rem;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  letter-spacing: 0;
-  text-transform: uppercase; }
-
-.page-header .page-title {
-  color: #fba99c;
-  font-size: 31px;
-  font-size: 3.1rem;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  letter-spacing: 0;
-  line-height: 1;
-  margin: 20px 0;
-  text-transform: uppercase; }
-
-.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6,
-.comment-content h1,
-.comment-content h2,
-.comment-content h3,
-.comment-content h4,
-.comment-content h5,
-.comment-content h6,
-#tinymce h1,
-#tinymce h2,
-#tinymce h3,
-#tinymce h4,
-#tinymce h5,
-#tinymce h6 {
-  font-size: 12px;
-  font-size: 1.2rem;
+  color: #747373;
+  font-size: 16px;
+  font-size: 1.6rem;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 600;
-  letter-spacing: .2em;
-  margin: 0 0 20px;
+  letter-spacing: .15em;
   text-transform: uppercase; }
-.entry-content h1, .entry-content h3,
-.comment-content h1,
-.comment-content h3,
-#tinymce h1,
-#tinymce h3 {
-  color: #fba99c; }
-.entry-content h2, .entry-content h4,
-.comment-content h2,
-.comment-content h4,
-#tinymce h2,
-#tinymce h4 {
-  color: #747373; }
 
 /*--------------------------------------------------------------
 1.2 Blockquotes
@@ -298,57 +259,13 @@ blockquote {
       left: 0;
       z-index: -1; } }
 h1, h2, h3, h4, h5, h6 {
-  color: #fba99c;
-  font-size: 31px;
-  font-size: 3.1rem;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  letter-spacing: 0;
-  text-transform: uppercase; }
-
-.page-header .page-title {
-  color: #fba99c;
-  font-size: 31px;
-  font-size: 3.1rem;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  letter-spacing: 0;
-  line-height: 1;
-  margin: 20px 0;
-  text-transform: uppercase; }
-
-.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6,
-.comment-content h1,
-.comment-content h2,
-.comment-content h3,
-.comment-content h4,
-.comment-content h5,
-.comment-content h6,
-#tinymce h1,
-#tinymce h2,
-#tinymce h3,
-#tinymce h4,
-#tinymce h5,
-#tinymce h6 {
-  font-size: 12px;
-  font-size: 1.2rem;
+  color: #747373;
+  font-size: 16px;
+  font-size: 1.6rem;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 600;
-  letter-spacing: .2em;
-  margin: 0 0 20px;
+  letter-spacing: .15em;
   text-transform: uppercase; }
-.entry-content h1, .entry-content h3,
-.comment-content h1,
-.comment-content h3,
-#tinymce h1,
-#tinymce h3 {
-  color: #fba99c; }
-.entry-content h2, .entry-content h4,
-.comment-content h2,
-.comment-content h4,
-#tinymce h2,
-#tinymce h4 {
-  color: #747373; }
 
 a {
   color: #fba99c;
