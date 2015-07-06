@@ -451,13 +451,19 @@ a {
             text-align: left; }
             #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu li a,
             #site-navigation div.menu > ul li.menu-item-has-children:hover > .sub-menu li a {
+              display: block;
               padding: 4px 8px; }
               #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu li a:after,
               #site-navigation div.menu > ul li.menu-item-has-children:hover > .sub-menu li a:after {
                 content: ""; }
             #site-navigation ul.menu li.menu-item-has-children:hover > .sub-menu li:first-child a,
             #site-navigation div.menu > ul li.menu-item-has-children:hover > .sub-menu li:first-child a {
-              padding-top: 0; } }
+              padding-top: 0; }
+        #site-navigation ul.menu li .sub-menu > .menu-item-has-children:hover > .sub-menu,
+        #site-navigation div.menu > ul li .sub-menu > .menu-item-has-children:hover > .sub-menu {
+          padding-top: 4px;
+          top: 0;
+          left: 100%; } }
       #site-navigation ul.menu li:last-child a:after,
       #site-navigation div.menu > ul li:last-child a:after {
         content: "";

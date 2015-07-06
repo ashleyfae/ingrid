@@ -24,7 +24,7 @@ function ingrid_theme_navigation() {
 		array(
 			'theme_location' => 'main_menu',
 			'container'      => false,
-			'depth'          => '2',
+			'depth'          => '3',
 			'fallback_cb'    => 'ingrid_theme_navigation_fallback'
 		)
 	);

@@ -92,6 +92,7 @@
                             text-align: left;
 
                             a {
+                                display: block;
                                 padding: 4px 8px;
 
                                 &:after {
@@ -104,6 +105,16 @@
                                     padding-top: 0;
                                 }
                             }
+                        }
+                    }
+                }
+
+                .sub-menu {
+                    > .menu-item-has-children:hover {
+                        > .sub-menu {
+                            padding-top: 4px;
+                            top: 0;
+                            left: 100%;
                         }
                     }
                 }

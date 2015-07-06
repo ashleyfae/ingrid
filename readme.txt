@@ -38,3 +38,19 @@ Ingrid includes support for Infinite Scroll in Jetpack.
 
 = 1.0 =
 * Initial release
+
+== Font Awesome License ==
+
+Font License - https://fortawesome.github.io/Font-Awesome/license/
+License: SIL OFL 1.1
+License URI: http://scripts.sil.org/OFL
+Copyright: Dave Gandy, http://fontawesome.io
+
+Code License - https://fortawesome.github.io/Font-Awesome/license/
+License: MIT License
+License URI: http://opensource.org/licenses/mit-license.html
+Copyright: Dave Gandy, http://fontawesome.io
+
+Brand Icons
+All brand icons are trademarks of their respective owners.
+The use of these trademarks does not indicate endorsement of the trademark holder by Font Awesome, nor vice versa.
