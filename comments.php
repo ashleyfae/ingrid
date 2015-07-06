@@ -35,7 +35,7 @@ if ( post_password_required() ) {
 				);
 				?>
 
-				<span class=comment-count"><?php echo get_comments_number(); ?></span>
+				<span class="comment-count"><?php echo get_comments_number(); ?></span>
 			</h2>
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
