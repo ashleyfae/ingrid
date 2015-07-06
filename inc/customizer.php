@@ -140,7 +140,7 @@ function ingrid_customize_register( $wp_customize ) {
 	// Email
 	$wp_customize->add_setting( 'ingrid_email', array(
 		'default'           => '',
-		'sanitize_callback' => 'sanitize_text_field',
+		'sanitize_callback' => 'sanitize_email',
 	) );
 
 	$wp_customize->add_control( 'ingrid_email_control', array(

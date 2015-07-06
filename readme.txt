@@ -28,6 +28,12 @@ In order to create a distraction-free blogging template, Ingrid has no sidebar. 
 
 Ingrid includes support for Infinite Scroll in Jetpack.
 
+= How do I set up my menu? =
+
+1. Go to Appearance > Menus.
+2. Create a new menu and add your desired pages.
+3. Assign the menu to the "Main Menu" theme location.
+
 == Changelog ==
 
 = 1.0 =
