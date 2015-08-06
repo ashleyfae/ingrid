@@ -19,7 +19,7 @@
 
 <div class="attribution text-center">
 
-	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/flower-footer.png" id="footer-flower" alt="A flower with leaves">
+	<!--<img src="" id="footer-flower" alt="<?php _e( 'A flower with leaves', 'ingrid' ); ?>">-->
 
 	<div id="website-copyright">
 		<?php printf( __( 'Copyright &copy; %s. All Rights Reserved.', 'ingrid' ), get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ); ?>

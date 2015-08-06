@@ -910,7 +910,6 @@ section.error-404,
       article.page .entry-footer:after,
       section.error-404 .entry-footer:after,
       .box .entry-footer:after {
-        background: url("assets/images/flower-post.png") no-repeat center;
         content: "";
         display: block;
         width: 107px;

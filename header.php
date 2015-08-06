@@ -41,7 +41,7 @@
 
 		<header id="masthead" class="site-header" role="banner">
 
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/flowers-header.png" alt="Flowers" class="flowers">
+			<!--<img src="" alt="<?php _e( 'Flowers', 'ingrid' ); ?>" class="flowers">-->
 
 			<div class="site-branding text-center">
 				<?php if ( get_header_image() ) : ?>
