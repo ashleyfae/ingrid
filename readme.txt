@@ -54,3 +54,7 @@ Copyright: Dave Gandy, http://fontawesome.io
 Brand Icons
 All brand icons are trademarks of their respective owners.
 The use of these trademarks does not indicate endorsement of the trademark holder by Font Awesome, nor vice versa.
+
+== Graphics License ==
+
+Flower illustrations were created by Jaymie O'Callaghan and are licensed under GPL2+.
