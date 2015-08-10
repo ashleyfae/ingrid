@@ -28,7 +28,7 @@ section.error-404,
     }
 
     .entry-title {
-        color: #fba99c;
+        color: $color_post-titles;
         @include font-size(3.1);
         font: {
             family: $font_secondary;
@@ -39,6 +39,10 @@ section.error-404,
         margin: 0;
         padding: 20px 20px 18px;
         text-transform: uppercase;
+
+        a {
+            color: $color_post-titles;
+        }
 
         @media (min-width: 768px) {
             margin: 0 61px 0 0;
@@ -144,13 +148,13 @@ section.error-404,
         @media (min-width: 768px) {
 
             &:after {
-                //background: url('assets/images/flower-post.png') no-repeat center;
+                background: url('assets/images/flower-post.png') no-repeat center;
                 content: "";
                 display: block;
-                width: 107px;
-                height: 92px;
+                width: 119px;
+                height: 124px;
                 position: absolute;
-                right: -30px;
+                right: -65px;
                 bottom: -25px;
             }
         }
