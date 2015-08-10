@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-    color: #fba99c;
+    color: $color_post-titles;
     @include font-size(3.1);
     font: {
         family: $font_secondary;
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     h1, h3 {
-        color: #fba99c;
+        color: $color_post-titles;
     }
 
     h2, h4 {

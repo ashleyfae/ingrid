@@ -76,7 +76,7 @@ p {
 1.1 Headings
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
-  color: #fba99c;
+  color: #82b37e;
   font-size: 31px;
   font-size: 3.1rem;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 .comment-content h3,
 #tinymce h1,
 #tinymce h3 {
-  color: #fba99c; }
+  color: #82b37e; }
 .entry-content h2, .entry-content h4,
 .comment-content h2,
 .comment-content h4,
