@@ -751,7 +751,7 @@ section.error-404,
   article.page.sticky,
   section.error-404.sticky,
   .box.sticky {
-    border-color: #fd83c6; }
+    border-color: #82b37e; }
     article.post.sticky .entry-header,
     article.post.sticky .tagged,
     article.page.sticky .entry-header,
@@ -760,12 +760,12 @@ section.error-404,
     section.error-404.sticky .tagged,
     .box.sticky .entry-header,
     .box.sticky .tagged {
-      border-bottom-color: #fd83c6; }
+      border-bottom-color: #82b37e; }
     article.post.sticky .entry-footer,
     article.page.sticky .entry-footer,
     section.error-404.sticky .entry-footer,
     .box.sticky .entry-footer {
-      border-top-color: #fd83c6; }
+      border-top-color: #82b37e; }
   article.post .entry-header,
   article.page .entry-header,
   section.error-404 .entry-header,
@@ -1214,7 +1214,7 @@ body.search .search-description {
   text-transform: uppercase; }
 
 #design-credits {
-  color: #fba99c;
+  color: #fd83c6;
   margin-bottom: 20px; }
   #design-credits a {
     text-decoration: underline; }

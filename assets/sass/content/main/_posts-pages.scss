@@ -7,15 +7,15 @@ section.error-404,
     padding: 0 20px;
 
     &.sticky {
-        border-color: $color_links;
+        border-color: $color_post-titles;
 
         .entry-header,
         .tagged {
-            border-bottom-color: $color_links;
+            border-bottom-color: $color_post-titles;
         }
 
         .entry-footer {
-            border-top-color: $color_links;
+            border-top-color: $color_post-titles;
         }
     }
 
