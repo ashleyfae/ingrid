@@ -184,7 +184,7 @@ function ingrid_customize_register( $wp_customize ) {
 
 	// Links
 	$wp_customize->add_setting( 'ingrid_links', array(
-		'default'           => '#fba99c',
+		'default'           => '#fd83c6',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
@@ -201,7 +201,7 @@ function ingrid_customize_register( $wp_customize ) {
 
 	// Links - Hover
 	$wp_customize->add_setting( 'ingrid_links_hover', array(
-		'default'           => '#fba99c',
+		'default'           => '#82b37e',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
@@ -250,7 +250,7 @@ function ingrid_header_style() {
 		?>
 		.site-title a,
 		.site-title a:hover {
-			color: # <?php echo esc_attr( $header_text_color ); ?>;
+			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
 
 		<?php endif; ?>
