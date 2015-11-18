@@ -44,7 +44,7 @@
 		 * Post content
 		 * translators: %s: Name of current post
 		 */
-		the_content( '<div class="readmore"><a href="' . get_permalink() . '" class="btn btn-primary btn-block">' . __( 'Continue Reading', 'ingrid' ) . '</a></div>' );
+		the_content( '<div class="readmore"><a href="' . esc_url( get_permalink() ) . '" class="btn btn-primary btn-block">' . __( 'Continue Reading', 'ingrid' ) . '</a></div>' );
 		?>
 	</div>
 	<!-- .entry-content -->
