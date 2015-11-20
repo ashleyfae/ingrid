@@ -1,0 +1,314 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ingrid\n"
+"POT-Creation-Date: 2015-11-20 14:33-0000\n"
+"PO-Revision-Date: 2015-11-20 14:34-0000\n"
+"Last-Translator: Creative Whim <support@creativewhim.com>\n"
+"Language-Team: Creative Whim <support@creativewhim.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:34
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:51
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: comments.php:33
+#, php-format
+msgctxt "comments title"
+msgid "response to %1$s"
+msgid_plural "responses to %1$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:43 comments.php:62
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:45 comments.php:64
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:46 comments.php:65
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:77
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:89
+#, php-format
+msgid "What did you think of &ldquo;%1$s&rdquo;?"
+msgstr ""
+
+#: comments.php:90
+msgid "Leave a Comment"
+msgstr ""
+
+#: comments.php:91
+msgid "Submit &#x2192;"
+msgstr ""
+
+#: comments.php:95 comments.php:96
+msgid "Name"
+msgstr ""
+
+#: comments.php:100 comments.php:101
+msgid "Email"
+msgstr ""
+
+#: comments.php:105
+msgid "Website"
+msgstr ""
+
+#: comments.php:106
+msgid "URL"
+msgstr ""
+
+#: footer.php:22
+msgid "A flower with leaves"
+msgstr ""
+
+#: footer.php:25
+#, php-format
+msgid "Copyright &copy; %s. All Rights Reserved."
+msgstr ""
+
+#: footer.php:31
+#, php-format
+msgid ""
+"<a href=\"%s\" target=\"_blank\" rel=\"nofollow\">Ingrid Theme</a> by Anna "
+"Moore and Nose Graze."
+msgstr ""
+
+#: functions.php:34
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:84
+msgid "Footer - Column #1"
+msgstr ""
+
+#: functions.php:93
+msgid "Footer - Column #2"
+msgstr ""
+
+#: header.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:30
+msgid "Menu"
+msgstr ""
+
+#: header.php:44
+msgid "Flowers"
+msgstr ""
+
+#: inc/customizer.php:15
+msgid "Social Media"
+msgstr ""
+
+#: inc/customizer.php:16
+msgid ""
+"Enter the URLs for your social media profiles. These may be used in the "
+"layout and/or in a custom widget."
+msgstr ""
+
+#: inc/customizer.php:27
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/customizer.php:39
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/customizer.php:51
+msgid "Pinterest URL"
+msgstr ""
+
+#: inc/customizer.php:63
+msgid "Instagram URL"
+msgstr ""
+
+#: inc/customizer.php:75
+msgid "Tumblr URL"
+msgstr ""
+
+#: inc/customizer.php:87
+msgid "Google+ URL"
+msgstr ""
+
+#: inc/customizer.php:99
+msgid "Dribbble URL"
+msgstr ""
+
+#: inc/customizer.php:111
+msgid "Last.fm URL"
+msgstr ""
+
+#: inc/customizer.php:123
+msgid "Spotify URL"
+msgstr ""
+
+#: inc/customizer.php:135
+msgid "Bloglovin' URL"
+msgstr ""
+
+#: inc/customizer.php:147
+msgid "Email Address or Contact Page URL"
+msgstr ""
+
+#: inc/customizer.php:159
+msgid "RSS URL"
+msgstr ""
+
+#: inc/customizer.php:178
+msgid "Paragraph Text"
+msgstr ""
+
+#: inc/customizer.php:195
+msgid "Link Colour"
+msgstr ""
+
+#: inc/customizer.php:212
+msgid "Link Colour - Hover"
+msgstr ""
+
+#: inc/extras.php:83
+msgctxt "placeholder"
+msgid "keyword + enter"
+msgstr ""
+
+#: inc/extras.php:83
+msgctxt "placeholder"
+msgid "Search the blog"
+msgstr ""
+
+#: inc/template-parts/content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#: inc/template-parts/content-none.php:22
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: inc/template-parts/content-none.php:26
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: inc/template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: inc/template-parts/content-page.php:22
+msgid "Pages:"
+msgstr ""
+
+#: inc/template-parts/content-page.php:30
+msgid "Edit"
+msgstr ""
+
+#. translators: %s: Name of current post
+#.
+#: inc/template-parts/content-single.php:43 inc/template-parts/content.php:47
+msgid "Continue Reading"
+msgstr ""
+
+#: inc/template-tags.php:25
+msgid "&#x2190; Newer Entries"
+msgstr ""
+
+#: inc/template-tags.php:26
+msgid "Older Entries &#x2192;"
+msgstr ""
+
+#: inc/template-tags.php:64
+#, php-format
+msgid "categories: %1$s %2$s"
+msgstr ""
+
+#: inc/template-tags.php:66
+msgid "tagged: "
+msgstr ""
+
+#: inc/template-tags.php:74
+msgid "Share:"
+msgstr ""
+
+#: inc/template-tags.php:75
+msgid "Twitter"
+msgstr ""
+
+#: inc/template-tags.php:77
+msgid "Facebook"
+msgstr ""
+
+#: inc/template-tags.php:79
+msgid "Pinterest"
+msgstr ""
+
+#: inc/template-tags.php:81
+msgid "Post Link"
+msgstr ""
+
+#: inc/template-tags.php:86
+msgid "0 Comments"
+msgstr ""
+
+#: inc/template-tags.php:86
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:86
+msgid "% Comments"
+msgstr ""
+
+#: inc/template-tags.php:120
+msgid "Previous Post"
+msgstr ""
+
+#: inc/template-tags.php:123
+msgid "Next Post"
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:19
+msgid "Not what you're looking for? You can search again!"
+msgstr ""
