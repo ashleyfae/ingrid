@@ -7,6 +7,14 @@
  * @license   GPL2+
  */
 
+/**
+ * Customizer Settings
+ *
+ * @param WP_Customize_Manager $wp_customize
+ *
+ * @since 1.0
+ * @return void
+ */
 function ingrid_customize_register( $wp_customize ) {
 	/*
 	 * Social Media Section
@@ -250,12 +258,12 @@ function ingrid_header_style() {
 		?>
 		.site-title a,
 		.site-title a:hover {
-			color: #<?php echo esc_attr( $header_text_color ); ?>;
+			color: # <?php echo esc_attr( $header_text_color ); ?>;
 		}
 
 		<?php endif; ?>
 	</style>
-<?php
+	<?php
 }
 
 /**
