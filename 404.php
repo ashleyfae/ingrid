@@ -8,7 +8,7 @@
  */
 
 $args = array(
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'before_widget' => '<div class="widget %s">',
 	'after_widget'  => '</div>',
 	'before_title'  => '<h2 class="widget-title text-left">',
 	'after_title'   => '</h2>',
@@ -50,7 +50,7 @@ get_header(); ?>
 		/* translators: %1$s: smiley */
 		$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'ingrid' ), convert_smilies( ':)' ) ) . '</p>';
 		$args_archive    = array(
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'before_widget' => '<div class="widget %s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title text-left">',
 			'after_title'   => '</h2>' . $archive_content,
