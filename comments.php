@@ -28,12 +28,14 @@ if ( post_password_required() ) {
 
 		<?php if ( have_comments() ) : ?>
 			<h2 class="comments-title">
-				<?php
-				printf(
-					_nx( 'response to %1$s', 'responses to %1$s', get_comments_number(), 'comments title', 'ingrid' ),
-					'&ldquo;' . get_the_title() . '&rdquo;'
-				);
-				?>
+				<span class="comments-title-text">
+					<?php
+					printf(
+						_nx( 'response to %1$s', 'responses to %1$s', get_comments_number(), 'comments title', 'ingrid' ),
+						'&ldquo;' . get_the_title() . '&rdquo;'
+					);
+					?>
+				</span>
 
 				<span class="comment-count"><?php echo get_comments_number(); ?></span>
 			</h2>

@@ -10,17 +10,23 @@
     text-transform: uppercase;
 
     @media (min-width: 768px) {
-        padding: 20px 0 18px 20px;
+        clear: both;
+        overflow: hidden;
+        padding: 20px 85px 18px 20px;
     }
 
-    > span {
+    .comment-count {
         @media (min-width: 768px) {
             color: #aaaaaa;
             display: block;
-            float: right;
             font: {
                 weight: 600;
             }
+            height: 100%;
+            padding-top: 20px;
+            position: absolute;
+            top: 0;
+            right: 0;
             text-align: center;
             width: 61px;
 

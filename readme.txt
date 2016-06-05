@@ -42,6 +42,7 @@ Ingrid includes support for Infinite Scroll in Jetpack.
 * Small code adjustments - mostly escaping a few extra things.
 * Fixed "too few arguments" error in 404 template.
 * Removed unused content-single.php template part.
+* Fixed issue with comment title when post title is long.
 
 = 1.0 =
 * Initial release
