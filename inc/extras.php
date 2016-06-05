@@ -32,6 +32,8 @@ function ingrid_theme_navigation() {
 
 function ingrid_theme_navigation_fallback() {
 	$args = array(
+		'before'      => '<ul class="menu">',
+		'container'   => false,
 		'depth'       => 2,
 		'sort_column' => 'menu_order, post_title',
 		'menu_class'  => 'menu',

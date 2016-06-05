@@ -53,11 +53,9 @@ function ingrid_theme_setup() {
 
 	// Set up the WordPress core custom header feature.
 	add_theme_support( 'custom-header', apply_filters( 'ingrid_custom_header_args', array(
-		//'default-image'      => get_template_directory_uri() . '/assets/images/ingrid.png',
 		'default-text-color' => '000000',
 		'flex-height'        => true,
 		'flex-width'         => true,
-		//'header-text' => false,
 		'wp-head-callback'   => 'ingrid_header_style'
 	) ) );
 
@@ -110,7 +108,7 @@ function ingrid_theme_scripts() {
 
 	wp_enqueue_style( 'droid-serif', '//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic|Source+Sans+Pro:300,600,700|Cookie' );
 
-	wp_enqueue_style( 'ingrid', get_stylesheet_uri(), array(), '1.0' );
+	wp_enqueue_style( 'ingrid', get_stylesheet_uri(), array(), '1.0.4' );
 	wp_add_inline_style( 'ingrid', ingrid_generate_custom_styles() );
 
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.3.0' );

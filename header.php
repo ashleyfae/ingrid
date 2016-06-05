@@ -41,12 +41,12 @@
 
 		<header id="masthead" class="site-header" role="banner">
 
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/flowers-header.jpg" alt="<?php _e( 'Flowers', 'ingrid' ); ?>" class="flowers">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/flowers-header.jpg" alt="<?php esc_attr_e( 'Flowers', 'ingrid' ); ?>" class="flowers">
 
 			<div class="site-branding text-center">
 				<?php if ( get_header_image() ) : ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>">
+						<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 					</a>
 				<?php else : ?>
 					<h1 class="site-title">
