@@ -2,13 +2,16 @@
 /**
  * Custom functions that act independently of the theme templates
  *
- * @package   noah
+ * @package   ingrid
  * @copyright Copyright (c) 2015 Ashley Evans and Anna Moore
  * @license   GPL2
  */
 
 /**
  * Adds a custom stylesheet to the visual editor
+ *
+ * @since 1.0
+ * @return void
  */
 function ingrid_theme_add_editor_styles() {
 	add_editor_style();
@@ -18,6 +21,9 @@ add_action( 'after_setup_theme', 'ingrid_theme_add_editor_styles' );
 
 /**
  * Creates a new navigation menu in the main_nav location.
+ *
+ * @since 1.0
+ * @return void
  */
 function ingrid_theme_navigation() {
 	wp_nav_menu(
@@ -30,6 +36,12 @@ function ingrid_theme_navigation() {
 	);
 }
 
+/**
+ * Menu Fallback (if no menu is set to the location)
+ *
+ * @since 1.0
+ * @return void
+ */
 function ingrid_theme_navigation_fallback() {
 	$args = array(
 		'before'      => '<ul class="menu">',
@@ -54,6 +66,7 @@ function ingrid_theme_navigation_fallback() {
  *
  * @param string $text
  *
+ * @since 1.0
  * @return string
  */
 function ingrid_theme_current_to_active( $text ) {
@@ -76,13 +89,14 @@ add_filter( 'wp_nav_menu', 'ingrid_theme_current_to_active' );
  *
  * @param string $form The default search form HTML.
  *
+ * @since 1.0
  * @return string The filtered search form HTML.
  */
 function ingrid_theme_search_form( $form ) {
 	$form = '
-	<form role="search" method="get" class="searchform" action="' . home_url( '/' ) . '">
+	<form role="search" method="get" class="searchform" action="' . esc_url( home_url( '/' ) ) . '">
 		<i class="fa fa-angle-double-right"></i>
-		<input type="search" class="search-field" placeholder="' . esc_attr_x( 'keyword + enter', 'placeholder', 'ingrid' ) . '" value="' . get_search_query() . '" name="s" title="' . esc_attr_x( 'Search the blog', 'placeholder', 'ingrid' ) . '">
+		<input type="search" class="search-field" placeholder="' . esc_attr_x( 'keyword + enter', 'placeholder', 'ingrid' ) . '" value="' . esc_attr( get_search_query() ) . '" name="s" title="' . esc_attr_x( 'Search the blog', 'placeholder', 'ingrid' ) . '">
 	</form>
 	';
 
@@ -95,6 +109,7 @@ add_filter( 'get_search_form', 'ingrid_theme_search_form' );
  * Gets all of the social media URLs and puts them
  * into an unordered list with the appropriate icons.
  *
+ * @since 1.0
  * @return string
  */
 function ingrid_social_media_links() {
@@ -178,6 +193,7 @@ function ingrid_social_media_links() {
  * @param $attr
  * @param $content
  *
+ * @since 1.0
  * @return string
  */
 function ingrid_img_caption_shortcode_filter( $dummy, $attr, $content ) {

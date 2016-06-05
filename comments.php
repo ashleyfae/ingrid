@@ -86,24 +86,24 @@ if ( post_password_required() ) {
 	$aria_req  = ( $req ? ' aria-required="true"' : '' );
 
 	$args = array(
-		'comment_field'        => '<div class="form-group"><textarea name="comment" id="comment" placeholder="' . sprintf( __( 'What did you think of &ldquo;%1$s&rdquo;?', 'ingrid' ), get_the_title() ) . '" tabindex="4" aria-required="true" rows="12"></textarea></div>',
-		'title_reply'          => __( 'Leave a Comment', 'ingrid' ),
-		'label_submit'         => __( 'Submit &#x2192;', 'ingrid' ),
-		'fields'               => apply_filters( 'comment_form_default_fields', array(
+		'comment_field' => '<div class="form-group"><textarea name="comment" id="comment" placeholder="' . esc_attr( sprintf( __( 'What did you think of &ldquo;%1$s&rdquo;?', 'ingrid' ), get_the_title() ) ) . '" aria-required="true" rows="12"></textarea></div>',
+		'title_reply'   => __( 'Leave a Comment', 'ingrid' ),
+		'label_submit'  => __( 'Submit &#x2192;', 'ingrid' ),
+		'fields'        => apply_filters( 'comment_form_default_fields', array(
 			'author' =>
 				'<div class="form-group">' .
 				'<label for="author" class="screen-reader-text">' . __( 'Name', 'ingrid' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-				'<input type="text" name="author" id="author" value="' . esc_attr( $commenter['comment_author'] ) . '" placeholder="' . __( 'Name', 'ingrid' ) . '" tabindex="1"' . $aria_req . '>' .
+				'<input type="text" name="author" id="author" value="' . esc_attr( $commenter['comment_author'] ) . '" placeholder="' . esc_attr__( 'Name', 'ingrid' ) . '"' . $aria_req . '>' .
 				'</div>',
 			'email'  =>
 				'<div class="form-group">' .
 				'<label for="email" class="screen-reader-text">' . __( 'Email', 'ingrid' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-				'<input type="text" name="email" id="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" placeholder="' . __( 'Email', 'ingrid' ) . '" tabindex="2"' . $aria_req . '>' .
+				'<input type="text" name="email" id="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" placeholder="' . esc_attr__( 'Email', 'ingrid' ) . '"' . $aria_req . '>' .
 				'</div>',
 			'url'    =>
 				'<div class="form-group">' .
 				'<label for="url" class="screen-reader-text">' . __( 'Website', 'ingrid' ) . '</label> ' .
-				'<input type="text" name="url" id="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="' . __( 'URL', 'ingrid' ) . '" tabindex="3">' .
+				'<input type="text" name="url" id="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="' . esc_attr__( 'URL', 'ingrid' ) . '">' .
 				'</div>'
 		) )
 	);

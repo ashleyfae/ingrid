@@ -229,6 +229,9 @@ add_action( 'customize_register', 'ingrid_customize_register' );
 
 /**
  * Styles the header image and text displayed on the blog.
+ *
+ * @since 1.0
+ * @return void
  */
 function ingrid_header_style() {
 	$header_text_color = get_header_textcolor();
@@ -258,7 +261,7 @@ function ingrid_header_style() {
 		?>
 		.site-title a,
 		.site-title a:hover {
-			color: # <?php echo esc_attr( $header_text_color ); ?>;
+			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
 
 		<?php endif; ?>
@@ -269,6 +272,7 @@ function ingrid_header_style() {
 /**
  * Generates the custom CSS rules based on the customizer settings.
  *
+ * @since 1.0
  * @return string
  */
 function ingrid_generate_custom_styles() {

@@ -13,6 +13,9 @@
  *
  * @param string $before
  * @param string $after
+ *
+ * @since 1.0
+ * @return void
  */
 if ( ! function_exists( 'ingrid_theme_pagination' ) ) {
 	function ingrid_theme_pagination() {
@@ -34,6 +37,9 @@ if ( ! function_exists( 'ingrid_theme_pagination' ) ) {
 /**
  * Displays the meta information. This includes the
  * date the post was published and the list of categories.
+ *
+ * @since 1.0
+ * @return void
  */
 if ( ! function_exists( 'ingrid_theme_post_meta' ) ) {
 	function ingrid_theme_post_meta() {
@@ -54,6 +60,9 @@ if ( ! function_exists( 'ingrid_theme_post_meta' ) ) {
 
 /**
  * Displays the post footer information.
+ *
+ * @since 1.0
+ * @return void
  */
 if ( ! function_exists( 'ingrid_theme_post_footer' ) ) {
 	function ingrid_theme_post_footer() {
@@ -92,6 +101,9 @@ if ( ! function_exists( 'ingrid_theme_post_footer' ) ) {
 
 /**
  * Display's the current post's featured image.
+ *
+ * @since 1.0
+ * @return void
  */
 if ( ! function_exists( 'ingrid_featured_image' ) ) {
 	function ingrid_featured_image() {
@@ -108,8 +120,10 @@ if ( ! function_exists( 'ingrid_featured_image' ) ) {
 
 /**
  * Adds the pagination on a single post page.
- * Displays links to the next post and the previous
- * post.
+ * Displays links to the next post and the previous post.
+ *
+ * @since 1.0
+ * @return void
  */
 if ( ! function_exists( 'ingrid_post_pagination' ) ) {
 	function ingrid_post_pagination() {

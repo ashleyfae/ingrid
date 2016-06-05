@@ -36,6 +36,13 @@ Ingrid includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.4 =
+* Fixed issue with navigation menu not expanding to multiple lines.
+* Fixed issue with mobile navigation not expanding when menu location isn't assigned in Appearance > Menus.
+* Small code adjustments - mostly escaping a few extra things.
+* Fixed "too few arguments" error in 404 template.
+* Removed unused content-single.php template part.
+
 = 1.0 =
 * Initial release
 

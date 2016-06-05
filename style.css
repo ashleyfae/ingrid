@@ -208,7 +208,8 @@ input[type="submit"] {
 2.2 Captions
 --------------------------------------------------------------*/
 .wp-caption {
-  background: none; }
+  background: none;
+  max-width: 100%; }
   .wp-caption .wp-caption-text {
     color: #888;
     font-size: 10px;
