@@ -36,6 +36,13 @@ Ingrid includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.5 =
+* Changed menu fallback depth to 1.
+* Fixed hr styles.
+* Removed fieldset border.
+* Added minimum height to #footer to ensure the black background shows up even if no widgets are added.
+* Updated theme tags.
+
 = 1.0.4 =
 * Fixed issue with navigation menu not expanding to multiple lines.
 * Fixed issue with mobile navigation not expanding when menu location isn't assigned in Appearance > Menus.

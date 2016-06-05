@@ -4,7 +4,7 @@
  * Author: Anna Moore and Nose Graze
  * Author URI: http://thelovelydesign.co/
  * Description: A simple, feminine theme without a sidebar.
- * Version: 1.0.4
+ * Version: 1.0.5
  * License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: ingrid
@@ -259,7 +259,8 @@ input[type="submit"] {
 2.4 Horizontal Rules
 --------------------------------------------------------------*/
 hr {
-  border-top-color: #eee;
+  border: none;
+  border-top: 1px solid #eee;
   margin: 25px 0; }
 
 /*--------------------------------------------------------------
@@ -352,6 +353,9 @@ select {
     border: none;
     padding: 8px;
     text-transform: lowercase; }
+
+fieldset {
+  border: none; }
 
 /*--------------------------------------------------------------
 4.0 Navigation
@@ -1215,6 +1219,7 @@ body.search .search-description {
 /* Footer Area */
 #footer {
   background: black;
+  min-height: 40px;
   position: relative; }
 
 #website-copyright,
