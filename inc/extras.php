@@ -49,8 +49,6 @@ function ingrid_theme_navigation_fallback() {
 		'depth'       => 2,
 		'sort_column' => 'menu_order, post_title',
 		'menu_class'  => 'menu',
-		'include'     => '',
-		'exclude'     => '',
 		'echo'        => true,
 		'show_home'   => true,
 		'link_before' => '',
